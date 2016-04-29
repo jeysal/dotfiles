@@ -1,3 +1,6 @@
 [submodule "powerline-shell"]
 	path = powerline-shell
 	url = https://github.com/milkbikis/powerline-shell.git
+[submodule "vim-monokai"]
+	path = vim-monokai
+	url = https://github.com/sickill/vim-monokai.git
