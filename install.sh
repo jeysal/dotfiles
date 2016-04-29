@@ -4,9 +4,9 @@ echo -n "Copying files to home directory..."
 cp -rT home/ ~/
 echo "Done"
 
-echo "Downloading vim monokai theme..."
+echo -n "Installing vim monokai theme..."
 mkdir -p ~/.vim/colors
-curl https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim > ~/.vim/colors/monokai.vim
+cp vim-monokai/colors/monokai.vim ~/.vim/colors
 echo "Done"
 
 echo "Installing powerline shell prompt..."
