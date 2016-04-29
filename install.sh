@@ -12,5 +12,6 @@ echo "Done"
 echo "Installing powerline shell prompt..."
 cd powerline-shell
 ./install.py
+cp powerline-shell.py ~
 cd ..
 echo "Done"
