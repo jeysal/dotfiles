@@ -91,5 +91,14 @@ if [[ "$OSTYPE" =~ cygwin ]]; then
 
     wtf() { echo " ----- TYPE $@ ----- "; type "$@"; echo " ----- WHERE $@ ----- "; where "$@"; echo " ----- WHATIS $@ ----- "; whatis "$@"; }
     expl() { explorer $(cygpath -w "$PWD"); }
+    doge() {
+        if [[ "$#" != 0 ]]; then
+           curl http://dogr.io/$@.png > ~/.config/xfce4/terminal/doge.png
+        else
+           rm ~/.config/xfce4/terminal/doge.png
+        fi
+        xfce4-terminal --display=$DISPLAY --maximize --working-directory="$PWD" &disown
+        exit
+    }
 
 fi
