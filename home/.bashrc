@@ -55,6 +55,7 @@ alias vi='vim'
 
 # Functions
 nginxhere() {
+    nginx -s stop 2>/dev/null
     CONFIGLOCATION=$(mktemp)
     cat <<EOF > $CONFIGLOCATION
 events {
