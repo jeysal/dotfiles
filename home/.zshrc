@@ -3,6 +3,9 @@ bindkey -v
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
 
+PROMPTFILE='/usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme'
+[[ -f $PROMPTFILE ]] && source $PROMPTFILE
+
 # Completion
 zstyle :compinstall filename '/home/seckinger/.zshrc'
 autoload -Uz compinit && compinit
