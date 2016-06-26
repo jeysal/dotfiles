@@ -4,7 +4,7 @@ bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
 
 PROMPTFILE='/usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme'
-[[ -f $PROMPTFILE ]] && source $PROMPTFILE
+[[ -f $PROMPTFILE ]] && source $PROMPTFILE && source ~/.promptcfg
 
 # Completion
 zstyle :compinstall filename '/home/seckinger/.zshrc'
