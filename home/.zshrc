@@ -1,5 +1,7 @@
 # Command line
 bindkey -v
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
 
 # Completion
 zstyle :compinstall filename '/home/seckinger/.zshrc'
