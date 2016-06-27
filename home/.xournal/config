@@ -1,0 +1,4 @@
+[general]
+    window_maximize = true
+    initial_zoom = 150
+    use_xinput = false
