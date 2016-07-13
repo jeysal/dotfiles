@@ -1,23 +1,35 @@
-[color]
-	ui = auto
 [core]
 	eol = lf
 	autocrlf = input
+[color]
+	ui = auto
+[alias]
+	st = status
+	l = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    fix = commit -a --amend --no-edit
+
 [user]
 	name = Tim Seckinger
 	email = seckinger.tim@gmail.com
 [credential]
 	helper = cache --timeout 3600
-[rerere]
-	enabled = true
-	autoupdate = true
-[alias]
-	st = status
-	l = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-    fix = commit -a --amend --no-edit
-[rebase]
-	autosquash = true
+
 [init]
 	templatedir = ~/.git_template
 [pull]
 	rebase = true
+[rebase]
+	autosquash = true
+[rerere]
+	enabled = true
+	autoupdate = true
+
+[merge]
+    tool = intellij
+[mergetool "intellij"]
+    cmd = idea merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
+    trustExitCode = true
+[diff]
+    tool = intellij
+[difftool "intellij"]
+    cmd = idea diff $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE")
