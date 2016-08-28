@@ -1,4 +1,10 @@
 [general]
     window_maximize = true
-    initial_zoom = 150
+    initial_zoom = 125
     use_xinput = false
+    autoload_pdf_xoj = false
+[paper]
+    style = graph
+    print_ruling = false
+[tools]
+    default_font = Roboto
