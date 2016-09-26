@@ -1,3 +1,5 @@
+export POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+
 export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(battery context dir vcs)
 export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode background_jobs status history time)
 
