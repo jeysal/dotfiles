@@ -29,6 +29,8 @@ alias gitdir='cd $(git rev-parse --show-toplevel)'
 
 alias xclip='xclip -selection clipboard'
 
+alias sudo='sudo '
+
 # "Better version" aliases
 which vim >& /dev/null && alias vi='vim'
 which colordiff >& /dev/null && alias diff='colordiff'
