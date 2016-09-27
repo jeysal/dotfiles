@@ -8,3 +8,4 @@
     print_ruling = false
 [tools]
     default_font = Roboto
+    default_font_size = 10
