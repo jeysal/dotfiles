@@ -1,4 +1,4 @@
-export EDITOR='vi -e'
+export EDITOR='vi'
 export VISUAL='vim'
 export PAGER='less'
 
