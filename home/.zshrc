@@ -42,3 +42,7 @@ SAVEHIST=$HISTSIZE
 
 # SSH
 plugins=(git ssh-agent)
+
+# local config
+LOCALCONFIGFILE='~/.zshlocal'
+[[ -f $LOCALCONFIGFILE ]] && source $LOCALCONFIGFILE
