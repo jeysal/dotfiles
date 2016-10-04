@@ -3,11 +3,11 @@ bindkey -v
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
 
-PROMPTFILE='/usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme'
+PROMPTFILE=/usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 [[ $TERM == "xterm-256color" ]] && [[ -f $PROMPTFILE ]] && source $PROMPTFILE && source ~/.promptcfg
 
 # Completion
-zstyle :compinstall filename '/home/seckinger/.zshrc'
+zstyle :compinstall filename $HOME/.zshrc
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
 
@@ -44,5 +44,5 @@ SAVEHIST=$HISTSIZE
 plugins=(git ssh-agent)
 
 # local config
-LOCALCONFIGFILE='~/.zshlocal'
+LOCALCONFIGFILE=$HOME/.zshlocal
 [[ -f $LOCALCONFIGFILE ]] && source $LOCALCONFIGFILE
