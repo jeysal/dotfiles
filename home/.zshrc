@@ -2,6 +2,12 @@
 bindkey -v
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
+bindkey "${terminfo[kich1]}" overwrite-mode
+bindkey "${terminfo[kdch1]}" delete-char
+bindkey "${terminfo[kcuu1]}" up-line-or-history
+bindkey "${terminfo[kcud1]}" down-line-or-history
+bindkey "${terminfo[kcub1]}" backward-char
+bindkey "${terminfo[kcuf1]}" forward-char
 
 PROMPTFILE=/usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 [[ $TERM == "xterm-256color" ]] && [[ -f $PROMPTFILE ]] && source $PROMPTFILE && source ~/.promptcfg
