@@ -1,0 +1,14 @@
+{
+    // windows
+    "explorer.openEditors.visible": 0,
+    "workbench.editor.showTabs": false,
+    // font
+    "editor.fontSize": 13,
+    "editor.lineHeight": 16,
+    "editor.fontFamily": "'Fira Code', 'Hack', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
+    // files
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 3000,
+    "files.insertFinalNewline": true
+}
