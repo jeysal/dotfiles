@@ -18,7 +18,7 @@ bindkey "${terminfo[kcuf1]}" forward-char
 bindkey "^E" edit-command-line
 
 PROMPTFILE=/usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
-[[ $TERM == "xterm-256color" ]] && [[ -f $PROMPTFILE ]] && source $PROMPTFILE && source ~/.promptcfg
+echo $TERM | grep "xterm.*" >/dev/null && TERM=xterm-256color && [[ -f $PROMPTFILE ]] && source $PROMPTFILE && source ~/.promptcfg
 
 # Completion
 zstyle :compinstall filename $HOME/.zshrc
