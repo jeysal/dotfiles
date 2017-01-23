@@ -19,7 +19,7 @@
 [init]
 	templatedir = ~/.git_template
 [pull]
-	rebase = true
+	rebase = preserve
 [rebase]
 	autosquash = true
 [rerere]
