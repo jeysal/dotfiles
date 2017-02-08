@@ -1,5 +1,5 @@
 #!/bin/sh
-awk '!/^([[:space:]]*#)/' $1 | awk '((NR==1) && (length($0) > 50)) || ((NR == 2) && (length($0) > 0)) || (length($0) > 72) { exit 1 }'
+awk '!/^([[:space:]]*#)/' $1 | awk '((NR==1) && (length($0) > 50)) || ((NR == 2) && (length($0) > 0)) { exit 1 }'
 if [ $? -ne 0 ]; then
     echo >&2 -e "Commit aborted: invalid commit message format"
     exit 1
