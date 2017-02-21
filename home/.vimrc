@@ -1,3 +1,5 @@
+source ~/.commonvimrc
+
 syntax enable
 colorscheme monokai
 

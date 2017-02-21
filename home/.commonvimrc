@@ -1,0 +1,23 @@
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+
+noremap <insert> <nop>
+noremap <del> <nop>
+noremap <home> <nop>
+noremap <end> <nop>
+noremap <pageup> <nop>
+noremap <pagedown> <nop>
+
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+inoremap <insert> <nop>
+inoremap <del> <nop>
+inoremap <home> <nop>
+inoremap <end> <nop>
+inoremap <pageup> <nop>
+inoremap <pagedown> <nop>
