@@ -1,0 +1,6 @@
+[Unit]
+Description=grive sync
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/grive -p %h/gdrive
