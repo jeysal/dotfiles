@@ -22,22 +22,12 @@ noremap <c-end> <nop>
 noremap <c-pageup> <nop>
 noremap <c-pagedown> <nop>
 
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
 inoremap <insert> <nop>
 inoremap <del> <nop>
 inoremap <home> <nop>
 inoremap <end> <nop>
 inoremap <pageup> <nop>
 inoremap <pagedown> <nop>
-
-inoremap <c-up> <nop>
-inoremap <c-down> <nop>
-inoremap <c-left> <nop>
-inoremap <c-right> <nop>
 
 inoremap <c-insert> <nop>
 inoremap <c-del> <nop>
