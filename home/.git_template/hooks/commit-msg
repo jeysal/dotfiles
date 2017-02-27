@@ -1,6 +1,1 @@
-#!/bin/sh
-awk '!/^([[:space:]]*#)/' $1 | awk '((NR==1) && (length($0) > 50)) || ((NR == 2) && (length($0) > 0)) { exit 1 }'
-if [ $? -ne 0 ]; then
-    echo >&2 -e "Commit aborted: invalid commit message format"
-    exit 1
-fi
+/home/seckinger/lib/node_modules/angular-precommit/index.js
