@@ -21,17 +21,3 @@ noremap <c-home> <nop>
 noremap <c-end> <nop>
 noremap <c-pageup> <nop>
 noremap <c-pagedown> <nop>
-
-inoremap <insert> <nop>
-inoremap <del> <nop>
-inoremap <home> <nop>
-inoremap <end> <nop>
-inoremap <pageup> <nop>
-inoremap <pagedown> <nop>
-
-inoremap <c-insert> <nop>
-inoremap <c-del> <nop>
-inoremap <c-home> <nop>
-inoremap <c-end> <nop>
-inoremap <c-pageup> <nop>
-inoremap <c-pagedown> <nop>
