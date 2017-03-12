@@ -1,23 +1,5 @@
-# Command line
-autoload edit-command-line
-zle -N edit-command-line
-
-bindkey "^E" edit-command-line
-
 PROMPTFILE=/usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 echo $TERM | grep "xterm.*" >/dev/null && TERM=xterm-256color && [[ -f $PROMPTFILE ]] && source $PROMPTFILE && source ~/.promptcfg
-
-# Completion
-zstyle :compinstall filename $HOME/.zshrc
-autoload -Uz compinit && compinit
-zstyle ':completion:*' menu select
-
-# Aliases
-alias ls='ls -hF --color=tty'
-alias ll='ls -l'
-alias la='ls -A'
-alias lla='ls -lA'
-alias lr='ls -lAR'
 
 alias df='df -h'
 alias du='du -h'
