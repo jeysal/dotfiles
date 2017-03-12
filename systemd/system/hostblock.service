@@ -1,0 +1,6 @@
+[Unit]
+Description=update /etc/hosts with StevenBlack's blocked hosts
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bash -c 'hostname=$(cat /etc/hostname) && curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts > /etc/hosts && echo 127.0.1.1 $hostname.localdomain $hostname >> /etc/hosts'
