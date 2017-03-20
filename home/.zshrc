@@ -22,6 +22,8 @@ alias xclip='xclip -selection clipboard'
 
 alias sudo='sudo '
 
+alias less='less -r'
+
 # "Better version" aliases
 which vim >& /dev/null && alias vi='vim'
 which colordiff >& /dev/null && alias diff='colordiff'
