@@ -35,3 +35,11 @@ SAVEHIST=$HISTSIZE
 
 # SSH
 plugins=(git ssh-agent)
+
+# base16
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
+# extra
+ZSH_EXTRA_CONF=$HOME/.zsh.extra
+[[ -f $ZSH_EXTRA_CONF ]] && source $ZSH_EXTRA_CONF

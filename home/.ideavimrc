@@ -1,4 +1,2 @@
-source ~/.commonvimrc
-
 set showmode
 set wrapscan
