@@ -51,6 +51,8 @@ filetype plugin indent on    " required
 " Enhance command-line completion
 " Make Vim more useful
 set nocompatible
+" Enable clicking
+set mouse=a
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard+=unnamed
 set wildmenu
