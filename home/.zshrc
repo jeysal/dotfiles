@@ -24,6 +24,9 @@ alias sudo='sudo '
 
 alias less='less -r'
 
+# Functions
+mkcd() { mkdir $1 && cd $1 }
+
 # "Better version" aliases
 which vim >& /dev/null && alias vi='vim'
 which colordiff >& /dev/null && alias diff='colordiff'
