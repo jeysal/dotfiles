@@ -1,8 +1,8 @@
 [Unit]
-Description=run grive 1min after boot and every 15mins
+Description=run grive 1min after startup and every 10mins
 
 [Timer]
-OnBootSec=1min
+OnStartupSec=1min
 OnUnitActiveSec=10min
 
 [Install]

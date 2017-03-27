@@ -1,8 +1,8 @@
 [Unit]
-Description=update blocked hosts on boot
+Description=update blocked hosts 1min after startup
 
 [Timer]
-OnBootSec=10min
+OnStartupSec=1min
 
 [Install]
 WantedBy=timers.target
