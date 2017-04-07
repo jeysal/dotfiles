@@ -4,7 +4,7 @@
 [[ ! -x $(which pygmentize 2>/dev/null) ]] && exit 1
 
 # Custom options to pass pygmentize (can be empty)
-pygmentize_opts="-f terminal256 -O style=solarized_dark256"
+pygmentize_opts="-f terminal256 -O style=monokai"
 
 # enable pattern list
 shopt -s extglob
