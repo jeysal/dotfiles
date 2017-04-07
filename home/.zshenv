@@ -1,7 +1,7 @@
-export EDITOR='vi'
-export VISUAL='vim'
-export PAGER='less'
+export EDITOR=vi
+export VISUAL=vim
+export PAGER=less
 
 export TERMINFO=~/.terminfo
 
-DEFAULT_USER=$USER
+export DEFAULT_USER=$USER
