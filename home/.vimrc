@@ -7,9 +7,10 @@ Plug 'Shougo/vimproc.vim'
 
 " vim-surround
 Plug 'tpope/vim-surround'
-" NERDTree
+" NERDTree & Git
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'airblade/vim-gitgutter'
 " Ctrl-P
 Plug 'ctrlpvim/ctrlp.vim'
 " MatchTagAlways
