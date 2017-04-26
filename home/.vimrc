@@ -5,41 +5,28 @@ call plug#begin('~/.vim/plugged')
 Plug 'VundleVim/Vundle.vim'
 Plug 'Shougo/vimproc.vim'
 
-" vim-surround
 Plug 'tpope/vim-surround'
-" NERDTree & Git
+Plug 'tpope/vim-unimpaired'
+
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
-" Ctrl-P
 Plug 'ctrlpvim/ctrlp.vim'
-" MatchTagAlways
+
 Plug 'valloric/MatchTagAlways'
-" auto formatter
 Plug 'Chiel92/vim-autoformat'
-" editorconfig
 Plug 'editorconfig/editorconfig-vim'
 
-" syntastic
 Plug 'scrooloose/syntastic'
-" emmet
 Plug 'mattn/emmet-vim'
 
-" React syntax
 Plug 'mgechev/vim-jsx'
-" coffeescript syntax
-Plug 'kchmck/vim-coffee-script'
-" TypeScript
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
 
-" Goyo for distraction free coding
 Plug 'junegunn/goyo.vim'
-" limelight for better Goyo experience
 Plug 'junegunn/limelight.vim'
-" base16 colors
 Plug 'chriskempson/base16-vim'
-" airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
