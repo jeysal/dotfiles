@@ -20,6 +20,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/syntastic'
 Plug 'mattn/emmet-vim'
 
+Plug 'jelera/vim-javascript-syntax'
 Plug 'mgechev/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
