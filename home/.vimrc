@@ -21,7 +21,9 @@ Plug 'scrooloose/syntastic'
 Plug 'mattn/emmet-vim'
 
 Plug 'jelera/vim-javascript-syntax'
+Plug 'flowtype/vim-flow'
 Plug 'mgechev/vim-jsx'
+
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
 
@@ -153,7 +155,7 @@ let g:user_emmet_install_global = 0
 let NERDTreeShowHidden=1
 
 let g:syntastic_typescript_checkers = ['tslint']
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['eslint', 'flow']
 
 " To spell check all git commit messages
 au BufNewFile,BufRead COMMIT_EDITMSG set spell
