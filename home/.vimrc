@@ -157,6 +157,8 @@ let NERDTreeShowHidden=1
 let g:syntastic_typescript_checkers = ['tslint']
 let g:syntastic_javascript_checkers = ['eslint', 'flow']
 
+let g:ctrlp_show_hidden = 1
+
 " To spell check all git commit messages
 au BufNewFile,BufRead COMMIT_EDITMSG set spell
 
