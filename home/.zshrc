@@ -27,7 +27,7 @@ alias less='less -r'
 # Functions
 mkcd() { mkdir $1 && cd $1 }
 
-watchdir() { while true; do eval $@ && inotifywait -r . @.git; done }
+watchdir() { while true; do clear && eval $@ && inotifywait -r . @.git >/dev/null; done }
 
 # "Better version" aliases
 which vim >& /dev/null && alias vi='vim'
