@@ -5,7 +5,7 @@ bindkey -v
 # Prompt & tmux
 
 PROMPTFILE=/usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
-echo $TERM | egrep "(screen|xterm).*" >/dev/null && TERM=xterm-256color && [[ -f $PROMPTFILE ]] && source $PROMPTFILE && source ~/.promptcfg && [[ -z "$TMUX" ]] && exec tmux
+echo $TERM | egrep "(screen|xterm).*" >/dev/null && TERM=xterm-256color && [[ -f $PROMPTFILE ]] && source $PROMPTFILE && source ~/.promptcfg
 
 # Aliases
 
