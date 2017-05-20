@@ -18,6 +18,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'editorconfig/editorconfig-vim'
 
 Plug 'scrooloose/syntastic'
+Plug 'ruanyl/vim-fixmyjs'
 Plug 'mattn/emmet-vim'
 
 Plug 'jelera/vim-javascript-syntax'
@@ -164,6 +165,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_typescript_checkers = ['tslint']
 let g:syntastic_javascript_checkers = ['eslint', 'flow']
 
+" fixmyjs
+let g:fixmyjs_use_local = 1
+
 let g:ctrlp_show_hidden = 1
 
 " To spell check all git commit messages
@@ -183,10 +187,9 @@ let g:user_emmet_settings = {
             \  }
             \}
 
-" Change the var declaration from multiline to single line
-noremap <leader>v $r;^hhrrhrahrv
 " Autoformat
-noremap <C-l> :Autoformat<CR>
+noremap <C-l> :Autoformat<CR> :Fixmyjs<CR>
+inoremap <C-l> :Autoformat<CR> :Fixmyjs<CR>
 " Recents
 noremap <C-e> :CtrlPBuffer<CR>
 inoremap <C-e> <C-c>:CtrlPBuffer<CR>
