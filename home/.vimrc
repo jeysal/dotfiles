@@ -33,6 +33,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
 call plug#end()
 
 inoremap <expr><tab> pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -133,24 +134,35 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.es6 setfiletype javascript syntax=javascript
     autocmd BufNewFile,BufRead *.es7 setfiletype javascript syntax=javascript
     autocmd BufNewFile,BufRead *.tsx setfiletype typescript syntax=typescript
-    " Set appropriate linters
     " Treat .md files as .markdown
     autocmd BufNewFile,BufRead *.md set syntax=markdown
+
     " Start NERDTree automatically
     autocmd VimEnter * NERDTree
     " Take focus away from NERDTree
     autocmd VimEnter * wincmd p
+    " quit NERDtree automatically
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
     " Enable emmet for JavaScript and CSS files
     autocmd FileType html,css EmmetInstall
+
     " use Flow for definitions in javascript files
     autocmd FileType javascript map <buffer> gd :FlowJumpToDef<CR>
+    autocmd FileType javascript noremap <buffer> <C-l> :Autoformat<CR> :Fixmyjs<CR>
+    autocmd FileType javascript inoremap <buffer> <C-l> :Autoformat<CR> :Fixmyjs<CR>
+
     " use Tsu for definitions in typescript files & more
     autocmd FileType typescript map <buffer> gd :TsuDefinition<CR>
     autocmd FileType typescript map <buffer> <leader>r :TsuRenameSymbol<CR>
+    " set fixmyjs to ts
+    autocmd BufEnter *.ts let g:fixmyjs_engine = 'eslint'
+    autocmd BufEnter *.ts let g:fixmyjs_engine = 'tslint'
+    autocmd FileType typescript noremap <buffer> <C-l> :Autoformat<CR> :Fixmyjs<CR>
+    autocmd FileType typescript inoremap <buffer> <C-l> :Autoformat<CR> :Fixmyjs<CR>
+
     " Indentation for CSS files
     autocmd BufNewFile,BufRead *.css,*.py call SetIndent(4)
-    " quit NERDtree automatically
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 endif
 " monokai theme
 let base16colorspace=256
@@ -202,8 +214,8 @@ xmap < ]
 map [h [c
 map ]h ]c
 " Autoformat
-noremap <C-l> :Autoformat<CR> :Fixmyjs<CR>
-inoremap <C-l> :Autoformat<CR> :Fixmyjs<CR>
+noremap <C-l> :Autoformat<CR>
+inoremap <C-l> :Autoformat<CR>
 " Recents
 noremap <C-e> :CtrlPBuffer<CR>
 inoremap <C-e> <C-c>:CtrlPBuffer<CR>
