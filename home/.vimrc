@@ -186,6 +186,7 @@ noremap <leader>v $r;^hhrrhrahrv
 noremap <C-l> :Autoformat<CR>
 " Recents
 noremap <C-e> :CtrlPBuffer<CR>
+inoremap <C-e> <C-c>:CtrlPBuffer<CR>
 " Ctrl+Space omnicomplete
 inoremap <C-@> <C-x><C-o>
 
