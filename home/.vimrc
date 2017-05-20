@@ -144,8 +144,9 @@ if has("autocmd")
     autocmd FileType html,css EmmetInstall
     " use Flow for definitions in javascript files
     autocmd FileType javascript map <buffer> gd :FlowJumpToDef<CR>
-    " use Tsu for definitions in typescript files
+    " use Tsu for definitions in typescript files & more
     autocmd FileType typescript map <buffer> gd :TsuDefinition<CR>
+    autocmd FileType typescript map <buffer> <leader>r :TsuRenameSymbol<CR>
     " Indentation for CSS files
     autocmd BufNewFile,BufRead *.css,*.py call SetIndent(4)
     " quit NERDtree automatically
