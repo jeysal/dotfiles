@@ -158,6 +158,7 @@ let g:user_emmet_install_global = 0
 " Show hidden files in NERDTree
 let NERDTreeShowHidden=1
 
+let g:syntastic_aggregate_errors = 1
 let g:syntastic_typescript_checkers = ['tslint']
 let g:syntastic_javascript_checkers = ['eslint', 'flow']
 
