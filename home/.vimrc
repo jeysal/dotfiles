@@ -66,9 +66,9 @@ set undofile
 set undodir=~/.vim/undo
 " Set spaces indentation
 function SetIndent(n)
-  let &tabstop=a:n
-  let &shiftwidth=a:n
-  let &softtabstop=a:n
+    let &tabstop=a:n
+    let &shiftwidth=a:n
+    let &softtabstop=a:n
 endfunction
 " Respect modeline in files
 set modeline
@@ -110,39 +110,41 @@ set hidden
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
-  let save_cursor = getpos(".")
-  let old_query = getreg('/')
-  :%s/\s\+$//e
-  call setpos('.', save_cursor)
-  call setreg('/', old_query)
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    :%s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
 endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 " Automatic commands
 if has("autocmd")
-  " Enable filetype plugin
-  " filetype plugin on
-  " Enable file type detection
-  filetype on
-  " Treat .json files as .js
-  autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-  autocmd BufNewFile,BufRead *.es6 setfiletype javascript syntax=javascript
-  autocmd BufNewFile,BufRead *.es7 setfiletype javascript syntax=javascript
-  autocmd BufNewFile,BufRead *.tsx setfiletype typescript syntax=typescript
-  " Set appropriate linters
-  " Treat .md files as .markdown
-  autocmd BufNewFile,BufRead *.md set syntax=markdown
-  " Start NERDTree automatically
-  autocmd VimEnter * NERDTree
-  " Take focus away from NERDTree
-  autocmd VimEnter * wincmd p
-  " Enable emmet for JavaScript and CSS files
-  autocmd FileType html,css EmmetInstall
-  " Indentation for CSS files
-  autocmd BufNewFile,BufRead *.css,*.py call SetIndent(4)
-  " quit NERDtree automatically
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+    " Enable filetype plugin
+    " filetype plugin on
+    " Enable file type detection
+    filetype on
+    " Treat .json files as .js
+    autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+    autocmd BufNewFile,BufRead *.es6 setfiletype javascript syntax=javascript
+    autocmd BufNewFile,BufRead *.es7 setfiletype javascript syntax=javascript
+    autocmd BufNewFile,BufRead *.tsx setfiletype typescript syntax=typescript
+    " Set appropriate linters
+    " Treat .md files as .markdown
+    autocmd BufNewFile,BufRead *.md set syntax=markdown
+    " Start NERDTree automatically
+    autocmd VimEnter * NERDTree
+    " Take focus away from NERDTree
+    autocmd VimEnter * wincmd p
+    " Enable emmet for JavaScript and CSS files
+    autocmd FileType html,css EmmetInstall
+    " use Flow for definitions in javascript files
+    autocmd FileType javascript map <buffer> gd :FlowJumpToDef<CR>
+    " Indentation for CSS files
+    autocmd BufNewFile,BufRead *.css,*.py call SetIndent(4)
+    " quit NERDtree automatically
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 endif
 " monokai theme
 let base16colorspace=256
@@ -163,18 +165,18 @@ let g:ctrlp_show_hidden = 1
 au BufNewFile,BufRead COMMIT_EDITMSG set spell
 
 if &term =~ '256color'
-  " disable Background Color Erase (BCE) so that color schemes
-  " render properly when inside 256-color tmux and GNU screen.
-  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
-  set t_ut=
+    " disable Background Color Erase (BCE) so that color schemes
+    " render properly when inside 256-color tmux and GNU screen.
+    " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+    set t_ut=
 endif
 
 " Emmet uses spaces instead of tabs
 let g:user_emmet_settings = {
-      \  'html' : {
-      \    'indentation' : '  '
-      \  }
-      \}
+            \  'html' : {
+            \    'indentation' : '  '
+            \  }
+            \}
 
 " Change the var declaration from multiline to single line
 noremap <leader>v $r;^hhrrhrahrv
