@@ -119,6 +119,8 @@ endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
+" find in NERDTree
+noremap <leader>f :NERDTreeFind<CR>
 " Automatic commands
 if has("autocmd")
     " Enable filetype plugin
