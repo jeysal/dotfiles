@@ -17,7 +17,8 @@ Plug 'valloric/MatchTagAlways'
 Plug 'Chiel92/vim-autoformat'
 Plug 'editorconfig/editorconfig-vim'
 
-Plug 'scrooloose/syntastic'
+Plug 'neomake/neomake'
+Plug 'benjie/neomake-local-eslint.vim'
 Plug 'ruanyl/vim-fixmyjs'
 Plug 'mattn/emmet-vim'
 
@@ -144,8 +145,13 @@ if has("autocmd")
     " quit NERDtree automatically
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+    " Indentation for CSS files
+    autocmd BufNewFile,BufRead *.css,*.py call SetIndent(4)
     " Enable emmet for JavaScript and CSS files
     autocmd FileType html,css EmmetInstall
+
+    " lint automatically
+    autocmd BufWritePost,BufEnter * Neomake
 
     " use Flow for definitions in javascript files
     autocmd FileType javascript map <buffer> gd :FlowJumpToDef<CR>
@@ -160,9 +166,6 @@ if has("autocmd")
     autocmd BufEnter *.ts let g:fixmyjs_engine = 'tslint'
     autocmd FileType typescript noremap <buffer> <C-l> :Autoformat<CR> :Fixmyjs<CR>
     autocmd FileType typescript inoremap <buffer> <C-l> :Autoformat<CR> :Fixmyjs<CR>
-
-    " Indentation for CSS files
-    autocmd BufNewFile,BufRead *.css,*.py call SetIndent(4)
 endif
 " monokai theme
 let base16colorspace=256
@@ -174,11 +177,8 @@ let g:user_emmet_install_global = 0
 " Show hidden files in NERDTree
 let NERDTreeShowHidden=1
 
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_always_populate_loc_list = 1
-
-let g:syntastic_typescript_checkers = ['tslint']
-let g:syntastic_javascript_checkers = ['eslint', 'flow']
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_typescript_enabled_makers = ['tsc', 'tslint']
 
 " fixmyjs
 let g:fixmyjs_use_local = 1
