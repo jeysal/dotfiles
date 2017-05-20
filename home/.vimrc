@@ -186,6 +186,15 @@ let g:user_emmet_settings = {
             \    'indentation' : '  '
             \  }
             \}
+
+" german keyboard layout ...
+nmap > [
+nmap < ]
+omap > [
+omap < ]
+xmap > [
+xmap < ]
+
 " gitgutter
 map [h [c
 map ]h ]c
