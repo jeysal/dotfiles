@@ -186,7 +186,9 @@ let g:user_emmet_settings = {
             \    'indentation' : '  '
             \  }
             \}
-
+" gitgutter
+map [h [c
+map ]h ]c
 " Autoformat
 noremap <C-l> :Autoformat<CR> :Fixmyjs<CR>
 inoremap <C-l> :Autoformat<CR> :Fixmyjs<CR>
