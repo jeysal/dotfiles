@@ -159,8 +159,9 @@ if has("autocmd")
 
     " use Flow for definitions in javascript files
     autocmd FileType javascript map <buffer> gd :FlowJumpToDef<CR>
-    autocmd FileType javascript noremap <buffer> <leader>l :Neoformat<CR> :Fixmyjs<CR>
-    autocmd FileType javascript inoremap <buffer> <leader>l :Neoformat<CR> :Fixmyjs<CR>
+    autocmd FileType javascript noremap <buffer> <leader>l :Fixmyjs<CR>
+    autocmd FileType javascript noremap <buffer> <C-l> :Neoformat<CR>
+    autocmd FileType javascript inoremap <buffer> <C-l> <C-c>:Neoformat<CR>
 
     " use Tsu for definitions in typescript files & more
     autocmd FileType typescript map <buffer> gd :TsuDefinition<CR>
@@ -171,8 +172,9 @@ if has("autocmd")
     autocmd BufEnter *.ts let g:fixmyjs_engine = 'tslint'
     autocmd BufEnter *.ts let g:fixmyjs_rc_filename = 'tslint.json'
     autocmd BufEnter * let g:fixmyjs_executable = g:fixmyjs_engine
-    autocmd FileType typescript noremap <buffer> <leader>l :Neoformat<CR> :Fixmyjs<CR>
-    autocmd FileType typescript inoremap <buffer> <leader>l :Neoformat<CR> :Fixmyjs<CR>
+    autocmd FileType typescript noremap <buffer> <leader>l :Fixmyjs<CR>
+    autocmd FileType typescript noremap <buffer> <C-l> :Neoformat<CR>
+    autocmd FileType typescript inoremap <buffer> <C-l> <C-c>:Neoformat<CR>
 endif
 " monokai theme
 let base16colorspace=256
