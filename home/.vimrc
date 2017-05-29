@@ -62,8 +62,8 @@ set ttyfast
 set smartindent
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
-" Change mapleader
-let mapleader=","
+" Change leader
+map <space> <leader>
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
