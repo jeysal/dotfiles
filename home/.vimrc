@@ -17,6 +17,7 @@ Plug 'valloric/MatchTagAlways'
 Plug 'Chiel92/vim-autoformat'
 Plug 'editorconfig/editorconfig-vim'
 
+Plug 'sbdchd/neoformat'
 Plug 'neomake/neomake'
 Plug 'benjie/neomake-local-eslint.vim'
 Plug 'ruanyl/vim-fixmyjs'
@@ -155,17 +156,20 @@ if has("autocmd")
 
     " use Flow for definitions in javascript files
     autocmd FileType javascript map <buffer> gd :FlowJumpToDef<CR>
-    autocmd FileType javascript noremap <buffer> <leader>l :Autoformat<CR> :Fixmyjs<CR>
-    autocmd FileType javascript inoremap <buffer> <leader>l :Autoformat<CR> :Fixmyjs<CR>
+    autocmd FileType javascript noremap <buffer> <leader>l :Neoformat<CR> :Fixmyjs<CR>
+    autocmd FileType javascript inoremap <buffer> <leader>l :Neoformat<CR> :Fixmyjs<CR>
 
     " use Tsu for definitions in typescript files & more
     autocmd FileType typescript map <buffer> gd :TsuDefinition<CR>
     autocmd FileType typescript map <buffer> <leader>r :TsuRenameSymbol<CR>
     " set fixmyjs to ts
-    autocmd BufEnter *.ts let g:fixmyjs_engine = 'eslint'
+    autocmd BufEnter * let g:fixmyjs_engine = 'eslint'
+    autocmd BufEnter * let g:fixmyjs_rc_filename = '.eslintrc'
     autocmd BufEnter *.ts let g:fixmyjs_engine = 'tslint'
-    autocmd FileType typescript noremap <buffer> <leader>l :Autoformat<CR> :Fixmyjs<CR>
-    autocmd FileType typescript inoremap <buffer> <leader>l :Autoformat<CR> :Fixmyjs<CR>
+    autocmd BufEnter *.ts let g:fixmyjs_rc_filename = 'tslint.json'
+    autocmd BufEnter * let g:fixmyjs_executable = g:fixmyjs_engine
+    autocmd FileType typescript noremap <buffer> <leader>l :Neoformat<CR> :Fixmyjs<CR>
+    autocmd FileType typescript inoremap <buffer> <leader>l :Neoformat<CR> :Fixmyjs<CR>
 endif
 " monokai theme
 let base16colorspace=256
