@@ -10,6 +10,7 @@ Plug 'tpope/vim-unimpaired'
 
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -120,11 +121,12 @@ function! StripWhitespace()
     call setpos('.', save_cursor)
     call setreg('/', old_query)
 endfunction
-noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 " find in NERDTree
-noremap <leader>f :NERDTreeFind<CR>
+noremap <leader>t :NERDTreeFind<CR>
+" find using Ggrep
+noremap <leader>f :Ggrep<space>
 " Automatic commands
 if has("autocmd")
     " Enable filetype plugin
