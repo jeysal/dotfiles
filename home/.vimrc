@@ -12,7 +12,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 Plug 'valloric/MatchTagAlways'
 Plug 'Chiel92/vim-autoformat'
@@ -178,8 +179,6 @@ let base16colorspace=256
 colorscheme base16-monokai
 " Emmet
 let g:user_emmet_install_global = 0
-" Toggle NERDTree
-" nnoremap <C-e> :NERDTreeToggle<CR>
 " Show hidden files in NERDTree
 let NERDTreeShowHidden=1
 
@@ -223,8 +222,14 @@ map ]h ]c
 noremap <C-l> :Autoformat<CR>
 inoremap <C-l> :Autoformat<CR>
 " Recents
-noremap <C-e> :CtrlPBuffer<CR>
-inoremap <C-e> <C-c>:CtrlPBuffer<CR>
+noremap <C-p> :GFiles<CR>
+inoremap <C-p> <C-c>:GFiles<CR>
+noremap <leader>p :Files<CR>
+inoremap <leader>p <C-c>:Files<CR>
+noremap <C-n> :Ag<CR>
+inoremap <C-n> <C-c>:Ag<CR>
+noremap <C-e> :History<CR>
+inoremap <C-e> <C-c>:History<CR>
 " Ctrl+Space omnicomplete
 inoremap <C-@> <C-x><C-o>
 
