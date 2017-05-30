@@ -161,7 +161,6 @@ if has("autocmd")
     autocmd FileType javascript map <buffer> gd :FlowJumpToDef<CR>
     autocmd FileType javascript noremap <buffer> <leader>l :Fixmyjs<CR>
     autocmd FileType javascript noremap <buffer> <C-l> :Neoformat<CR>
-    autocmd FileType javascript inoremap <buffer> <C-l> <C-c>:Neoformat<CR>
 
     " use Tsu for definitions in typescript files & more
     autocmd FileType typescript map <buffer> gd :TsuDefinition<CR>
@@ -174,7 +173,6 @@ if has("autocmd")
     autocmd BufEnter * let g:fixmyjs_executable = g:fixmyjs_engine
     autocmd FileType typescript noremap <buffer> <leader>l :Fixmyjs<CR>
     autocmd FileType typescript noremap <buffer> <C-l> :Neoformat<CR>
-    autocmd FileType typescript inoremap <buffer> <C-l> <C-c>:Neoformat<CR>
 endif
 " monokai theme
 let base16colorspace=256
@@ -222,7 +220,6 @@ map [h [c
 map ]h ]c
 " Autoformat
 noremap <C-l> :Autoformat<CR>
-inoremap <C-l> :Autoformat<CR>
 " Recents
 noremap <C-p> :GFiles<CR>
 inoremap <C-p> <C-c>:GFiles<CR>
