@@ -228,8 +228,8 @@ noremap <C-p> :GFiles<CR>
 inoremap <C-p> <C-c>:GFiles<CR>
 noremap <leader>p :Files<CR>
 inoremap <leader>p <C-c>:Files<CR>
-noremap <C-n> :Ag<CR>
-inoremap <C-n> <C-c>:Ag<CR>
+noremap <C-s> :Ag<CR>
+inoremap <C-s> <C-c>:Ag<CR>
 noremap <C-e> :History<CR>
 inoremap <C-e> <C-c>:History<CR>
 " Ctrl+Space omnicomplete
