@@ -190,6 +190,12 @@ let g:fixmyjs_use_local = 1
 
 let g:ctrlp_show_hidden = 1
 
+" Neoformat
+let g:neoformat_javascript_prettier = {
+            \ 'exe': 'prettier',
+            \ 'args': ['--single-quote', '--trailing-comma', 'all'],
+            \ }
+
 " To spell check all git commit messages
 au BufNewFile,BufRead COMMIT_EDITMSG set spell
 
