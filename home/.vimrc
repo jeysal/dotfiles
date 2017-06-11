@@ -28,6 +28,7 @@ Plug 'mattn/emmet-vim'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'flowtype/vim-flow'
 Plug 'mgechev/vim-jsx'
+Plug 'heavenshell/vim-jsdoc'
 
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
@@ -160,6 +161,9 @@ if has("autocmd")
 
     " lint automatically
     autocmd BufWritePost,BufEnter * Neomake
+
+    " jsdoc
+    autocmd FileType javascript,typescript map <leader>d :JsDoc<CR>
 
     " use Flow for definitions in javascript files
     autocmd FileType javascript map <buffer> gd :FlowJumpToDef<CR>
