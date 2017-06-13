@@ -148,7 +148,7 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.md set syntax=markdown
 
     " Start NERDTree automatically
-    autocmd VimEnter * if &filetype !=# 'gitcommit' | NERDTree | endif
+    autocmd VimEnter * if @% == "" | NERDTree | endif
     " Take focus away from NERDTree
     autocmd VimEnter * wincmd p
     " quit NERDtree automatically
