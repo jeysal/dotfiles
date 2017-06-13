@@ -167,11 +167,15 @@ if has("autocmd")
 
     " use Flow for definitions in javascript files
     autocmd FileType javascript map <buffer> gd :FlowJumpToDef<CR>
+    autocmd FileType javascript map <buffer> <leader>i :FlowType<CR>
+
     autocmd FileType javascript noremap <buffer> <leader>l :Fixmyjs<CR>
     autocmd FileType javascript noremap <buffer> <C-l> :Neoformat<CR>
 
     " use Tsu for definitions in typescript files & more
     autocmd FileType typescript map <buffer> gd :TsuDefinition<CR>
+    autocmd FileType typescript map <buffer> <leader>i :echo tsuquyomi#hint()<CR>
+
     autocmd FileType typescript map <buffer> <leader>r :TsuRenameSymbol<CR>
     " set fixmyjs to ts
     autocmd BufEnter * let g:fixmyjs_engine = 'eslint'
@@ -182,6 +186,13 @@ if has("autocmd")
     autocmd FileType typescript noremap <buffer> <leader>l :Fixmyjs<CR>
     autocmd FileType typescript noremap <buffer> <C-l> :Neoformat<CR>
 endif
+
+" autoclose flow window
+let g:flow#autoclose = 1
+
+" no Tsu default mappings
+let g:tsuquyomi_disable_default_mappings = 1
+
 " monokai theme
 let base16colorspace=256
 colorscheme base16-monokai
