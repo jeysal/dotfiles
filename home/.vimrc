@@ -114,6 +114,8 @@ set showcmd
 set scrolloff=3
 " Keep buffers in background
 set hidden
+" auto read changed files
+set autoread
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
