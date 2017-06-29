@@ -2,37 +2,49 @@ execute pathogen#infect()
 " set the runtime path to include Vundle and initialize
 call plug#begin('~/.vim/plugged')
 
+" plugins
 Plug 'VundleVim/Vundle.vim'
 Plug 'Shougo/vimproc.vim'
 
+" editing / navigation
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
+" files
 Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-Plug 'valloric/MatchTagAlways'
+" git
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+" formatting
 Plug 'Chiel92/vim-autoformat'
 Plug 'editorconfig/editorconfig-vim'
 
+" format & lint
 Plug 'sbdchd/neoformat'
 Plug 'neomake/neomake'
 Plug 'benjie/neomake-local-eslint.vim'
 Plug 'ruanyl/vim-fixmyjs'
-Plug 'mattn/emmet-vim'
 
+" web
+Plug 'mattn/emmet-vim'
+Plug 'valloric/MatchTagAlways'
+
+" js
 Plug 'jelera/vim-javascript-syntax'
 Plug 'flowtype/vim-flow'
 Plug 'mgechev/vim-jsx'
 Plug 'heavenshell/vim-jsdoc'
 
+" ts
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
 
+" fancy
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'chriskempson/base16-vim'
