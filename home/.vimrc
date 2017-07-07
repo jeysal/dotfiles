@@ -214,7 +214,8 @@ colorscheme base16-monokai
 " Emmet
 let g:user_emmet_install_global = 0
 " Show hidden files in NERDTree
-let NERDTreeShowHidden=1
+let g:NERDTreeShowHidden=1
+let g:NERDTreeWinSize=50
 
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_typescript_enabled_makers = ['tsc', 'tslint']
