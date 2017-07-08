@@ -182,14 +182,14 @@ if has("autocmd")
 
     " use Flow for definitions in javascript files
     autocmd FileType javascript map <buffer> gd :FlowJumpToDef<CR>
-    autocmd FileType javascript map <buffer> <leader>t :FlowType<CR>
+    autocmd FileType javascript map <buffer> <leader>q :FlowType<CR>
 
     autocmd FileType javascript noremap <buffer> <leader>l :Fixmyjs<CR>
     autocmd FileType javascript noremap <buffer> <C-l> :Neoformat<CR>
 
     " use Tsu for definitions in typescript files & more
     autocmd FileType typescript map <buffer> gd :TsuDefinition<CR>
-    autocmd FileType typescript map <buffer> <leader>t :echo tsuquyomi#hint()<CR>
+    autocmd FileType typescript map <buffer> <leader>q :echo tsuquyomi#hint()<CR>
 
     autocmd FileType typescript map <buffer> <leader>r :TsuRenameSymbol<CR>
     autocmd FileType typescript map <buffer> <leader>i :TsuImport<CR>
