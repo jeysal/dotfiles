@@ -1,0 +1,13 @@
+[Unit]
+Description=gdfs mount
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 15
+ExecStart=/usr/bin/gdfs %h/.gdfs_auth %h/gdrive
+RemainAfterExit=true
+ExecStop=/usr/bin/fusermount -u %h/gdrive
+
+[Install]
+WantedBy=default.target
