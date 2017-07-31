@@ -193,6 +193,7 @@ if has("autocmd")
 
     autocmd FileType typescript map <buffer> <leader>r :TsuRenameSymbol<CR>
     autocmd FileType typescript map <buffer> <leader>i :TsuImport<CR>
+    autocmd FileType typescript map <buffer> <leader><CR> :TsuQuickFix<CR>
     " set fixmyjs to ts
     autocmd BufEnter * let g:fixmyjs_engine = 'eslint'
     autocmd BufEnter * let g:fixmyjs_rc_filename = '.eslintrc'
