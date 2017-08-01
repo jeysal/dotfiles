@@ -10,6 +10,7 @@ Plug 'Shougo/vimproc.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'machakann/vim-swap'
+Plug 'jiangmiao/auto-pairs'
 
 " files
 Plug 'scrooloose/nerdtree'
