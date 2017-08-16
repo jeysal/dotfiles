@@ -1,3 +1,5 @@
+# font
+rofi.font: Roboto Bold 16
 # color theme
 rofi.color-enabled: true
 rofi.color-window: #393939, #393939, #268bd2
