@@ -185,4 +185,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # yabar
-exec --no-startup-id yabar
+#exec --no-startup-id yabar
+
+# polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
