@@ -25,7 +25,7 @@ margin-bottom = 0
 enable-ipc = true
 monitor = ${env:POLYBAR_MONITOR:eDP1}
 width = 100%
-height = 32
+height = 24
 ;radius = 5.0
 ;fixed-center = false
 ;override-redirect = true
@@ -52,19 +52,17 @@ overline-size = 2
 border-bottom-size = 2
 border-bottom-color = ${colors.bordercolor}
 
-padding-left = 0
+padding-left = 1
 padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Hack:pixelsize=14;1
-font-1 = FontAwesome:pixelsize=14;1
-font-2 = Wuncon Siji:pixelsize=14;1
+font-0 = Hack:pixelsize=12;4
+font-1 = FontAwesome:size=14;4
 
-modules-left = power-menu bspwm i3
+modules-left = power-menu i3 xwindow
 ;modules-center = mpd
-modules-center = xwindow
-modules-right = xbacklight volume wifi battery memory cpu date
+modules-right = cpu memory volume xbacklight battery wifi date
 
 tray-position = right
 tray-padding = 4
@@ -80,10 +78,10 @@ wm-restack = i3
 ;click-left =
 ;click-middle =
 ;click-right =
-scroll-up = bspwm-deskprev
-scroll-down = bspwm-desknext
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+;scroll-up = bspwm-deskprev
+;scroll-down = bspwm-desknext
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
 ;double-click-left = notify-send -u low doubleclick
 ;double-click-right = notify-send -u low doubleclick2
 
@@ -207,8 +205,7 @@ type = internal/i3
 index-sort = true
 pin-workspaces = false
 wrapping-scroll = true
-;reverse-scroll = false
-;enable-scroll = false
+reverse-scroll = false
 
 format = <label-state> <label-mode>
 
@@ -236,28 +233,29 @@ label-visible-padding = ${module/bspwm.label-empty-padding}
 [module/cpu]
 type = internal/cpu
 interval = 0.5
-label = %percentage:2%%
-format-prefix = " "
-format-prefix-foreground = #666
+label = %percentage:3%%
+format-prefix = ""
+format-prefix-foreground = #02A
 
 [module/memory]
 type = internal/memory
 interval = 0.5
-label = %percentage_used:2%%
-format-prefix = " "
-format-prefix-foreground = #666
+label = %percentage_used:3%%
+format-prefix = ""
+format-prefix-foreground = #2A0
 
 [module/wifi]
 type = internal/network
 interface = wlp3s0
-interval = 3.0
+interval = 0.5
 ;udspeed-minwidth = 0
 
-format-connected = <ramp-signal> <label-connected>
-format-connected-prefix = " "
-format-connected-prefix-foreground = #666
+format-connected = <label-connected>
+format-connected-prefix = " "
+format-connected-prefix-foreground = #970
 format-connected-prefix-offset = -6
 label-connected = %downspeed:8%
+label-connected-foreground = ${root.foreground}
 
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-prefix = " "
@@ -265,89 +263,103 @@ label-connected = %downspeed:8%
 ;label-disconnected = not connected
 ;label-disconnected-foreground = #999
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = #666
+;ramp-signal-0 = 
+;ramp-signal-1 = 
+;ramp-signal-2 = 
+;ramp-signal-3 = 
+;ramp-signal-4 = 
+;ramp-signal-foreground = #666
 
 [module/date]
 type = internal/date
-label = %{F#666}%{F-} %date%  %{F#e60053}%{F-} %time%
-date = %Y-%m-%d
-time = %H:%M
-interval = 5
+;label = %{F#666}%{F-} %date%  %{F#e60053}%{F-} %time%
+date = %%{F#99} %Y-%m-%d%%{F#fff}   %H:%M:%S%%{F-}
+interval = 1
 
 [module/xbacklight]
 type = internal/xbacklight
-format = <ramp> <label>
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = #666
+format = <label>
+label = %percentage:3%%
 label-foreground = ${root.foreground}
+format-prefix = 
+format-prefix-foreground = #80A
 
 [module/volume]
 type = internal/volume
-speaker-mixer = Speaker
-headphone-mixer = Headphone
-headphone-id = 9
+;speaker-mixer = Speaker
+;headphone-mixer = Headphone
+;headphone-id = 9
 
-format-volume = <ramp-volume> <label-volume>
-label-volume = %percentage%%
+format-volume = <ramp-volume><label-volume>
+label-volume = %percentage:3%%
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
+format-muted-prefix = ""
 format-muted-foreground = #777
-label-muted = sound muted
+label-muted = " mute"
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
-ramp-volume-foreground = #666
+ramp-volume-0-foreground = #902
+ramp-volume-1-foreground = #B13
+ramp-volume-2-foreground = #D24
+ramp-volume-3-foreground = #F35
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
 
-ramp-headphones-0 = 
-ramp-headphones-1 = 
-ramp-headphones-foreground = #666
+;ramp-headphones-0 = 
+;ramp-headphones-1 = 
+;ramp-headphones-foreground = #666
 
 [module/battery]
 type = internal/battery
-full-at = 90
-time-format = %H:%M
+full-at = 95
+
+label-charging-foreground = ${root.foreground}
+label-discharging-foreground = ${root.foreground}
+label-full-foreground = ${root.foreground}
 
 format-charging = <animation-charging> <label-charging>
-label-charging = %percentage%% %time%
-
 format-discharging = <ramp-capacity> <label-discharging>
-label-discharging = %percentage%% %time%
+format-full = <ramp-capacity> <label-full>
 
-format-full = <label-full>
-format-full-prefix = " "
-format-full-prefix-foreground = #666
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = #f53c3c
+ramp-capacity-1 = 
+ramp-capacity-1-foreground = #ffa900
+ramp-capacity-2 = 
+ramp-capacity-2-foreground = ${root.foreground}
+ramp-capacity-3 = 
+ramp-capacity-3-foreground = ${root.foreground}
+ramp-capacity-4 = 
+ramp-capacity-4-foreground = ${root.foreground}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = #666
+;bar-capacity-width = 10
+;bar-capacity-format = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
+;bar-capacity-fill = █
+;bar-capacity-fill-foreground = #ddffffff
+;bar-capacity-fill-font = 3
+;bar-capacity-empty = █
+;bar-capacity-empty-font = 3
+;bar-capacity-empty-foreground = #44ffffff
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = #666
-animation-charging-framerate = 750
+animation-charging-0 = 
+animation-charging-0-foreground = ${root.foreground}
+animation-charging-1 = 
+animation-charging-1-foreground = ${root.foreground}
+animation-charging-2 = 
+animation-charging-2-foreground = ${root.foreground}
+animation-charging-3 = 
+animation-charging-3-foreground = ${root.foreground}
+animation-charging-4 = 
+animation-charging-4-foreground = ${root.foreground}
+animation-charging-framerate = 500
 
-;[module/battery-multi]
-;type = custom/script
-;exec = "count=$(acpi -b | wc -l); sum=$(acpi -b | egrep -o '[0-9]{1,3}%' | tr -d '%' | xargs -I% echo -n '+%'); echo $(date +%s) Avg capacity: $(( sum / count ))%"
-;exec-if = pgrep -x watch
-;interval = 3
 [module/power-menu]
 type = custom/menu
 
-label-open = 
-label-close = 
+label-open = " "
+label-close = 
 label-separator = /
 label-separator-margin = 1
 
@@ -394,7 +406,7 @@ label-indicator-background = ${colors.accent}
 [module/xwindow]
 type = internal/xwindow
 format = <label>
-label-maxlen = 75
+label-maxlen = 56
 
 [module/counter]
 type = internal/counter
