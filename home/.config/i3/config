@@ -189,3 +189,6 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# compositor
+exec --no-startup-id compton -b
