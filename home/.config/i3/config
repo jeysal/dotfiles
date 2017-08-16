@@ -37,8 +37,8 @@ bindsym $mod+Shift+Return exec env NOTMUX=true termite
 bindsym $mod+Shift+q kill
 
 # launcher
-bindsym $mod+space exec "rofi -normal-mode -show window -modi window,drun"
-bindsym $mod+Shift+space exec "rofi -normal-mode -show drun -modi drun,run"
+bindsym $mod+space exec --no-startup-id "rofi -normal-mode -show window -modi window,drun"
+bindsym $mod+Shift+space exec --no-startup-id "rofi -normal-mode -show drun -modi drun,run"
 
 # file manager
 bindsym $mod+Shift+f exec nemo
