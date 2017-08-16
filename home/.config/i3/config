@@ -37,7 +37,8 @@ bindsym $mod+Shift+Return exec env NOTMUX=true termite
 bindsym $mod+Shift+q kill
 
 # launcher
-bindsym $mod+space exec "rofi -normal-mode -matching fuzzy -show drun -modi drun"
+bindsym $mod+space exec "rofi -normal-mode -matching fuzzy -show window -modi window,drun"
+bindsym $mod+Shift+space exec "rofi -normal-mode -matching fuzzy -show drun -modi drun,run"
 
 # file manager
 bindsym $mod+Shift+f exec nemo
@@ -84,7 +85,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+#bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 # bindsym $mod+space focus mode_toggle
