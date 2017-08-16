@@ -42,6 +42,9 @@ bindsym $mod+space exec "rofi -normal-mode -matching fuzzy -show drun -modi drun
 # file manager
 bindsym $mod+Shift+f exec nemo
 
+# browser
+bindsym $mod+c exec google-chrome-stable
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
