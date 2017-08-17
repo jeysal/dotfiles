@@ -1,8 +1,8 @@
 # try desktop
 xrandr --output HDMI-0 --left-of DVI-D-0
 # try notebook
-xrandr --output HDMI-1 --left-of eDP1
-xrandr --output VGA-1 --right-of eDP1
+xrandr --output HDMI1 --left-of eDP1
+xrandr --output VGA1 --right-of eDP1
 
 # keys
 setxkbmap -layout de -variant nodeadkeys
