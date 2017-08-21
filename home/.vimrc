@@ -87,9 +87,9 @@ set undofile
 set undodir=~/.vim/undo
 " Set spaces indentation
 function SetIndent(n)
-    let &tabstop=a:n
-    let &shiftwidth=a:n
-    let &softtabstop=a:n
+  let &tabstop=a:n
+  let &shiftwidth=a:n
+  let &softtabstop=a:n
 endfunction
 " Respect modeline in files
 set modeline
@@ -133,11 +133,11 @@ set autoread
 
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
-    let save_cursor = getpos(".")
-    let old_query = getreg('/')
-    :%s/\s\+$//e
-    call setpos('.', save_cursor)
-    call setreg('/', old_query)
+  let save_cursor = getpos(".")
+  let old_query = getreg('/')
+  :%s/\s\+$//e
+  call setpos('.', save_cursor)
+  call setreg('/', old_query)
 endfunction
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
@@ -147,62 +147,62 @@ noremap <leader>t :NERDTreeFind<CR>
 noremap <leader>f :Ggrep<space>
 " Automatic commands
 if has("autocmd")
-    " Enable filetype plugin
-    " filetype plugin on
-    " Enable file type detection
-    filetype on
+  " Enable filetype plugin
+  " filetype plugin on
+  " Enable file type detection
+  filetype on
 
-    " do not auto insert comments
-    autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+  " do not auto insert comments
+  autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-    " Treat .json files as .js
-    autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-    autocmd BufNewFile,BufRead *.es6 setfiletype javascript syntax=javascript
-    autocmd BufNewFile,BufRead *.es7 setfiletype javascript syntax=javascript
-    autocmd BufNewFile,BufRead *.tsx setfiletype typescript syntax=typescript
-    " Treat .md files as .markdown
-    autocmd BufNewFile,BufRead *.md set syntax=markdown
+  " Treat .json files as .js
+  autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+  autocmd BufNewFile,BufRead *.es6 setfiletype javascript syntax=javascript
+  autocmd BufNewFile,BufRead *.es7 setfiletype javascript syntax=javascript
+  autocmd BufNewFile,BufRead *.tsx setfiletype typescript syntax=typescript
+  " Treat .md files as .markdown
+  autocmd BufNewFile,BufRead *.md set syntax=markdown
 
-    " Start NERDTree automatically
-    autocmd VimEnter * if @% == "" | NERDTree | endif
-    " Take focus away from NERDTree
-    autocmd VimEnter * wincmd p
-    " quit NERDtree automatically
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+  " Start NERDTree automatically
+  autocmd VimEnter * if @% == "" | NERDTree | endif
+  " Take focus away from NERDTree
+  autocmd VimEnter * wincmd p
+  " quit NERDtree automatically
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-    " Indentation for CSS files
-    autocmd BufNewFile,BufRead *.css,*.py call SetIndent(4)
-    " Enable emmet for JavaScript and CSS files
-    autocmd FileType html,css EmmetInstall
+  " Indentation for CSS files
+  autocmd BufNewFile,BufRead *.css,*.py call SetIndent(4)
+  " Enable emmet for JavaScript and CSS files
+  autocmd FileType html,css EmmetInstall
 
-    " lint automatically
-    autocmd BufWritePost,BufEnter * Neomake
+  " lint automatically
+  autocmd BufWritePost,BufEnter * Neomake
 
-    " jsdoc
-    autocmd FileType javascript,typescript map <leader>d :JsDoc<CR>
+  " jsdoc
+  autocmd FileType javascript,typescript map <leader>d :JsDoc<CR>
 
-    " use Flow for definitions in javascript files
-    autocmd FileType javascript map <buffer> gd :FlowJumpToDef<CR>
-    autocmd FileType javascript map <buffer> <leader>q :FlowType<CR>
+  " use Flow for definitions in javascript files
+  autocmd FileType javascript map <buffer> gd :FlowJumpToDef<CR>
+  autocmd FileType javascript map <buffer> <leader>q :FlowType<CR>
 
-    autocmd FileType javascript noremap <buffer> <leader>l :Fixmyjs<CR>
-    autocmd FileType javascript noremap <buffer> <C-l> :Neoformat<CR>
+  autocmd FileType javascript noremap <buffer> <leader>l :Fixmyjs<CR>
+  autocmd FileType javascript noremap <buffer> <C-l> :Neoformat<CR>
 
-    " use Tsu for definitions in typescript files & more
-    autocmd FileType typescript map <buffer> gd :TsuDefinition<CR>
-    autocmd FileType typescript map <buffer> <leader>q :echo tsuquyomi#hint()<CR>
+  " use Tsu for definitions in typescript files & more
+  autocmd FileType typescript map <buffer> gd :TsuDefinition<CR>
+  autocmd FileType typescript map <buffer> <leader>q :echo tsuquyomi#hint()<CR>
 
-    autocmd FileType typescript map <buffer> <leader>r :TsuRenameSymbol<CR>
-    autocmd FileType typescript map <buffer> <leader>i :TsuImport<CR>
-    autocmd FileType typescript map <buffer> <leader><CR> :TsuQuickFix<CR>
-    " set fixmyjs to ts
-    autocmd BufEnter * let g:fixmyjs_engine = 'eslint'
-    autocmd BufEnter * let g:fixmyjs_rc_filename = '.eslintrc'
-    autocmd BufEnter *.ts let g:fixmyjs_engine = 'tslint'
-    autocmd BufEnter *.ts let g:fixmyjs_rc_filename = 'tslint.json'
-    autocmd BufEnter * let g:fixmyjs_executable = g:fixmyjs_engine
-    autocmd FileType typescript noremap <buffer> <leader>l :Fixmyjs<CR>
-    autocmd FileType typescript noremap <buffer> <C-l> :Neoformat<CR>
+  autocmd FileType typescript map <buffer> <leader>r :TsuRenameSymbol<CR>
+  autocmd FileType typescript map <buffer> <leader>i :TsuImport<CR>
+  autocmd FileType typescript map <buffer> <leader><CR> :TsuQuickFix<CR>
+  " set fixmyjs to ts
+  autocmd BufEnter * let g:fixmyjs_engine = 'eslint'
+  autocmd BufEnter * let g:fixmyjs_rc_filename = '.eslintrc'
+  autocmd BufEnter *.ts let g:fixmyjs_engine = 'tslint'
+  autocmd BufEnter *.ts let g:fixmyjs_rc_filename = 'tslint.json'
+  autocmd BufEnter * let g:fixmyjs_executable = g:fixmyjs_engine
+  autocmd FileType typescript noremap <buffer> <leader>l :Fixmyjs<CR>
+  autocmd FileType typescript noremap <buffer> <C-l> :Neoformat<CR>
 endif
 
 " autoclose flow window
@@ -235,31 +235,33 @@ let g:fixmyjs_use_local = 1
 let g:ctrlp_show_hidden = 1
 
 " Neoformat
+let g:neoformat_enabled_javascript = ['prettier']
 let g:neoformat_javascript_prettier = {
-            \ 'exe': 'prettier',
-            \ 'args': ['--single-quote', '--trailing-comma', 'all'],
-            \ }
+      \ 'exe': 'prettier',
+      \ 'args': ['--single-quote', '--trailing-comma', 'all'],
+      \ }
+let g:neoformat_enabled_typescript = ['prettier']
 let g:neoformat_typescript_prettier = {
-            \ 'exe': 'prettier',
-            \ 'args': ['--single-quote', '--trailing-comma', 'all', '--parser', 'typescript'],
-            \ }
+      \ 'exe': 'prettier',
+      \ 'args': ['--single-quote', '--trailing-comma', 'all', '--parser', 'typescript'],
+      \ }
 
 " To spell check all git commit messages
 au BufNewFile,BufRead COMMIT_EDITMSG set spell
 
 if &term =~ '256color'
-    " disable Background Color Erase (BCE) so that color schemes
-    " render properly when inside 256-color tmux and GNU screen.
-    " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
-    set t_ut=
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color tmux and GNU screen.
+  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
 endif
 
 " Emmet uses spaces instead of tabs
 let g:user_emmet_settings = {
-            \  'html' : {
-            \    'indentation' : '  '
-            \  }
-            \}
+      \  'html' : {
+      \    'indentation' : '  '
+      \  }
+      \}
 
 " german keyboard layout ...
 nmap > [
