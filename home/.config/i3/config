@@ -195,4 +195,4 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.zsh
 exec --no-startup-id compton -b
 
 # MEGAsync
-exec --no-startup-id megasync
+exec --no-startup-id sleep 10 && megasync
