@@ -1,5 +1,5 @@
 # try desktop
-xrandr --output HDMI-0 --left-of DVI-D-0
+xrandr --output HDMI-1 --left-of DVI-D-1
 # try notebook
 xrandr --output HDMI1 --left-of eDP1
 xrandr --output VGA1 --right-of eDP1
