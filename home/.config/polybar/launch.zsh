@@ -8,7 +8,7 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # detect monitor
 xrandrOutput=$(xrandr -q | grep " connected ")
-for monitor in DVI-D-1 HDMI-1 HDMI1 VGA-1 VGA1 eDP1; do
+for monitor in DVI-D-1 HDMI-1 HDMI1 VGA-1 VGA1 VGA-2 VGA2 eDP1; do
   echo $monitor;
   if echo "$xrandrOutput" | grep "$monitor"; then
     export POLYBAR_MONITOR=$monitor

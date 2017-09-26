@@ -3,6 +3,9 @@ xrandr --output HDMI-1 --left-of DVI-D-1
 # try notebook
 xrandr --output VGA1 --right-of HDMI1
 xrandr --output eDP1 --left-of HDMI1
+# try VM
+xrandr --output VGA-3 --auto --right-of VGA-1
+xrandr --output VGA-2 --auto --left-of VGA-1
 
 # keys
 setxkbmap -layout de -variant nodeadkeys
