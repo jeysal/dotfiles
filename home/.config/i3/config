@@ -199,3 +199,6 @@ exec --no-startup-id xfce4-clipman
 
 # MEGAsync
 exec --no-startup-id sleep 60 && megasync
+
+# gdfs (in case the service is not already enabled on login)
+exec systemctl --user start gdfs
