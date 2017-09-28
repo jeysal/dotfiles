@@ -26,28 +26,33 @@ z40=0000000000000000000000000000000000000000
 
 while read local_ref local_sha remote_ref remote_sha
 do
-	if [ "$local_sha" = $z40 ]
-	then
-		# Handle delete
-		:
-	else
-		if [ "$remote_sha" = $z40 ]
-		then
-			# New branch, examine all commits
-                        range="$local_sha"
-		else
-			# Update to existing branch, examine new commits
-			range="$remote_sha..$local_sha"
-		fi
+    if [ "$local_sha" = $z40 ]
+    then
+        # Handle delete
+        :
+    else
+        if [ "$remote_sha" = $z40 ]
+        then
+            # Try to find base and examine new commits
+            base=`git show-branch -a \
+                | grep -v \`git rev-parse --abbrev-ref HEAD\` \
+                | head -n1 \
+                | sed 's/.*\[\(.*\)\].*/\1/' \
+                | sed 's/[\^~].*//'`
+            range="$base..$local_sha"
+        else
+            # Update to existing branch, examine new commits
+            range="$remote_sha..$local_sha"
+        fi
 
-		# Check for unfinished commit
-		commit=`git rev-list --pretty=medium --grep '^WIP' --grep '^reword!' --grep '^edit!' --grep '^fixup!' --grep '^squash!' "$range"`
-		if [ -n "$commit" ]
-		then
-			echo >&2 -e "Push aborted: found unfinished commit(s) in ${local_ref}\n\n$commit\n"
-			exit 1
-		fi
-	fi
+        # Check for unfinished commit
+        commit=`git rev-list --pretty=medium --grep '^WIP' --grep '^reword!' --grep '^edit!' --grep '^fixup!' --grep '^squash!' "$range"`
+        if [ -n "$commit" ]
+        then
+            echo >&2 -e "Push aborted: found unfinished commit(s) in ${local_ref}\n\n$commit\n"
+            exit 1
+        fi
+    fi
 done
 
 exit 0
