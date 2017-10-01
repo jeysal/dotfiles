@@ -323,7 +323,7 @@ format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <ramp-capacity> <label-full>
 
-ramp-capacity-0 = 
+ramp-capacity-0 = LOW BATTERY 
 ramp-capacity-0-foreground = #f53c3c
 ramp-capacity-1 = 
 ramp-capacity-1-foreground = #ffa900
