@@ -170,6 +170,9 @@ if has("autocmd")
   " quit NERDtree automatically
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+  " JSON C-l
+  autocmd FileType json map <buffer> <C-l> :Neoformat<CR>
+
   " Indentation for CSS files
   autocmd BufNewFile,BufRead *.css,*.py call SetIndent(4)
   " Enable emmet for JavaScript and CSS files
@@ -235,6 +238,8 @@ let g:fixmyjs_use_local = 1
 let g:ctrlp_show_hidden = 1
 
 " Neoformat
+let g:neoformat_enabled_json = ['prettier']
+
 let g:neoformat_enabled_javascript = ['prettier']
 let g:neoformat_javascript_prettier = {
       \ 'exe': 'prettier',
