@@ -6,6 +6,7 @@ xrandr --output eDP1 --left-of HDMI1
 # try VM
 xrandr --output VGA-3 --auto --right-of VGA-2
 xrandr --output VGA-2 --auto --left-of VGA-3
+xrandr --output VGA-2 --auto --right-of VGA-1
 xrandr --output VGA-1 --auto --left-of VGA-2
 
 # keys
