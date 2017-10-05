@@ -7,5 +7,5 @@
     style = graph
     print_ruling = false
 [tools]
-    default_font = Roboto
-    default_font_size = 10
+    default_font = Hack
+    default_font_size = 8
