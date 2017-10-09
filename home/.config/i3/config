@@ -194,6 +194,9 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.zsh
 # compositor
 exec --no-startup-id compton -b
 
+# redshift
+exec --no-startup-id redshift-gtk
+
 # clipboard manager
 exec --no-startup-id xfce4-clipman
 
