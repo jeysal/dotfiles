@@ -201,8 +201,8 @@ if has("autocmd")
   " set fixmyjs to ts
   autocmd BufEnter * let g:fixmyjs_engine = 'eslint'
   autocmd BufEnter * let g:fixmyjs_rc_filename = '.eslintrc'
-  autocmd BufEnter *.ts let g:fixmyjs_engine = 'tslint'
-  autocmd BufEnter *.ts let g:fixmyjs_rc_filename = 'tslint.json'
+  autocmd BufEnter * if &ft ==# 'typescript' | let g:fixmyjs_engine = 'tslint' | endif
+  autocmd BufEnter * if &ft ==# 'typescript' | let g:fixmyjs_rc_filename = 'tslint.json' | endif
   autocmd BufEnter * let g:fixmyjs_executable = g:fixmyjs_engine
   autocmd FileType typescript noremap <buffer> <leader>l :Fixmyjs<CR>
   autocmd FileType typescript noremap <buffer> <C-l> :Neoformat<CR>
