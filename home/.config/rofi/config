@@ -7,7 +7,8 @@ rofi.color-normal: #393939, #ffffff, #393939, #268bd2, #ffffff
 rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
 rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
 # keybindings
+rofi.kb-row-tab:
 rofi.kb-remove-to-eol:
-rofi.kb-accept-entry: Return, KP_Enter
-rofi.kb-row-up: Up, Control+k, Shift+Tab
-rofi.kb-row-down: Down, Control+j, Tab
+rofi.kb-accept-entry: Return,KP_Enter
+rofi.kb-row-up: Up,Control+k,Shift+Tab
+rofi.kb-row-down: Down,Control+j,Tab
