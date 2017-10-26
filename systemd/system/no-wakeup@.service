@@ -1,0 +1,13 @@
+[Unit]
+Description=Disable wakeup for specified device
+# e.g. pci0000:00/0000:00:14.0 for /sys/devices/pci0000:00/0000:00:14.0
+# or pci0000:00/0000:00:14.0/usb1/1-14 for /sys/devices/pci0000:00/0000:00:14.0/usb1/1-14
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "echo disabled > /sys/devices/%I/power/wakeup"
+ExecStop=/bin/sh -c "echo enabled > /sys/devices/%I/power/wakeup"
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
