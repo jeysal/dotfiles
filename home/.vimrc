@@ -11,6 +11,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'machakann/vim-swap'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tomtom/tcomment_vim'
 
 " files
 Plug 'scrooloose/nerdtree'
