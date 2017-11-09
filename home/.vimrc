@@ -174,6 +174,7 @@ if has("autocmd")
   " JSON & CSS C-l
   autocmd FileType json map <buffer> <C-l> :Neoformat<CR>
   autocmd FileType css map <buffer> <C-l> :Neoformat<CR>
+  autocmd FileType markdown map <buffer> <C-l> :Neoformat<CR>
 
   " Indentation for CSS files
   autocmd BufNewFile,BufRead *.css,*.py call SetIndent(4)
@@ -252,6 +253,12 @@ let g:neoformat_enabled_typescript = ['prettier']
 let g:neoformat_typescript_prettier = {
       \ 'exe': 'prettier',
       \ 'args': ['--single-quote', '--trailing-comma', 'all', '--parser', 'typescript'],
+      \ }
+
+let g:neoformat_enabled_markdown = ['prettier']
+let g:neoformat_markdown_prettier = {
+      \ 'exe': 'prettier',
+      \ 'args': ['--parser', 'markdown'],
       \ }
 
 " To spell check all git commit messages
