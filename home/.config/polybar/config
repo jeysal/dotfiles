@@ -363,32 +363,42 @@ label-close = 
 label-separator = /
 label-separator-margin = 1
 
-menu-0-0 = Terminate WM
+menu-0-0 = kill
 menu-0-0-foreground = ${colors.accent}
-menu-0-0-exec = i3-msg exit
-menu-0-1 = Reboot
+menu-0-0-exec = menu-open-3
+menu-0-1 = lock
 menu-0-1-foreground = ${colors.accent}
-menu-0-1-exec = menu-open-1
-menu-0-2 = Power off
+menu-0-1-exec = i3lock-fancy
+menu-0-2 = suspend
 menu-0-2-foreground = ${colors.accent}
-menu-0-2-exec = menu-open-2
-menu-0-3 = Lock
+menu-0-2-exec = systemctl suspend
+menu-0-3 = reboot
 menu-0-3-foreground = ${colors.accent}
-menu-0-3-exec = i3lock-fancy
+menu-0-3-exec = menu-open-1
+menu-0-4 = poweroff
+menu-0-4-foreground = ${colors.accent}
+menu-0-4-exec = menu-open-2
 
-menu-1-0 = Cancel
+menu-1-0 = cancel
 menu-1-0-foreground = ${colors.accent}
 menu-1-0-exec = menu-open-0
-menu-1-1 = Reboot
+menu-1-1 = reboot
 menu-1-1-foreground = ${colors.accent}
 menu-1-1-exec = reboot
 
-menu-2-0 = Power off
+menu-2-0 = cancel
 menu-2-0-foreground = ${colors.accent}
-menu-2-0-exec = poweroff
-menu-2-1 = Cancel
+menu-2-0-exec = menu-open-0
+menu-2-1 = poweroff
 menu-2-1-foreground = ${colors.accent}
-menu-2-1-exec = menu-open-0
+menu-2-1-exec = poweroff
+
+menu-3-0 = cancel
+menu-3-0-foreground = ${colors.accent}
+menu-3-0-exec = menu-open-0
+menu-3-1 = kill
+menu-3-1-foreground = ${colors.accent}
+menu-3-1-exec = i3-msg exit
 
 [module/xkeyboard]
 type = internal/xkeyboard
