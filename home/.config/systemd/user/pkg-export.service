@@ -1,0 +1,6 @@
+[Unit]
+Description=dump pacaur package list into gdrive
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bash -c 'pacaur -Qe >%h/gdrive/tech/misc/pkg-list/%H.txt'
