@@ -238,8 +238,6 @@ let g:neomake_typescript_mytslint_maker = {
 " fixmyjs
 let g:fixmyjs_use_local = 1
 
-let g:ctrlp_show_hidden = 1
-
 " Neoformat
 let g:neoformat_enabled_json = ['prettier']
 let g:neoformat_enabled_css = ['prettier']
