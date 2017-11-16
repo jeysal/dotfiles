@@ -23,7 +23,7 @@
   "files.autoSave": "onWindowChange",
   "files.trimTrailingWhitespace": false,
   "files.insertFinalNewline": true,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   // debug
   "debug.inlineValues": true,
   // autocomplete
