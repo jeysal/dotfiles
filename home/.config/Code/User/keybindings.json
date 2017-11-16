@@ -94,5 +94,15 @@
     "key": "ctrl+delete",
     "command": "subwordNavigation.deleteSubwordRight",
     "when": "editorTextFocus"
+  },
+  // complete statement
+  {
+    "key": "shift+[Comma]",
+    "command": "-smartsemicolon.insert"
+  },
+  {
+    "key": "ctrl+shift+enter",
+    "command": "smartsemicolon.insert",
+    "when": "editorTextFocus"
   }
 ]
