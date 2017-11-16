@@ -32,6 +32,27 @@
     "command": "editor.action.formatDocument",
     "when": "editorTextFocus && !editorReadonly"
   },
+  // linter fix
+  {
+    "key": "ctrl+shift+l",
+    "command": "eslint.executeAutofix",
+    "when": "editorTextFocus && editorLangId == javascript"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "eslint.executeAutofix",
+    "when": "editorTextFocus && editorLangId == javascriptreact"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "tslint.fixAllProblems",
+    "when": "editorTextFocus && editorLangId == typescript"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "tslint.fixAllProblems",
+    "when": "editorTextFocus && editorLangId == typescriptreact"
+  },
   // move lines
   {
     "key": "alt+shift+up",
