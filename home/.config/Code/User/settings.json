@@ -57,6 +57,16 @@
     "visualblock": "#77f",
     "replace": "#e26"
   },
+  "vim.otherModesKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-u>"],
+      "after": ["2", "0", "k"]
+    },
+    {
+      "before": ["<C-d>"],
+      "after": ["2", "0", "j"]
+    }
+  ],
   "vim.otherModesKeyBindings": [
     {
       "before": ["leader", "e"],
