@@ -41,7 +41,7 @@ bindsym $mod+space exec --no-startup-id "rofi -normal-mode -show window -modi wi
 bindsym $mod+Shift+space exec --no-startup-id "rofi -normal-mode -show drun -modi drun,run"
 
 # file manager
-bindsym $mod+Shift+f exec nemo
+bindsym $mod+Shift+f exec pcmanfm
 
 # browser
 bindsym $mod+c exec google-chrome-stable
