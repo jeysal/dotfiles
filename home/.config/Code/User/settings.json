@@ -115,6 +115,7 @@
     }
   ],
   // JS / TS
+  "javascript.validate.enable": false, // usually, we'll have flow / TS for this
   "javascript.referencesCodeLens.enabled": false,
   "javascript.implicitProjectConfig.checkJs": true,
   "typescript.referencesCodeLens.enabled": false,
