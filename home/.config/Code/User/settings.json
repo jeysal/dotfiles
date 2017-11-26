@@ -120,7 +120,7 @@
   "javascript.implicitProjectConfig.checkJs": true,
   "typescript.referencesCodeLens.enabled": false,
   "typescript.implementationsCodeLens.enabled": false,
-  "typescript.useCodeSnippetsOnMethodSuggest": true,
+  "typescript.useCodeSnippetsOnMethodSuggest": false,
   // lint
   "eslint.packageManager": "yarn",
   "tslint.packageManager": "yarn",
