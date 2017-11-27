@@ -1,5 +1,7 @@
-# try desktop
+# try desktop nouveau
 xrandr --output HDMI-1 --left-of DVI-D-1
+# try desktop nvidia
+xrandr --output HDMI-0 --left-of DVI-D-0
 # try notebook
 xrandr --output VGA1 --right-of HDMI1
 xrandr --output eDP1 --left-of HDMI1
