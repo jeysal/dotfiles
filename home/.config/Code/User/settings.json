@@ -42,6 +42,12 @@
   "editor.renderLineHighlight": "all",
   "editor.cursorBlinking": "smooth",
   "editor.dragAndDrop": false,
+  "auto-close-tag.activationOnLanguage": [
+    "html",
+    "xml",
+    "javascriptreact",
+    "typescriptreact"
+  ],
   // vim
   "vim.leader": " ",
   "vim.cmdLineInitialColon": true,
