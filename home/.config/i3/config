@@ -194,9 +194,6 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.zsh
 # compositor
 exec --no-startup-id compton -b
 
-# redshift
-exec --no-startup-id sleep 30 && killall redshift; redshift-gtk
-
 # clipboard manager
 exec --no-startup-id xfce4-clipman
 
@@ -204,7 +201,10 @@ exec --no-startup-id xfce4-clipman
 exec --no-startup-id nm-applet
 
 # MEGAsync
-exec --no-startup-id sleep 30 && megasync
+exec --no-startup-id sleep 10 && megasync
+
+# redshift
+exec --no-startup-id sleep 10 && killall redshift; redshift-gtk
 
 # gdfs (in case the service is not already enabled on login)
 exec systemctl --user start gdfs
