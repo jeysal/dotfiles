@@ -200,6 +200,9 @@ exec --no-startup-id sleep 30 && killall redshift; redshift-gtk
 # clipboard manager
 exec --no-startup-id xfce4-clipman
 
+# network manager applet
+exec --no-startup-id nm-applet
+
 # MEGAsync
 exec --no-startup-id sleep 30 && megasync
 
