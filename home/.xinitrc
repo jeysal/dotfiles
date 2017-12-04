@@ -32,5 +32,8 @@ export SSH_AUTH_SOCK
 # background
 feh --bg-fill /usr/share/archlinux/wallpaper/archlinux-arrival.jpg
 
+# beep
+xset -b
+
 # wm
 exec i3
