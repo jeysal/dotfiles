@@ -19,6 +19,10 @@ echo -n "Installing vim-plug..."
 cp -p vim-plug/plug.vim ~/.vim/autoload
 echo "Done"
 
+if [ "$1" != "-a" ]; then
+  exit
+fi
+
 echo -n "Installing systemd files..."
 sudo cp -rpT systemd/ /etc/systemd/
 echo "Done"
