@@ -20,7 +20,7 @@ xmodmap ~/.xmodmap
 numlockx on
 
 # touchpad
-xinput --set-prop "AlpsPS/2 ALPS DualPoint TouchPad" "libinput Natural Scrolling Enabled" 1
+xinput set-prop "DLL07D1:01 044E:120B" "libinput Natural Scrolling Enabled" 1
 
 # see arch wiki
 source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh

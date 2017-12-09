@@ -26,7 +26,3 @@ fi
 echo -n "Installing systemd files..."
 sudo cp -rpT systemd/ /etc/systemd/
 echo "Done"
-
-echo -n "Installing xorg.conf.d files..."
-sudo cp -rpT xorg.conf.d/ /etc/X11/xorg.conf.d/
-echo "Done"
