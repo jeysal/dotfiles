@@ -62,7 +62,7 @@ font-1 = FontAwesome:size=14;4
 
 modules-left = power-menu i3 xwindow
 ;modules-center = mpd
-modules-right = cpu memory volume xbacklight battery wifi date
+modules-right = cpu memory volume backlight battery wifi date
 
 tray-position = right
 tray-padding = 4
@@ -276,13 +276,17 @@ type = internal/date
 date = %%{F#99} %Y-%m-%d%%{F#fff}   %H:%M:%S%%{F-}
 interval = 1
 
-[module/xbacklight]
-type = internal/xbacklight
+[module/backlight]
+;type = internal/xbacklight
+type = internal/backlight
 format = <label>
 label = %percentage:3%%
 label-foreground = ${root.foreground}
 format-prefix = 
 format-prefix-foreground = #80A
+
+;only necessary for old backlight (not xbacklight)
+card = intel_backlight
 
 [module/volume]
 type = internal/volume
