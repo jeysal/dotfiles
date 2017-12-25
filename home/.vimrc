@@ -33,6 +33,9 @@ Plug 'neomake/neomake'
 Plug 'benjie/neomake-local-eslint.vim'
 Plug 'ruanyl/vim-fixmyjs'
 
+" latex
+Plug 'lervag/vimtex'
+
 " web
 Plug 'mattn/emmet-vim'
 Plug 'valloric/MatchTagAlways'
