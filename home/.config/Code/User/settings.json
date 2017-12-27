@@ -5,8 +5,7 @@
   "workbench.panel.location": "bottom",
   "window.menuBarVisibility": "hidden",
   "window.enableMenuBarMnemonics": false,
-  "window.title":
-    "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
+  "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
   // theming
   "workbench.colorTheme": "Monokai",
   "workbench.iconTheme": "material-icon-theme",
@@ -31,8 +30,7 @@
   "editor.suggestLineHeight": 12,
   // display & editing
   "editor.fontSize": 14,
-  "editor.fontFamily":
-    "'Fira Code', 'Hack', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
+  "editor.fontFamily": "'Fira Code', 'Hack', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
   "editor.lineHeight": 17,
   "editor.letterSpacing": -0.2,
@@ -65,17 +63,32 @@
   },
   "vim.otherModesKeyBindingsNonRecursive": [
     {
-      "before": ["<C-u>"],
-      "after": ["2", "0", "k"]
+      "before": [
+        "<C-u>"
+      ],
+      "after": [
+        "2",
+        "0",
+        "k"
+      ]
     },
     {
-      "before": ["<C-d>"],
-      "after": ["2", "0", "j"]
+      "before": [
+        "<C-d>"
+      ],
+      "after": [
+        "2",
+        "0",
+        "j"
+      ]
     }
   ],
   "vim.otherModesKeyBindings": [
     {
-      "before": ["leader", "e"],
+      "before": [
+        "leader",
+        "e"
+      ],
       "after": [],
       "commands": [
         {
@@ -84,7 +97,10 @@
       ]
     },
     {
-      "before": ["leader", "q"],
+      "before": [
+        "leader",
+        "q"
+      ],
       "after": [],
       "commands": [
         {
@@ -93,7 +109,10 @@
       ]
     },
     {
-      "before": ["leader", "r"],
+      "before": [
+        "leader",
+        "r"
+      ],
       "after": [],
       "commands": [
         {
@@ -102,7 +121,10 @@
       ]
     },
     {
-      "before": ["leader", "t"],
+      "before": [
+        "leader",
+        "t"
+      ],
       "after": [],
       "commands": [
         {
@@ -111,7 +133,10 @@
       ]
     },
     {
-      "before": ["leader", "<CR>"],
+      "before": [
+        "leader",
+        "<CR>"
+      ],
       "after": [],
       "commands": [
         {
