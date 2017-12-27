@@ -157,5 +157,9 @@
   "tslint.packageManager": "yarn",
   // format
   "prettier.singleQuote": true,
-  "prettier.trailingComma": "all"
+  "prettier.trailingComma": "all",
+  // LaTeX
+  "latex-workshop.latex.outputDir": "./dist",
+  "latex-workshop.latex.autoBuild.onSave.enabled": false,
+  "latex-workshop.latex.autoBuild.onTexChange.enabled": false
 }
