@@ -57,8 +57,9 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Hack:pixelsize=12;4
-font-1 = FontAwesome:size=14;4
+font-0 = "Hack:pixelsize=12;4"
+font-1 = "Font Awesome 5 Free:style=solid:size=14;4"
+font-2 = "Font Awesome 5 Brands:size=14;4"
 
 modules-left = power-menu i3 xwindow
 ;modules-center = mpd
