@@ -236,7 +236,7 @@ type = internal/cpu
 interval = 0.5
 label = %percentage:3%%
 format-prefix = ""
-format-prefix-foreground = #02A
+format-prefix-foreground = #03A
 
 [module/memory]
 type = internal/memory
