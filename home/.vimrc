@@ -246,14 +246,10 @@ let g:neoformat_enabled_json = ['prettier']
 let g:neoformat_enabled_css = ['prettier']
 
 let g:neoformat_enabled_javascript = ['prettier']
-let g:neoformat_javascript_prettier = {
-      \ 'exe': 'prettier',
-      \ 'args': ['--single-quote', '--trailing-comma', 'all'],
-      \ }
 let g:neoformat_enabled_typescript = ['prettier']
 let g:neoformat_typescript_prettier = {
       \ 'exe': 'prettier',
-      \ 'args': ['--single-quote', '--trailing-comma', 'all', '--parser', 'typescript'],
+      \ 'args': ['--parser', 'typescript'],
       \ }
 
 let g:neoformat_enabled_markdown = ['prettier']
