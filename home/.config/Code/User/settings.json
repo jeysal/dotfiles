@@ -15,7 +15,7 @@
   "extensions.autoUpdate": false,
   // term
   "terminal.explorerKind": "external",
-  "terminal.external.linuxExec": "kitty",
+  "terminal.external.linuxExec": "termite",
   // git
   "git.autofetch": false,
   // save
