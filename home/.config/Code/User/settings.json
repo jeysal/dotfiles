@@ -2,7 +2,6 @@
   // window / tabs
   "explorer.openEditors.visible": 0,
   "workbench.editor.showTabs": false,
-  "workbench.panel.location": "bottom",
   "window.menuBarVisibility": "hidden",
   "window.enableMenuBarMnemonics": false,
   "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
