@@ -218,6 +218,8 @@ let g:flow#autoclose = 1
 
 " no Tsu default mappings
 let g:tsuquyomi_disable_default_mappings = 1
+" show types in tsu completion
+let g:tsuquyomi_completion_detail=1
 
 " monokai theme
 let base16colorspace=256
