@@ -178,8 +178,8 @@ if has("autocmd")
   autocmd FileType css map <buffer> <C-l> :Neoformat<CR>
   autocmd FileType markdown map <buffer> <C-l> :Neoformat<CR>
 
-  " Indentation for CSS files
-  autocmd BufNewFile,BufRead *.css,*.py call SetIndent(4)
+  " Indentation for python files
+  autocmd BufNewFile,BufRead *.py call SetIndent(4)
   " Enable emmet for JavaScript and CSS files
   autocmd FileType html,css EmmetInstall
 
