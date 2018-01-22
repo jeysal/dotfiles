@@ -3,7 +3,6 @@ execute pathogen#infect()
 call plug#begin('~/.vim/plugged')
 
 " plugins
-Plug 'VundleVim/Vundle.vim'
 Plug 'Shougo/vimproc.vim'
 
 " editing / navigation
