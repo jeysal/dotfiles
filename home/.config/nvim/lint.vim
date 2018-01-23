@@ -5,6 +5,6 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_typescript_enabled_makers = ['tsc', 'mytslint']
 let g:neomake_typescript_mytslint_maker = {
       \ 'exe': 'tslint',
-      \ 'args': ['--type-check', '--project', neomake#utils#FindGlobFile('tsconfig.json'), '%:p'],
+      \ 'args': ['--project', neomake#utils#FindGlobFile('tsconfig.json'), '%:p'],
       \ 'errorformat': '%EERROR: %f[%l\, %c]: %m,%E%f[%l\, %c]: %m'
       \ }
