@@ -3,4 +3,4 @@ Description=dump npm global package list into gdrive
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/bash -c 'npm ls -g --depth=0 2>/dev/null >%h/gdrive/tech/misc/npm-global-list/%H.txt'
+ExecStart=/usr/bin/bash -c 'npm ls -g --depth=0 2>/dev/null >%h/gdrive/tech/npm-global-list/%H.txt'

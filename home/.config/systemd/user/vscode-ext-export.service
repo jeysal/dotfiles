@@ -3,4 +3,4 @@ Description=dump vscode extension list into gdrive
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/bash -c 'ls %h/.vscode/extensions/ >%h/gdrive/tech/misc/vscode-ext-list/%H.txt'
+ExecStart=/usr/bin/bash -c 'ls %h/.vscode/extensions/ >%h/gdrive/tech/vscode-ext-list/%H.txt'
