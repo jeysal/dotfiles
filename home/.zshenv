@@ -1,7 +1,7 @@
 [[ $- == *i* ]] && echo $TERM | grep "xterm.*" >/dev/null && [[ -z "$TMUX" ]] && [[ -z "$NOTMUX" ]] && exec tmux
 
 export EDITOR=vi
-export VISUAL=vim
+export VISUAL=nvim
 export PAGER=less
 
 export LESSOPEN='|~/.lessfilter %s'
