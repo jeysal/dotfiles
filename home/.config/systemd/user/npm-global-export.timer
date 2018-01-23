@@ -1,5 +1,5 @@
 [Unit]
-Description=run yarn-global-export once a week
+Description=run npm-global-export once a week
 
 [Timer]
 OnCalendar=weekly

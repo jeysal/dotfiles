@@ -1,6 +1,0 @@
-[Unit]
-Description=dump yarn global package list into gdrive
-
-[Service]
-Type=simple
-ExecStart=/usr/bin/bash -c 'yarn global list 2>/dev/null >%h/gdrive/tech/misc/yarn-global-list/%H.txt'
