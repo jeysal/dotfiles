@@ -1,5 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
+" plugin dependencies
+Plug 'Shougo/vimproc.vim'
+
 " editing / navigation
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
