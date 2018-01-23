@@ -10,11 +10,6 @@ mkdir -p ~/.config/base16-shell
 cp -rpT base16-shell/ ~/.config/base16-shell/
 echo "Done"
 
-echo -n "Installing vim-pathogen..."
-mkdir -p ~/.vim/autoload ~/.vim/bundle
-cp -p vim-pathogen/autoload/pathogen.vim ~/.vim/autoload
-echo "Done"
-
 echo -n "Installing vim-plug..."
 cp -p vim-plug/plug.vim ~/.vim/autoload
 echo "Done"
