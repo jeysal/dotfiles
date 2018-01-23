@@ -11,7 +11,7 @@ cp -rpT base16-shell/ ~/.config/base16-shell/
 echo "Done"
 
 echo -n "Installing vim-plug..."
-cp -p vim-plug/plug.vim ~/.vim/autoload
+cp -p vim-plug/plug.vim ~/.local/share/nvim/site/autoload/plug.vim
 echo "Done"
 
 if [ "$1" != "-a" ]; then
