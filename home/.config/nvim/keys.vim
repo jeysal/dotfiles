@@ -1,5 +1,6 @@
 " Ctrl+Space omnicomplete
-inoremap <C-@> <C-x><C-o>
+inoremap <C-space> <C-x><C-o>
+inoremap <C-@> <C-space>
 
 " restore c-6 mapping
 nnoremap <C-6> <C-^>
