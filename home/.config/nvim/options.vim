@@ -13,6 +13,7 @@ set wildmenu
 set backspace=indent,eol,start
 
 " misc
+set number
 set encoding=utf-8 nobomb
 set scrolljump=8
 set hlsearch
