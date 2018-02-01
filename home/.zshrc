@@ -20,6 +20,8 @@ alias gitdir='cd $(git rev-parse --show-toplevel)'
 
 alias xclip='xclip -selection clipboard'
 
+alias open='xdg-open'
+
 alias sudo='sudo '
 
 alias less='less -r'
