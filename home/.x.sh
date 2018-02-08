@@ -1,3 +1,4 @@
+xrandr --auto
 # try desktop nouveau
 xrandr --output HDMI-1 --left-of DP-1
 xrandr --output DVI-D-1 --right-of DP-1
