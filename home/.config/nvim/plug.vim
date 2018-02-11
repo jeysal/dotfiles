@@ -51,4 +51,11 @@ Plug 'heavenshell/vim-jsdoc'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
 
+" generic language client
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" reasonml
+Plug 'reasonml-editor/vim-reason-plus'
+
 call plug#end()
