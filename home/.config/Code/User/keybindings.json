@@ -120,5 +120,10 @@
     "key": "ctrl+shift+v",
     "command": "editor.action.clipboardPasteAction",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  // additional vim binds
+  {
+    "key": "ctrl+q",
+    "command": "editor.action.showHover"
   }
 ]
