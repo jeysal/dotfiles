@@ -1,5 +1,6 @@
 source $HOME/.config/nvim/plug.vim
 source $HOME/.config/nvim/options.vim
+source $HOME/.config/nvim/path.vim
 
 source $HOME/.config/nvim/theme.vim
 
