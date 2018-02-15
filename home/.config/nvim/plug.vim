@@ -31,7 +31,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'sbdchd/neoformat'
 Plug 'neomake/neomake'
-Plug 'benjie/neomake-local-eslint.vim'
 Plug 'ruanyl/vim-fixmyjs'
 
 " latex
