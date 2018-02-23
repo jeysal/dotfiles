@@ -26,6 +26,8 @@ alias sudo='sudo '
 
 alias less='less -r'
 
+alias update-mirrors='reflector --verbose -l 16 -p https --sort rate --save /etc/pacman.d/mirrorlist'
+
 # Functions
 mkcd() { mkdir $1 && cd $1 }
 
