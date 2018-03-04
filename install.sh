@@ -11,6 +11,7 @@ cp -rpT base16-shell/ ~/.config/base16-shell/
 echo "Done"
 
 echo -n "Installing vim-plug..."
+mkdir -p ~/.local/share/nvim/site/autoload
 cp -p vim-plug/plug.vim ~/.local/share/nvim/site/autoload/plug.vim
 echo "Done"
 
