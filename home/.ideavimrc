@@ -1,3 +1,15 @@
 set showmode
 set wrapscan
 set surround
+
+map <space> <leader>
+
+map <leader>t :action ActivateProjectToolWindow<CR>
+
+map <leader>p :action GotoFile<CR>
+map <leader>e :action FindInPath<CR>
+map <leader>q :action GotoSymbol<CR>
+
+map <leader>7 :action ShowUsages<CR>
+map <leader>r :action RenameElement<CR>
+map <leader><CR> :action ShowIntentionActions<CR>
