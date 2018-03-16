@@ -57,4 +57,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " reasonml
 Plug 'reasonml-editor/vim-reason-plus'
 
+" go
+Plug 'fatih/vim-go'
+
 call plug#end()
