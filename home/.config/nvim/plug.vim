@@ -51,7 +51,9 @@ Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
 
 " generic language client
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+if empty($ANDROID_ROOT) " unless on termux
+  Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+endif
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " reasonml
