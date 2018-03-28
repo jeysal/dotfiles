@@ -11,6 +11,8 @@ set nostartofline
 set wildmenu
 " allow backspace in INSERT
 set backspace=indent,eol,start
+" avoid confusing file watchers https://github.com/nodejs/node-v0.x-archive/issues/3172
+set backupcopy=yes
 
 " misc
 set number
