@@ -22,8 +22,7 @@ autocmd FileType reason map <buffer> <leader>7 :call LanguageClient_textDocument
 autocmd FileType go map <buffer> <leader>7 :GoCallers<CR>
 
 " format
-autocmd FileType javascript noremap <buffer> <C-l> :Neoformat<CR>
-autocmd FileType typescript noremap <buffer> <C-l> :Neoformat<CR>
+autocmd FileType javascript,typescript,html noremap <buffer> <C-l> :Neoformat<CR>
 autocmd FileType reason map <buffer> <C-l> :call LanguageClient_textDocument_formatting()<CR>
 autocmd FileType go map <buffer> <C-l> :GoFmt<CR>
 
