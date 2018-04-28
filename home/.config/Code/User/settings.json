@@ -27,6 +27,8 @@
   // autocomplete
   "editor.suggestFontSize": 12,
   "editor.suggestLineHeight": 12,
+  // search
+  "search.followSymlinks": false,
   // display & editing
   "editor.fontSize": 14,
   "editor.fontFamily": "'Fira Code', 'Hack', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
