@@ -27,7 +27,7 @@ map ]h ]c
 
 " config
 let g:NERDTreeShowHidden=1
-let g:NERDTreeWinSize=42
+let g:NERDTreeWinSize=32
 
 noremap <leader>t :NERDTreeFind<CR>
 
