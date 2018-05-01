@@ -25,10 +25,10 @@ set autoread
 filetype on
 
 " centralize backups, swapfiles and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
+set backupdir=~/.vim/backups//
+set directory=~/.vim/swaps//
 set undofile
-set undodir=~/.vim/undo
+set undodir=~/.vim/undo//
 
 " default to 2 spaces indentation
 set expandtab
