@@ -30,7 +30,7 @@ alias sudo='sudo '
 
 alias less='less -r'
 
-alias update-mirrors='reflector --verbose -l 16 -p https --sort rate --save /etc/pacman.d/mirrorlist'
+alias update-mirrors='sudo reflector --verbose -l 16 -p https --sort rate --save /etc/pacman.d/mirrorlist'
 alias audio-youtube-dl='noglob youtube-dl -f "bestaudio[ext=m4a]" --no-playlist'
 
 # Functions
