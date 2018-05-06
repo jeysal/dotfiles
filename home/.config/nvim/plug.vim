@@ -10,6 +10,9 @@ Plug 'machakann/vim-swap'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tomtom/tcomment_vim'
 
+" tmux integration
+Plug 'christoomey/vim-tmux-navigator'
+
 " fancy
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
