@@ -45,7 +45,6 @@ Plug 'valloric/MatchTagAlways'
 
 " js
 Plug 'jelera/vim-javascript-syntax'
-Plug 'flowtype/vim-flow'
 Plug 'mgechev/vim-jsx'
 Plug 'heavenshell/vim-jsdoc'
 

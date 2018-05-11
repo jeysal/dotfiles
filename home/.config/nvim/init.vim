@@ -17,6 +17,4 @@ source $HOME/.config/nvim/emmet.vim
 source $HOME/.config/nvim/md.vim
 
 source $HOME/.config/nvim/filetypes.vim
-source $HOME/.config/nvim/flow.vim
 source $HOME/.config/nvim/tsu.vim
-source $HOME/.config/nvim/reasonml.vim
