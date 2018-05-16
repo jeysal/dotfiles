@@ -2,7 +2,7 @@
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 
-" --- Ctrl-p ---
+" --- fzf.vim ---
 
 noremap <C-p> :GFiles<CR>
 inoremap <C-p> <C-c>:GFiles<CR>
@@ -11,6 +11,8 @@ noremap <leader>p :Files<CR>
 noremap <C-e> :History<CR>
 inoremap <C-e> <C-c>:History<CR>
 noremap <leader>e :Ag<CR>
+
+command! -bang -nargs=* Ag call fzf#vim#grep('rg --fixed-strings --ignore-case --column --line-number --no-heading --hidden --no-ignore --glob "!.git/*" '.shellescape(<q-args>), 1, <bang>0)
 
 
 " --- Git ---
