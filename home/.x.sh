@@ -17,3 +17,6 @@ xinput set-prop "DLL07D1:01 044E:120B" "libinput Natural Scrolling Enabled" 1
 
 # beep
 xset -b
+
+# polybar
+~/.config/polybar/launch.zsh
