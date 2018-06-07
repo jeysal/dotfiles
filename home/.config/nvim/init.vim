@@ -7,7 +7,6 @@ source $HOME/.config/nvim/theme.vim
 source $HOME/.config/nvim/keys.vim
 source $HOME/.config/nvim/files.vim
 source $HOME/.config/nvim/edit.vim
-source $HOME/.config/nvim/tmux.vim
 
 source $HOME/.config/nvim/spell.vim
 source $HOME/.config/nvim/lint.vim
