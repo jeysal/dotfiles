@@ -37,14 +37,14 @@ bindsym $mod+Shift+Return exec env NOTMUX=true termite
 bindsym $mod+Shift+q kill
 
 # launcher
-bindsym $mod+space exec --no-startup-id "rofi -normal-mode -show window -modi window,drun"
+bindsym $mod+space exec --no-startup-id "rofi -normal-mode -show combi -modi combi -combi-modi window,chrome:chrome-switch-tabs"
 bindsym $mod+Shift+space exec --no-startup-id "rofi -normal-mode -show drun -modi drun,run"
 
 # file manager
 bindsym $mod+Shift+f exec pcmanfm
 
 # browser
-bindsym $mod+c exec google-chrome-stable
+bindsym $mod+c exec chrome
 
 # change focus
 bindsym $mod+h focus left
