@@ -6,10 +6,17 @@ ZSH_GRML_CONF=$HOME/.zsh.grml
 
 bindkey -v
 
-# Prompt & tmux
+# Prompt
 
 PROMPTFILE=/usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 echo $TERM | egrep "(screen|xterm).*" >/dev/null && [[ -f $PROMPTFILE ]] && source $PROMPTFILE && source ~/.promptcfg
+
+# termite vte
+
+if [[ $TERM == xterm-termite ]]; then
+  . /etc/profile.d/vte.sh
+  __vte_osc7
+fi
 
 # Aliases
 
