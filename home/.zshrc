@@ -16,6 +16,7 @@ echo $TERM | egrep "(screen|xterm).*" >/dev/null && [[ -f $PROMPTFILE ]] && sour
 if [[ $TERM == xterm-termite ]]; then
   . /etc/profile.d/vte.sh
   __vte_osc7
+  export TERM=xterm-256color
 fi
 
 # Aliases
