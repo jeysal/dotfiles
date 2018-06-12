@@ -1,6 +1,7 @@
 [core]
   eol = lf
   autocrlf = input
+  excludesfile = ~/.gitignore
 [color]
   ui = auto
 [alias]
