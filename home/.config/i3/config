@@ -164,8 +164,9 @@ bindsym $mod+r mode "resize"
 new_window pixel 0
 hide_edge_borders smart
 
-# no mouse focus
+# focus
 focus_follows_mouse no
+focus_on_window_activation focus
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
