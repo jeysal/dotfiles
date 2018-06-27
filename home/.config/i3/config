@@ -187,7 +187,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # focus last script
-exec --no-startup-id $HOME/.config/i3/focus-last.py
+exec_always --no-startup-id $HOME/.config/i3/focus-last.py
 bindsym $mod+asciicircum exec $HOME/.config/i3/focus-last.py --switch
 
 # yabar
