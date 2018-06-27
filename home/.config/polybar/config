@@ -58,8 +58,9 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = "Hack:style=Bold:pixelsize=12;4"
-font-1 = "Font Awesome 5 Free:style=solid:size=14;4"
-font-2 = "Font Awesome 5 Brands:size=14;4"
+font-1 = "Transport New Medium:style=Regular:size=12;4"
+font-2 = "Font Awesome 5 Free:style=solid:size=14;4"
+font-3 = "Font Awesome 5 Brands:size=14;4"
 
 modules-left = power-menu i3 xwindow
 ;modules-center = mpd
@@ -446,8 +447,8 @@ label-indicator-background = ${colors.accent}
 
 [module/xwindow]
 type = internal/xwindow
-format = <label>
-label-maxlen = 56
+format = %{T2}<label>%{T-}
+label-maxlen = 64
 
 [module/counter]
 type = internal/counter
