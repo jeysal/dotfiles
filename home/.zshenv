@@ -5,7 +5,8 @@
 #exec tmux
 
 export GOPATH="$HOME/proj/go"
-export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.jsvu:$GOPATH/bin:$PATH"
+export CARGO_HOME="$HOME/.cargo"
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.jsvu:$CARGO_HOME/bin:$GOPATH/bin:$PATH"
 
 export EDITOR=vi
 export VISUAL=nvim
