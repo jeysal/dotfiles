@@ -58,9 +58,10 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = "Hack:style=Bold:pixelsize=12;4"
-font-1 = "Transport New Medium:style=Regular:size=12;4"
-font-2 = "Font Awesome 5 Free:style=solid:size=14;4"
-font-3 = "Font Awesome 5 Brands:size=14;4"
+font-1 = "Transport New Medium:style=Regular:size=12;3"
+font-2 = "Roboto Condensed:style=Regular:size=11;2.5"
+font-3 = "Font Awesome 5 Free:style=solid:size=14;4"
+font-4 = "Font Awesome 5 Brands:size=14;4"
 
 modules-left = power-menu i3 xwindow
 ;modules-center = mpd
@@ -215,7 +216,7 @@ label-mode = %mode%
 label-mode-padding = 2
 label-mode-background = ${colors.accent}
 
-label-focused = %index%
+label-focused = %index% %{T3}(%output%)%{T-}
 label-focused-background = ${module/bspwm.label-focused-background}
 label-focused-foreground = ${module/bspwm.label-focused-foreground}
 label-focused-overline= ${module/bspwm.label-focused-overline}
@@ -229,15 +230,36 @@ label-urgent = %index%!
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
-label-visible = %index%
+label-visible = %index% %{T3}(%output%)%{T-}
 label-visible-padding = ${module/bspwm.label-empty-padding}
 
 [module/cpu]
 type = internal/cpu
 interval = 0.5
-label = %percentage:3%%
-format-prefix = ""
-format-prefix-foreground = #03A
+format = <ramp-coreload> <label>
+
+label = " %{F#04B}%{F-}%percentage:3%%"
+
+ramp-coreload-0 = ▁
+ramp-coreload-0-foreground = #2A0
+ramp-coreload-1 = ▂
+ramp-coreload-1-foreground = #2A0
+ramp-coreload-2 = ▃
+ramp-coreload-2-foreground = #2A0
+ramp-coreload-3 = ▄
+ramp-coreload-3-foreground = #2A0
+ramp-coreload-4 = ▅
+ramp-coreload-4-foreground = #FA3
+ramp-coreload-5 = ▆
+ramp-coreload-5-foreground = #FA3
+ramp-coreload-6 = ▇
+ramp-coreload-6-foreground = #F35
+ramp-coreload-7 = █
+ramp-coreload-7-foreground = #F35
+
+;label = %percentage:3%%
+;format-prefix = ""
+;format-prefix-foreground = #03A
 
 [module/memory]
 type = internal/memory
