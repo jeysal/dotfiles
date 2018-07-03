@@ -52,10 +52,10 @@ overline-size = 2
 border-bottom-size = 2
 border-bottom-color = ${colors.bordercolor}
 
-padding-left = 1
-padding-right = 2
+padding-left = 0
+padding-right = 0
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
 font-0 = "Hack:style=Bold:pixelsize=12;4"
 font-1 = "Transport New Medium:style=Regular:size=12;3"
@@ -68,7 +68,7 @@ modules-left = power-menu i3 xwindow
 modules-right = cpu memory volume backlight battery wifi ethernet date
 
 tray-position = right
-tray-padding = 4
+tray-padding = 1
 tray-maxsize = 16
 ;tray-transparent = true
 ;tray-detached = true
@@ -152,7 +152,7 @@ label-focused-background = #383838
 label-focused-foreground = #fff
 label-focused-overline = ${root.bspwm-focused-overline}
 label-focused-underline = ${root.bspwm-focused-underline}
-label-focused-padding = 2
+label-focused-padding = 1
 
 label-focused-occupied = %{O-1}⏺%{O-1}
 label-focused-occupied-background = ${self.label-focused-background}
@@ -163,25 +163,25 @@ label-focused-occupied-padding = ${self.label-focused-padding}
 
 ;label-occupied = %icon%
 label-occupied = %{O-1}⏺%{O-1}
-label-occupied-padding = 2
+label-occupied-padding = 1
 
 ;label-urgent = %icon%
 label-urgent = !
 label-urgent-background = #bd2c40
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 ;label-empty = %icon%
 label-empty = x
 label-empty-foreground = #444
-label-empty-padding = 2
+label-empty-padding = 1
 
 label-monocle = 
-label-monocle-padding = 2
+label-monocle-padding = 1
 label-monocle-background = #171717
 label-monocle-foreground = ${colors.accent}
 
 label-floating = 
-label-floating-padding = 2
+label-floating-padding = 1
 label-floating-background = #171717
 label-floating-foreground = ${colors.accent}
 
@@ -213,10 +213,10 @@ reverse-scroll = false
 format = <label-state> <label-mode>
 
 label-mode = %mode%
-label-mode-padding = 2
+label-mode-padding = 0
 label-mode-background = ${colors.accent}
 
-label-focused = %index% %{T3}(%output%)%{T-}
+label-focused = %index% %{T3}%output%%{T-}
 label-focused-background = ${module/bspwm.label-focused-background}
 label-focused-foreground = ${module/bspwm.label-focused-foreground}
 label-focused-overline= ${module/bspwm.label-focused-overline}
@@ -230,7 +230,7 @@ label-urgent = %index%!
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
-label-visible = %index% %{T3}(%output%)%{T-}
+label-visible = %index% %{T3}%output%%{T-}
 label-visible-padding = ${module/bspwm.label-empty-padding}
 
 [module/cpu]
@@ -470,7 +470,7 @@ label-indicator-background = ${colors.accent}
 [module/xwindow]
 type = internal/xwindow
 format = %{T2}<label>%{T-}
-label-maxlen = 48
+label-maxlen = 40
 
 [module/counter]
 type = internal/counter
