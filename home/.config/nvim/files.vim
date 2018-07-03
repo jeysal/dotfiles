@@ -7,7 +7,8 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 noremap <C-p> :GFiles<CR>
 noremap <leader>p :Files<CR>
 
-noremap <C-e> :History<CR>
+let g:fzf_mru_relative = 1
+noremap <C-e> :FZFMru<CR>
 
 noremap <C-f> :GLines<CR>
 noremap <leader>f :Lines<CR>
