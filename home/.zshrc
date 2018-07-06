@@ -64,10 +64,6 @@ plugins=(git ssh-agent)
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
-# fzf
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"';
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
 # nvm
 NVM_INIT_SCRIPT=/usr/share/nvm/init-nvm.sh
 [[ -f $NVM_INIT_SCRIPT ]] && source $NVM_INIT_SCRIPT
