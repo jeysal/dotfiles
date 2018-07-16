@@ -58,7 +58,7 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = "Hack:style=Bold:pixelsize=12;4"
-font-1 = "Transport New Medium:style=Regular:size=12;3"
+font-1 = "Railway:style=Regular:size=13;3"
 font-2 = "Roboto Condensed:style=Regular:size=11;2.5"
 font-3 = "Font Awesome 5 Free:style=solid:size=14;4"
 font-4 = "Font Awesome 5 Brands:size=14;4"
@@ -470,7 +470,7 @@ label-indicator-background = ${colors.accent}
 [module/xwindow]
 type = internal/xwindow
 format = %{T2}<label>%{T-}
-label-maxlen = 40
+label-maxlen = 42
 
 [module/counter]
 type = internal/counter
