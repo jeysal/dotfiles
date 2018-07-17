@@ -30,5 +30,6 @@
   "upgrademenu": true,
   "cleanmenu": true,
   "diffmenu": true,
-  "editmenu": false
+  "editmenu": false,
+  "combinedupgrade": true
 }
