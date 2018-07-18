@@ -64,9 +64,10 @@ plugins=(git ssh-agent)
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
-# nvm
-NVM_INIT_SCRIPT=/usr/share/nvm/init-nvm.sh
-[[ -f $NVM_INIT_SCRIPT ]] && source $NVM_INIT_SCRIPT
+# zsh-nvm
+NVM_LAZY_LOAD=true
+ZSH_NVM=$HOME/conf/zsh-nvm/zsh-nvm.plugin.zsh
+[ -s $ZSH_NVM ] && source $ZSH_NVM
 
 # extra
 ZSH_EXTRA_CONF=$HOME/.zsh.extra
