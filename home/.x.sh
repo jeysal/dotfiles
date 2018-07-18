@@ -3,7 +3,7 @@ xrandr --auto
 xrandr --output HDMI-0 --left-of DP-1
 xrandr --output DVI-D-0 --right-of DP-1
 # try notebook nvidia
-xrandr --output DP-2 --right-of HDMI-1
+xrandr --output DP-2 --right-of HDMI-1 --rotate left
 xrandr --output eDP-1 --left-of HDMI-1
 
 # keys
