@@ -1,5 +1,8 @@
 source $HOME/.x.sh
 
+# Xresources
+xrdb $HOME/.Xresources
+
 # see arch wiki
 source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 
