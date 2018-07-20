@@ -28,8 +28,7 @@ autocmd FileType javascript,reason,java,rust map <buffer> <leader>q :call Langua
 autocmd FileType javascript,reason,java,rust map <buffer> <leader>7 :call LanguageClient_textDocument_references()<CR>
 autocmd FileType go map <buffer> <leader>7 :GoCallers<CR>
 
-" format
-autocmd FileType javascript,typescript,html noremap <buffer> <C-l> :Neoformat<CR>
+" format (see format.vim for Neoformat)
 autocmd FileType reason,java,rust map <buffer> <C-l> :call LanguageClient_textDocument_formatting()<CR>
 autocmd FileType go map <buffer> <C-l> :GoFmt<CR>
 
