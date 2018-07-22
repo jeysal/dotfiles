@@ -65,7 +65,9 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # zsh-nvm
-NVM_LAZY_LOAD=true
+if [[ ! -o login ]]; then
+  NVM_LAZY_LOAD=true
+fi
 ZSH_NVM=$HOME/conf/zsh-nvm/zsh-nvm.plugin.zsh
 [ -s $ZSH_NVM ] && source $ZSH_NVM
 
