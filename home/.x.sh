@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 xrandr --auto
 # try desktop nvidia
 xrandr --output HDMI-0 --left-of DP-1
