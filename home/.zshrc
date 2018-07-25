@@ -74,3 +74,5 @@ ZSH_NVM=$HOME/conf/zsh-nvm/zsh-nvm.plugin.zsh
 # extra
 ZSH_EXTRA_CONF=$HOME/.zsh.extra
 [[ -f $ZSH_EXTRA_CONF ]] && source $ZSH_EXTRA_CONF
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
