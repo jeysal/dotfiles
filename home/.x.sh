@@ -21,8 +21,7 @@ xinput set-prop "DLL07D1:01 044E:120B" "libinput Natural Scrolling Enabled" 1
 xset -b
 
 # background
-BACKGROUND_IMAGES=(/usr/share/archlinux/wallpaper/archlinux-{aftermath,arrival,underground}.jpg)
-feh --bg-fill ${BACKGROUND_IMAGES[$(( $RANDOM % ${#BACKGROUND_IMAGES[@]} + 1 ))]}
+feh --bg-fill --randomize /usr/share/archlinux/wallpaper/archlinux-{aftermath,arrival,underground}.jpg
 
 # polybar
 ~/.config/polybar/launch.zsh
