@@ -339,7 +339,7 @@ format-prefix-foreground = #80A
 card = intel_backlight
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 ;speaker-mixer = Speaker
 ;headphone-mixer = Headphone
 ;headphone-id = 9
