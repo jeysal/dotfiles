@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " plugin dependencies
-Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/vimproc.vim', { 'do': ':VimProcInstall' }
 
 " editing / navigation
 Plug 'tpope/vim-repeat'
