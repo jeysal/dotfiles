@@ -1,6 +1,8 @@
 [global]
     ### Display ###
 
+    corner_radius = 8
+
     # Which monitor should the notifications be displayed on.
     monitor = 0
 
@@ -41,12 +43,12 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 0
+    transparency = 16
 
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
     # to the font height and padding.
-    notification_height = 0
+    notification_height = 64
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
