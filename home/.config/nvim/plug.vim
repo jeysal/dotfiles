@@ -7,9 +7,8 @@ Plug 'Shougo/vimproc.vim', { 'do': ':VimProcInstall' }
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'chaoren/vim-wordmotion'
-Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-swap'
+Plug 'jiangmiao/auto-pairs'
 Plug 'tomtom/tcomment_vim'
 
 " fancy
