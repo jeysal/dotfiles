@@ -8,6 +8,7 @@ noremap <C-p> :GFiles<CR>
 noremap <leader>p :Files<CR>
 
 let g:fzf_mru_relative = 1
+let g:fzf_mru_max = 32
 noremap <C-e> :FZFMru<CR>
 
 noremap <C-f> :GLines<CR>
