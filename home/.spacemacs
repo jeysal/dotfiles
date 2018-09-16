@@ -314,7 +314,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq x-select-enable-clipboard nil)
   (setq undo-tree-auto-save-history t)
-  (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
+  (setq undo-tree-history-directory-alist '(("." . "~/tmp/.emacs.d/undo")))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
