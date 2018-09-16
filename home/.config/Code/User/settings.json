@@ -49,20 +49,17 @@
   ],
   // vim
   "vim.leader": " ",
-  "vim.cmdLineInitialColon": true,
   "vim.ignorecase": false,
   "vim.hlsearch": true,
   "vim.incsearch": true,
-  "vim.statusBarColorControl": false,
-  "vim.statusBarColors": {
-    "normal": "#666",
-    "insert": "#09e",
-    "visual": "#77f",
-    "visualline": "#77f",
-    "visualblock": "#77f",
-    "replace": "#e26"
-  },
-  "vim.otherModesKeyBindingsNonRecursive": [
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": "#666",
+  "vim.statusBarColors.insert": "#09e",
+  "vim.statusBarColors.visual": "#77f",
+  "vim.statusBarColors.visualline": "#77f",
+  "vim.statusBarColors.visualblock": "#77f",
+  "vim.statusBarColors.replace": "#e26",
+  "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
         "<C-u>"
@@ -84,7 +81,7 @@
       ]
     }
   ],
-  "vim.otherModesKeyBindings": [
+  "vim.normalModeKeyBindings": [
     {
       "before": [
         "leader",
@@ -94,6 +91,18 @@
       "commands": [
         {
           "command": "workbench.view.explorer"
+        }
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "f"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.view.search"
         }
       ]
     },
@@ -174,5 +183,10 @@
   // LaTeX
   "latex-workshop.latex.outputDir": "./dist",
   "latex-workshop.latex.autoBuild.onSave.enabled": false,
-  "latex-workshop.latex.autoBuild.onTexChange.enabled": false
+  "latex-workshop.latex.autoBuild.onTexChange.enabled": false,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#666",
+    "statusBar.noFolderBackground": "#666",
+    "statusBar.debuggingBackground": "#666"
+  }
 }

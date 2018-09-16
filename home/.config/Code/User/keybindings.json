@@ -16,6 +16,11 @@
     "command": "workbench.action.quickOpen",
     "when": "!inQuickOpen"
   },
+  // find
+  {
+    "key": "ctrl+f",
+    "command": "workbench.action.findInFiles"
+  },
   // new
   {
     "key": "alt+insert",
