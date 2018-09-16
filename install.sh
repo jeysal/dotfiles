@@ -9,6 +9,10 @@ echo -n "Installing base16-shell..."
 ln -fnsT $(realpath base16-shell) ~/.config/base16-shell
 echo "Done"
 
+echo -n "Installing spacemacs..."
+ln -fnsT $(realpath spacemacs) ~/.emacs.d
+echo "Done"
+
 echo -n "Installing vim-pathogen..."
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 ln -fnsT $(realpath vim-pathogen/autoload/pathogen.vim) ~/.vim/autoload/pathogen.vim
