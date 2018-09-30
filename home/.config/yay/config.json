@@ -1,5 +1,5 @@
 {
-  "buildDir": "/home/seckinger/.cache/yay",
+  "buildDir": "$HOME/.cache/yay",
   "editor": "",
   "editorflags": "",
   "makepkgbin": "makepkg",
