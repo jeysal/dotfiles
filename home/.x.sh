@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 
 xrandr --auto
+# try VirtualBox
+xrandr --output VGA-1 --auto --left-of VGA-2
 # try desktop nvidia
 xrandr --output HDMI-0 --left-of DP-1
 xrandr --output DVI-D-0 --right-of DP-1
