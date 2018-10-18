@@ -19,6 +19,11 @@ if [[ $TERM == xterm-termite ]]; then
   export TERM=xterm-256color
 fi
 
+# kitty TERM
+if [[ $TERM == xterm-kitty ]]; then
+  export TERM=xterm-256color
+fi
+
 # Aliases
 
 alias df='df -h'
