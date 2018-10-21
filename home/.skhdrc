@@ -84,7 +84,7 @@
 # ]
 
 # open terminal, blazingly fast compared to iTerm/Hyper
-cmd - return : /Applications/kitty.app/Contents/MacOS/kitty
+cmd - return : /Applications/kitty.app/Contents/MacOS/kitty -1 -d ~
 
 # open qutebrowser
 #cmd + shift - return : ~/Scripts/qtb.sh
