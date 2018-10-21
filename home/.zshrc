@@ -1,5 +1,5 @@
 # grml in user folder (for systems that do not have it installed globally)
-ZSH_GRML_CONF=$HOME/.zsh.grml
+ZSH_GRML_CONF=$HOME/.grml.zsh
 [[ -f $ZSH_GRML_CONF ]] && source $ZSH_GRML_CONF
 
 # Vim mode
