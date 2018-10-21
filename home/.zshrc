@@ -2,6 +2,19 @@
 ZSH_GRML_CONF=$HOME/.grml.zsh
 [[ -f $ZSH_GRML_CONF ]] && source $ZSH_GRML_CONF
 
+# macOS PATH
+if uname -a | grep >/dev/null Darwin; then
+  export PATH="/usr/local/opt/openssl/bin:$PATH"
+  for package in {coreutils,findutils,gnu-sed,gnu-tar,grep}; do
+    export PATH="/usr/local/opt/$package/libexec/gnubin:$PATH"
+    export MANPATH="/usr/local/opt/$package/libexec/gnuman:$PATH"
+  done
+fi
+
+# PATH
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.jsvu:$CARGO_HOME/bin:$GOPATH/bin:$PATH"
+
+
 # Vim mode
 
 bindkey -v
