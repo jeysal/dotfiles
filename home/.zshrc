@@ -38,6 +38,13 @@ for PROMPTFILE in {/usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme,$HOM
   echo $TERM | egrep "(screen|xterm).*" >/dev/null && [[ -f $PROMPTFILE ]] && source ~/.promptcfg && source $PROMPTFILE
 done
 
+PURE_PROMPT_DIR=$HOME/.pure
+if [[ -n $PURE_PROMPT_DIR ]]; then
+  fpath=($PURE_PROMPT_DIR $fpath)
+  autoload -U promptinit; promptinit
+  prompt pure
+fi
+
 
 # Aliases
 

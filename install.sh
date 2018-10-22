@@ -9,6 +9,14 @@ echo -n "Installing base16-shell..."
 ln -fnsT $(realpath base16-shell) ~/.config/base16-shell
 echo "Done"
 
+if uname | grep >/dev/null Darwin; then
+  echo -n "On Darwin, installing pure..."
+  mkdir ~/.pure
+  ln -fnsT $(realpath pure/pure.zsh) ~/.pure/prompt_pure_setup
+  ln -fnsT $(realpath pure/async.zsh) ~/.pure/async
+  echo "Done"
+fi
+
 echo -n "Installing spacemacs..."
 ln -fnsT $(realpath spacemacs) ~/.emacs.d
 echo "Done"
