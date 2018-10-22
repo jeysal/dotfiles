@@ -3,7 +3,7 @@ ZSH_GRML_CONF=$HOME/.grml.zsh
 [[ -f $ZSH_GRML_CONF ]] && source $ZSH_GRML_CONF
 
 # macOS PATH
-if uname -a | grep >/dev/null Darwin; then
+if uname | grep >/dev/null Darwin; then
   export PATH="/usr/local/opt/openssl/bin:$HOME/.jenv/shims:$PATH"
   for package in {coreutils,findutils,gnu-sed,gnu-tar,grep}; do
     export PATH="/usr/local/opt/$package/libexec/gnubin:$PATH"
@@ -19,11 +19,6 @@ export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.jsvu:$CARGO_HOME/bin:$GOPATH/bin:
 
 bindkey -v
 
-# Prompt
-
-PROMPTFILE=/usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
-echo $TERM | egrep "(screen|xterm).*" >/dev/null && [[ -f $PROMPTFILE ]] && source $PROMPTFILE && source ~/.promptcfg
-
 # termite vte
 
 if [[ $TERM == xterm-termite ]]; then
@@ -36,6 +31,13 @@ fi
 if [[ $TERM == xterm-kitty ]]; then
   export TERM=xterm-256color
 fi
+
+# Prompt
+
+for PROMPTFILE in {/usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme,$HOME/.powerlevel9k/powerlevel9k.zsh-theme}; do
+  echo $TERM | egrep "(screen|xterm).*" >/dev/null && [[ -f $PROMPTFILE ]] && source ~/.promptcfg && source $PROMPTFILE
+done
+
 
 # Aliases
 
