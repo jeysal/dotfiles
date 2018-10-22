@@ -11,7 +11,7 @@ echo "Done"
 
 if uname | grep >/dev/null Darwin; then
   echo -n "On Darwin, installing pure..."
-  mkdir ~/.pure
+  mkdir -p ~/.pure
   ln -fnsT $(realpath pure/pure.zsh) ~/.pure/prompt_pure_setup
   ln -fnsT $(realpath pure/async.zsh) ~/.pure/async
   echo "Done"
