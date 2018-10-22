@@ -3,11 +3,10 @@ ZSH_GRML_CONF=$HOME/.grml.zsh
 [[ -f $ZSH_GRML_CONF ]] && source $ZSH_GRML_CONF
 
 # macOS PATH
-if uname | grep >/dev/null Darwin; then
+if [[ ! -z "$IS_MACOS" ]]; then
   export PATH="/usr/local/opt/openssl/bin:$HOME/.jenv/shims:$PATH"
   for package in {coreutils,findutils,gnu-sed,gnu-tar,grep}; do
     export PATH="/usr/local/opt/$package/libexec/gnubin:$PATH"
-    export MANPATH="/usr/local/opt/$package/libexec/gnuman:$PATH"
   done
 fi
 
@@ -26,7 +25,6 @@ if [[ $TERM == xterm-termite ]]; then
   __vte_osc7
   export TERM=xterm-256color
 fi
-
 # kitty TERM
 if [[ $TERM == xterm-kitty ]]; then
   export TERM=xterm-256color
@@ -45,6 +43,16 @@ if [[ -n $PURE_PROMPT_DIR ]]; then
   prompt pure
 fi
 
+# more completions
+ZSH_COMPLETIONS_DIR=/usr/local/share/zsh-completions
+if [[ -n $ZSH_COMPLETIONS_DIR ]]; then
+  fpath=($ZSH_COMPLETIONS_DIR $fpath)
+  if [[ -n $HOME/.zcompdump(#qN.mh+24) ]]; then
+    compinit
+  else
+    compinit -C;
+  fi
+fi
 
 # Aliases
 
@@ -94,7 +102,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # zsh-nvm
-if [[ ! -o login ]]; then
+if [[ ! -o login ]] || [[ ! -z "$IS_MACOS" ]]; then
   NVM_LAZY_LOAD=true
 fi
 ZSH_NVM=$HOME/conf/zsh-nvm/zsh-nvm.plugin.zsh
