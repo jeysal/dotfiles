@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 echo -n "Installing home dir files..."
 cp -nprsT $(realpath home)/ ~/
@@ -8,14 +8,6 @@ echo "Done"
 echo -n "Installing base16-shell..."
 ln -fnsT $(realpath base16-shell) ~/.config/base16-shell
 echo "Done"
-
-if uname | grep >/dev/null Darwin; then
-  echo -n "On Darwin, installing pure..."
-  mkdir -p ~/.pure
-  ln -fnsT $(realpath pure/pure.zsh) ~/.pure/prompt_pure_setup
-  ln -fnsT $(realpath pure/async.zsh) ~/.pure/async
-  echo "Done"
-fi
 
 echo -n "Installing spacemacs..."
 ln -fnsT $(realpath spacemacs) ~/.emacs.d
@@ -31,7 +23,28 @@ mkdir -p ~/.local/share/nvim/site/autoload
 ln -fnsT $(realpath vim-plug/plug.vim) ~/.local/share/nvim/site/autoload/plug.vim
 echo "Done"
 
-if [ "$1" == "-a" ]; then
+if uname | grep >/dev/null Darwin; then
+  echo "Detected Darwin"
+
+  echo -n "Installing pure..."
+  mkdir -p ~/.pure
+  ln -fnsT $(realpath pure/pure.zsh) ~/.pure/prompt_pure_setup
+  ln -fnsT $(realpath pure/async.zsh) ~/.pure/async
+  echo "Done"
+
+  echo -n "Running list exports once..."
+  npm ls -g --depth=0 2>/dev/null >$HOME/gdrive/tech/npm-global-list/$HOST.txt
+
+  PKG_LIST=$HOME/gdrive/tech/pkg-list/$HOST.txt
+  brew list >$PKG_LIST
+  echo >>$PKG_LIST
+  brew cask list >>$PKG_LIST
+
+  ls $HOME/.vscode/extensions/ >$HOME/gdrive/tech/vscode-ext-list/$HOST.txt
+  echo "Done"
+fi
+
+if [[ "$1" == "-a" ]] && uname | grep >/dev/null Linux; then
   echo -n "Installing systemd files..."
   sudo cp -nprsT $(realpath systemd)/ /etc/systemd/
   echo "Done"
