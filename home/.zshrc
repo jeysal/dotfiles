@@ -83,7 +83,15 @@ alias m4a-to-mp3='find . -type f -name "*.m4a" -print0 | nice xargs -0 -i -P8 ff
 # Functions
 mkcd() { mkdir $1 && cd $1 }
 
-watchdir() { while true; do clear && eval $@ && inotifywait -r . @.git 2>/dev/null; done }
+watchdir() {
+  PATTERN="$1"
+  shift
+  while [ $? -eq 0 ]; do
+    clear && \
+      eval $@ && \
+      watchman-wait . -p $PATTERN;
+  done
+}
 
 # "Better version" aliases
 which nvim >& /dev/null && alias vi='nvim' && alias vim='nvim'
