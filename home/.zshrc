@@ -83,13 +83,19 @@ alias m4a-to-mp3='find . -type f -name "*.m4a" -print0 | nice xargs -0 -i -P8 ff
 # Functions
 mkcd() { mkdir $1 && cd $1 }
 
-watchdir() {
+watch_macos() {
   PATTERN="$1"
   shift
-  while [ $? -eq 0 ]; do
-    clear && \
-      eval $@ && \
-      watchman-wait . -p $PATTERN;
+  while [ $? -ne -2 ]; do
+    clear && eval $@;
+    watchman-wait . -p $PATTERN;
+  done
+}
+
+watch_linux() {
+  while [ $? -ne -2 ]; do
+    clear && eval $@;
+    inotifywait -r . @./.git 2>/dev/null;
   done
 }
 
