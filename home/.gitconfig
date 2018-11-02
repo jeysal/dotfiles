@@ -1,7 +1,6 @@
 [core]
   eol = lf
   autocrlf = input
-  ignorecase = false
   excludesfile = ~/.gitignore
 [color]
   ui = auto
