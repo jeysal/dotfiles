@@ -4,7 +4,7 @@ ZSH_GRML_CONF=$HOME/.grml.zsh
 
 # macOS PATH
 if [[ ! -z "$IS_MACOS" ]]; then
-  export PATH="/usr/local/opt/openssl/bin:$HOME/.jenv/shims:$PATH"
+  export PATH="/usr/local/opt/less/bin:/usr/local/opt/openssl/bin:$HOME/.jenv/shims:$PATH"
   for package in {coreutils,findutils,gnu-sed,gnu-tar,grep}; do
     export PATH="/usr/local/opt/$package/libexec/gnubin:$PATH"
   done
