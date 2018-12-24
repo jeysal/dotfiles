@@ -18,6 +18,8 @@ Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'RRethy/vim-illuminate'
+Plug 'lilydjwg/colorizer'
+Plug 'inside/vim-search-pulse'
 
 " files
 Plug 'scrooloose/nerdtree'
