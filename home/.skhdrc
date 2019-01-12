@@ -86,7 +86,8 @@
 ctrl + alt + cmd - c : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 
 # open terminal, blazingly fast compared to iTerm/Hyper
-cmd - return : /Applications/kitty.app/Contents/MacOS/kitty -1 -d ~
+cmd - return : /Applications/kitty.app/Contents/MacOS/kitty -d ~
+cmd  + shift - return : env NOTMUX=true /Applications/kitty.app/Contents/MacOS/kitty -d ~
 
 # open qutebrowser
 #cmd + shift - return : ~/Scripts/qtb.sh
