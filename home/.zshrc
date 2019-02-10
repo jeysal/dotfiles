@@ -103,6 +103,10 @@ watch_linux() {
 which nvim >& /dev/null && alias vi='nvim' && alias vim='nvim'
 which colordiff >& /dev/null && alias diff='colordiff'
 
+# aliases from oh-my-zsh
+
+source $HOME/conf/oh-my-zsh/plugins/git/git.plugin.zsh
+
 # History
 HISTFILE=~/.histfile
 HISTSIZE=999999999
