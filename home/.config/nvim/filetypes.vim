@@ -4,7 +4,7 @@ autocmd BufNewFile,BufRead *.tsx setfiletype typescript syntax=typescript
 
 " language server commands
 let g:LanguageClient_serverCommands = {
-      \ 'javascript': ['flow-language-server', '--stdio'],
+      \ 'javascript': ['flow', 'lsp', '--from', './node_modules/.bin'],
       \ 'reason': ['ocaml-language-server', '--stdio'],
       \ 'ocaml': ['ocaml-language-server', '--stdio'],
       \ 'java': ['java-language-server'],
