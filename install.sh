@@ -32,6 +32,11 @@ if uname | grep >/dev/null Darwin; then
   ln -fnsT $(realpath pure/async.zsh) ~/.pure/async
   echo "Done"
 
+  echo -n "Linking VSCode files..."
+  mkdir -p "$HOME/Library/Application Support/Code/User"
+  ln -fst "$HOME/Library/Application Support/Code/User" ~/.config/Code/User/*
+  echo "Done"
+
   echo -n "Running list exports once..."
   npm ls -g --depth=0 2>/dev/null >$HOME/gdrive/tech/npm-global-list/$HOST.txt
 
