@@ -59,7 +59,9 @@ fi
 alias df='df -h'
 alias du='du -h'
 
-alias grep='grep --color'
+alias grep='egrep'
+alias sed='sed -r'
+
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
