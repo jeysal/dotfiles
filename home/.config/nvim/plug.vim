@@ -30,6 +30,7 @@ Plug 'pbogut/fzf-mru.vim'
 " git
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
 
 " format & lint
