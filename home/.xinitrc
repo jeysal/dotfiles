@@ -1,3 +1,8 @@
+if uname | grep >/dev/null Darwin; then
+  source /opt/X11/lib/X11/xinit/xinitrc
+  exit
+fi
+
 source $HOME/.x.sh
 
 # Xresources
