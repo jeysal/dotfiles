@@ -62,6 +62,7 @@ alias du='du -h'
 alias grep='egrep'
 alias sed='sed -r'
 
+alias ls='ls --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
