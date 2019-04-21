@@ -62,7 +62,6 @@ alias du='du -h'
 alias grep='egrep'
 alias sed='sed -r'
 
-alias ls='ls --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
@@ -103,8 +102,9 @@ watch_linux() {
 }
 
 # "Better version" aliases
-which nvim >& /dev/null && alias vi='nvim' && alias vim='nvim'
+which exa >& /dev/null && alias ls='exa' && alias l='exa -l' && alias la="exa -la"
 which colordiff >& /dev/null && alias diff='colordiff'
+which nvim >& /dev/null && alias vi='nvim' && alias vim='nvim'
 
 # aliases from oh-my-zsh
 
