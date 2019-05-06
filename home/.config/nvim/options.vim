@@ -18,6 +18,7 @@ set backupcopy=yes
 set number
 set encoding=utf-8 nobomb
 set scrolljump=8
+set signcolumn=yes
 set hlsearch
 set incsearch
 set hidden
