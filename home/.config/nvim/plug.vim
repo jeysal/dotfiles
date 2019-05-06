@@ -53,7 +53,7 @@ Plug 'heavenshell/vim-jsdoc'
 
 " ts
 Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/tsuquyomi'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 " generic language client
 if empty($ANDROID_ROOT) " unless on termux

@@ -13,19 +13,25 @@ let g:LanguageClient_serverCommands = {
 
 " goto definition
 autocmd FileType javascript,reason,java,rust map <buffer> gd :call LanguageClient_textDocument_definition()<CR>
-autocmd FileType typescript map <buffer> gd :TsuDefinition<CR>
+autocmd FileType typescript map <buffer> gd :TSDef<CR>
 autocmd FileType go map <buffer> gd :GoDef<CR>
+
+" goto type definition
+autocmd FileType javascript,reason,java,rust map <buffer> gD :call LanguageClient_textDocument_typeDefinition()<CR>
+autocmd FileType typescript map <buffer> gD :TSTypeDef<CR>
 
 " show type hint
 autocmd FileType javascript,reason,java,rust map <buffer> <C-q> :call LanguageClient_textDocument_hover()<CR>
-autocmd FileType typescript map <buffer> <C-q> :echo tsuquyomi#hint()<CR>
+autocmd FileType typescript map <buffer> <C-q> :TSType<CR>
 autocmd FileType go map <buffer> <C-q> :GoInfo<CR>
 
 " list symbols
 autocmd FileType javascript,reason,java,rust map <buffer> <leader>q :call LanguageClient_textDocument_documentSymbol()<CR>
+autocmd FileType typescript map <buffer> <leader>q :TSGetDocSymbols<CR>
 
 " references
 autocmd FileType javascript,reason,java,rust map <buffer> <leader>7 :call LanguageClient_textDocument_references()<CR>
+autocmd FileType typescript map <buffer> <leader>7 :TSRefs<CR>
 autocmd FileType go map <buffer> <leader>7 :GoCallers<CR>
 
 " format (see format.vim for Neoformat)
@@ -36,13 +42,13 @@ autocmd FileType go map <buffer> <C-l> :GoFmt<CR>
 autocmd FileType javascript,typescript map <leader>d :JsDoc<CR>
 
 " import
-autocmd FileType typescript map <buffer> <leader>i :TsuImport<CR>
+autocmd FileType typescript map <buffer> <leader>i :TSImport<CR>
 autocmd FileType go map <buffer> <leader>i :GoImports<CR>
 
 " rename
-autocmd FileType typescript map <buffer> <leader>r :TsuRenameSymbol<CR>
+autocmd FileType typescript map <buffer> <leader>r :TSRename<CR>
 autocmd FileType javascript,reason,rust map <buffer> <leader>r :call LanguageClient_textDocument_rename()<CR>
 autocmd FileType go map <buffer> <leader>r :GoRename<CR>
 
 " quick fix
-autocmd FileType typescript map <buffer> <leader><CR> :TsuQuickFix<CR>
+autocmd FileType typescript map <buffer> <leader><CR> :TSGetCodeFix<CR>
