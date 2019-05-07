@@ -41,10 +41,6 @@ autocmd FileType go map <buffer> <C-l> :GoFmt<CR>
 " insert doc
 autocmd FileType javascript,typescript map <leader>d :JsDoc<CR>
 
-" import
-autocmd FileType typescript map <buffer> <leader>i :TSImport<CR>
-autocmd FileType go map <buffer> <leader>i :GoImports<CR>
-
 " rename
 autocmd FileType typescript map <buffer> <leader>r :TSRename<CR>
 autocmd FileType javascript,reason,rust map <buffer> <leader>r :call LanguageClient_textDocument_rename()<CR>
