@@ -125,6 +125,8 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 # zsh-nvm
 if [[ ! -o login ]] || [[ ! -z "$IS_MACOS" ]]; then
   NVM_LAZY_LOAD=true
+  # force load for other commands
+  alias nvim="node --version >/dev/null && nvim"
 fi
 ZSH_NVM=$HOME/conf/zsh-nvm/zsh-nvm.plugin.zsh
 [ -s $ZSH_NVM ] && source $ZSH_NVM
