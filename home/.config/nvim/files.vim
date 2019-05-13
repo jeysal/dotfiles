@@ -24,8 +24,8 @@ command! -bang -nargs=* Lines call fzf#vim#grep('rg --fixed-strings --ignore-cas
 noremap <leader>e :Ggrep<space>
 
 " gitgutter
-map [h [c
-map ]h ]c
+map [h :GitGutterNextHunk<CR>
+map ]h :GitGutterPrevHunk<CR>
 
 
 " --- NERDTree ---

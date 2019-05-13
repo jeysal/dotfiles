@@ -17,9 +17,11 @@ Plug 'junegunn/limelight.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'RRethy/vim-illuminate'
-Plug 'lilydjwg/colorizer'
 Plug 'inside/vim-search-pulse'
+
+" for FocusGained
+Plug 'tmux-plugins/vim-tmux-focus-events'
+
 
 " files
 Plug 'scrooloose/nerdtree'
@@ -33,11 +35,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
 
-" format & lint
+" format
 Plug 'editorconfig/editorconfig-vim'
-Plug 'sbdchd/neoformat'
-Plug 'neomake/neomake'
-Plug 'ruanyl/vim-fixmyjs'
 
 " latex
 Plug 'lervag/vimtex'
@@ -53,18 +52,21 @@ Plug 'heavenshell/vim-jsdoc'
 
 " ts
 Plug 'leafgarland/typescript-vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 " generic language client
-if empty($ANDROID_ROOT) " unless on termux
-  Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
-endif
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-" reasonml
-Plug 'reasonml-editor/vim-reason-plus'
-
-" go
-Plug 'fatih/vim-go'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-emmet', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-highlight', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-rls', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-tslint', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-yank', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()

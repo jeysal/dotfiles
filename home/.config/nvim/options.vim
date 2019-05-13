@@ -15,14 +15,16 @@ set backspace=indent,eol,start
 set backupcopy=yes
 
 " misc
-set number
+set autoread
 set encoding=utf-8 nobomb
-set scrolljump=8
-set signcolumn=yes
+set hidden
 set hlsearch
 set incsearch
-set hidden
-set autoread
+set number
+set scrolljump=8
+set shortmess+=c
+set signcolumn=yes:2
+set termguicolors
 filetype on
 
 " centralize backups, swapfiles and undo history

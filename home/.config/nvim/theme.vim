@@ -1,6 +1,8 @@
 " theme
-let base16colorspace=256
-colorscheme base16-monokai
+colorscheme base16-spacemacs
+if filereadable(expand("~/.vimrc_background"))
+  autocmd FocusGained * source ~/.vimrc_background
+endif
 
 " powerline
 let g:airline_left_sep = ''
