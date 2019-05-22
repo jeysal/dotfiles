@@ -1,7 +1,3 @@
-" additional extensions
-autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-autocmd BufNewFile,BufRead *.tsx setfiletype typescript.tsx syntax=typescript
-autocmd BufNewFile,BufRead *.md set syntax=markdown
 autocmd BufNewFile,BufRead COMMIT_EDITMSG set spell
 autocmd FileType markdown,latex set spell
 
