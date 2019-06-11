@@ -51,7 +51,7 @@ Plug 'mgechev/vim-jsx'
 Plug 'heavenshell/vim-jsdoc'
 
 " ts
-Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
 
 " generic language client
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
