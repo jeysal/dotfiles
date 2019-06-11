@@ -188,5 +188,8 @@
     "statusBar.background": "#666",
     "statusBar.noFolderBackground": "#666",
     "statusBar.debuggingBackground": "#666"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
