@@ -11,7 +11,6 @@ xrandr --output DP-2 --right-of HDMI-1 --rotate left
 xrandr --output eDP-1 --left-of HDMI-1
 
 # keys
-xmodmap ~/.xmodmap
 setxkbmap -layout uk -variant macos -option compose:caps
 numlockx on
 
