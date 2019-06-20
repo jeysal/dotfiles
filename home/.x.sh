@@ -12,8 +12,7 @@ xrandr --output eDP-1 --left-of HDMI-1
 
 # keys
 xmodmap ~/.xmodmap
-setxkbmap -layout de -variant nodeadkeys -option compose:caps
-
+setxkbmap -layout uk -variant macos -option compose:caps
 numlockx on
 
 # touchpad
