@@ -15,10 +15,3 @@ nnoremap <C-6> <C-^>
 :nmap <F1> <nop>
 :imap <F1> <nop>
 
-" german keyboard layout ...
-nmap > [
-nmap < ]
-omap > [
-omap < ]
-xmap > [
-xmap < ]
