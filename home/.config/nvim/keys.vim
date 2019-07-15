@@ -16,4 +16,4 @@ nnoremap <C-6> <C-^>
 :imap <F1> <nop>
 
 " how tf am I supposed to press shift-6??
-:nmap § ^
+:map § ^
