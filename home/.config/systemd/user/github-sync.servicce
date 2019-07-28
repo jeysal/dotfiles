@@ -1,0 +1,6 @@
+[Unit]
+Description=fetch all GitHub repos into .github
+
+[Service]
+Type=simple
+ExecStart=%h/.github/sync.js
