@@ -3,4 +3,4 @@ Description=dump npm global package list into gdrive
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/zsh -c 'source /usr/share/nvm/init-nvm.sh && npm ls -g --depth=0 2>/dev/null >%h/gdrive/tech/npm-global-list/%H.txt'
+ExecStart=/usr/bin/zsh -c 'source %h/conf/zsh-nvm/zsh-nvm.plugin.zsh && npm ls -g --depth=0 2>/dev/null >%h/gdrive/tech/npm-global-list/%H.txt'
