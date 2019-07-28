@@ -1,10 +1,11 @@
-#!/usr/bin/env yarn node
+#!/usr/bin/env -S yarn node
 
 (async () => {
   const { spawnSync } = require("child_process");
   const { mkdirSync, readFileSync, readdirSync } = require("fs");
-  const fetch = require("node-fetch");
   const { resolve } = require("path");
+
+  const fetch = require(require.resolve("node-fetch", { paths: [resolve()] }));
 
   // GitHub helpers
 
@@ -39,9 +40,10 @@
       query {
         viewer {
           login
-          repositories(isFork:false, first:100${after}) {
+          repositories(first:100${after}) {
             nodes {
-              name
+              nameWithOwner
+              url
             }
             pageInfo {
               endCursor
@@ -53,29 +55,33 @@
     `);
 
     user = login;
-    repos.push(...nodes.map(({ name }) => name));
+    repos.push(...nodes);
 
     ({ endCursor, hasNextPage } = pageInfo);
   }
 
   // sync repos
 
-  const reposDir = resolve("repos");
-  mkdirSync(reposDir, { recursive: true });
-  repos.forEach(repo => {
-    const repoDir = resolve("repos", repo);
-    if (!readdirSync(reposDir).includes(repo)) {
-      mkdirSync(repoDir);
-      spawnSync("git", ["init"], { cwd: repoDir });
+  repos.forEach(({ nameWithOwner, url: urlString }) => {
+    const repoDir = resolve("repos", nameWithOwner);
+    const url = new URL(urlString);
+    url.username = user;
+    url.password = token;
+
+    // prepare repo dir
+    mkdirSync(repoDir, { recursive: true });
+    if (!readdirSync(repoDir).includes(".git")) {
+      spawnSync("git", ["init"], { cwd: repoDir, stdio: "inherit" });
+      spawnSync("git", ["remote", "add", "origin", url.href], {
+        cwd: repoDir,
+        stdio: "inherit"
+      });
     }
-    spawnSync(
-      "git",
-      [
-        `fetch`,
-        `--prune`,
-        `https://${user}:${token}@github.com/${user}/${repo}`
-      ],
-      { cwd: repoDir }
-    );
+
+    // fetch
+    spawnSync("git", [`fetch`, `--prune`, "origin"], {
+      cwd: repoDir,
+      stdio: "inherit"
+    });
   });
 })();
