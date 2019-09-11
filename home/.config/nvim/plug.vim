@@ -44,14 +44,10 @@ Plug 'lervag/vimtex'
 " webdev
 Plug 'mattn/emmet-vim'
 Plug 'valloric/MatchTagAlways'
-
-" js
-Plug 'jelera/vim-javascript-syntax'
-Plug 'mgechev/vim-jsx'
 Plug 'heavenshell/vim-jsdoc'
 
-" ts
-Plug 'HerringtonDarkholme/yats.vim'
+" syntax
+Plug 'sheerun/vim-polyglot'
 
 " generic language client
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
