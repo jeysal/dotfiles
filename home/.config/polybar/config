@@ -24,8 +24,9 @@ margin-bottom = 0
 [bar/top]
 enable-ipc = true
 monitor = ${env:POLYBAR_MONITOR:eDP-1}
+dpi = 210
 width = 100%
-height = 24
+height = 64
 ;radius = 5.0
 ;fixed-center = false
 ;override-redirect = true
