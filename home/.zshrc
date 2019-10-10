@@ -32,7 +32,7 @@ fi
 
 # Prompt
 
-for PROMPTFILE in {/usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme,$HOME/.powerlevel9k/powerlevel9k.zsh-theme}; do
+for PROMPTFILE in {/usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme,$HOME/.powerlevel10k/powerlevel10k.zsh-theme}; do
   echo $TERM | egrep "(screen|xterm).*" >/dev/null && [[ -f $PROMPTFILE ]] && source ~/.promptcfg && source $PROMPTFILE
 done
 
