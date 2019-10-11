@@ -53,6 +53,10 @@ if [[ "$1" == "-a" ]] && uname | grep >/dev/null Linux; then
   echo -n "Installing systemd files..."
   sudo cp -nprsT $(realpath systemd)/ /etc/systemd/
   echo "Done"
+
+  echo -n "Installing udev files..."
+  sudo cp -nprsT $(realpath udev)/ /etc/udev/
+  echo "Done"
 fi
 
 DANGLING_SYMLINKS=`find ~ -maxdepth 4 -xtype l`
