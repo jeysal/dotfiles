@@ -198,7 +198,7 @@ exec --no-startup-id xautolock -time 8 -detectsleep -locker 'i3lock-fancy-dualmo
 exec_always --no-startup-id $HOME/.config/polybar/launch.zsh
 
 # compositor
-exec --no-startup-id compton -b
+#exec --no-startup-id compton -b
 
 # clipboard manager
 exec --no-startup-id xfce4-clipman
