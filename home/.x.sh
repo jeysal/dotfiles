@@ -16,7 +16,7 @@ numlockx on
 
 # touchpad
 xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Natural Scrolling Enabled" 1
-xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Tapping Enabled" 1
+xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Tapping Enabled" 0
 xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Accel Speed" 1
 
 # beep
