@@ -39,6 +39,8 @@ bindsym $mod+Shift+q kill
 # launcher
 bindsym $mod+space exec --no-startup-id "rofi -normal-mode -show combi -modi combi -combi-modi window,chrome:chrome-switch-tabs"
 bindsym $mod+Shift+space exec --no-startup-id "rofi -normal-mode -show drun -modi drun,run"
+# emoji picker
+bindsym $mod+u exec --no-startup-id "rofimoji --skin-tone=neutral"
 
 # file manager
 bindsym $mod+Shift+f exec pcmanfm
