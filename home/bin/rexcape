@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+const assert = require("assert");
+
+const [, , str] = process.argv;
+assert.equal(typeof str, "string");
+
+const regex = str.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
+console.log(regex);
