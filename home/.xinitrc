@@ -5,8 +5,11 @@ fi
 
 source $HOME/.x.sh
 
-# Xresources
-xrdb $HOME/.Xresources
+if xrandr | grep >/dev/null 3840x2160; then
+  export DPI=210
+  export POLYBAR_HEIGHT=64
+  xrdb $HOME/hidpi.Xresources
+fi
 
 # see arch wiki
 source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
