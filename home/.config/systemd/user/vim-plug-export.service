@@ -1,0 +1,7 @@
+[Unit]
+Description=write vim-plug snapshot into gdrive
+
+[Service]
+Type=simple
+# sleep avoids core dump for some reason
+ExecStart=/usr/bin/nvim -c 'PlugSnapshot! %h/gdrive/tech/vim-plug-snapshot/%H.vim' -c 'sleep 1' -c 'qa!'
