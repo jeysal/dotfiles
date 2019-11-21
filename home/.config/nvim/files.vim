@@ -1,6 +1,8 @@
 " save as root https://github.com/neovim/neovim/issues/1496
 "noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
+command! -nargs=0 Only %bd|e#|bd#
+
 " --- fzf.vim ---
 
 noremap <C-p> :GFiles<CR>
