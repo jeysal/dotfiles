@@ -5,8 +5,9 @@ source $HOME/.config/nvim/path.vim
 source $HOME/.config/nvim/theme.vim
 
 source $HOME/.config/nvim/keys.vim
-source $HOME/.config/nvim/files.vim
 source $HOME/.config/nvim/edit.vim
+source $HOME/.config/nvim/files.vim
+source $HOME/.config/nvim/tree.vim
 
 source $HOME/.config/nvim/emmet.vim
 

@@ -1,6 +1,5 @@
-" save as root
-noremap <leader>W :w !sudo tee % > /dev/null<CR>
-
+" save as root https://github.com/neovim/neovim/issues/1496
+"noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " --- fzf.vim ---
 
@@ -26,19 +25,3 @@ noremap <leader>e :Ggrep<space>
 " gitgutter
 map ]h :GitGutterNextHunk<CR>
 map [h :GitGutterPrevHunk<CR>
-
-
-" --- NERDTree ---
-
-" config
-let g:NERDTreeShowHidden=1
-let g:NERDTreeWinSize=32
-
-noremap <leader>t :NERDTreeFind<CR>
-
-" start automatically
-autocmd VimEnter * if @% == "" | NERDTree | endif
-" take focus away
-autocmd VimEnter * wincmd p
-" quit automatically
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
