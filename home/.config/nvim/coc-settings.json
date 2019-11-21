@@ -1,0 +1,11 @@
+{
+  "suggest.enablePreview": true,
+  "tabnine.priority": 99,
+  "coc.source.tabnine.priority": 99,
+  "coc.source.tsserver-typescript.priority": 95,
+  "coc.source.tsserver-javascript.priority": 90,
+  "coc.source.around.priority": 5,
+  "coc.source.buffer.priority": 1,
+
+  "diagnostic.checkCurrentLine": true
+}
