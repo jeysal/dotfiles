@@ -8,7 +8,7 @@ source $HOME/.x.sh
 if xrandr | grep >/dev/null 3840x2160; then
   export DPI=210
   export POLYBAR_HEIGHT=64
-  xrdb $HOME/hidpi.Xresources
+  xrdb $HOME/.hidpi.Xresources
 fi
 
 # see arch wiki
