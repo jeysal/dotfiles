@@ -18,6 +18,7 @@ numlockx on
 xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Natural Scrolling Enabled" 1
 xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Tapping Enabled" 0
 xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Accel Speed" 1
+xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Middle Emulation Enabled" 1 # really only to disable the annoying default middle button region
 
 # beep
 xset -b
