@@ -23,6 +23,11 @@ mkdir -p ~/.local/share/nvim/site/autoload
 ln -fnsT $(realpath vim-plug/plug.vim) ~/.local/share/nvim/site/autoload/plug.vim
 echo "Done"
 
+echo -n "Setting up nvm..."
+NODE_VERSION=12
+zsh -i -c "nvm install $NODE_VERSION && nvm alias default $NODE_VERSION"
+echo "Done"
+
 echo -n "Setting up vim..."
 nvim -c 'PlugInstall' -c 'VimProcInstall' -c 'qa!'
 echo "Done"
