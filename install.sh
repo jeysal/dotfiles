@@ -23,6 +23,10 @@ mkdir -p ~/.local/share/nvim/site/autoload
 ln -fnsT $(realpath vim-plug/plug.vim) ~/.local/share/nvim/site/autoload/plug.vim
 echo "Done"
 
+echo -n "Setting up vim..."
+nvim -c 'PlugInstall' -c 'qa!'
+echo "Done"
+
 if uname | grep >/dev/null Darwin; then
   echo "Detected Darwin"
 
