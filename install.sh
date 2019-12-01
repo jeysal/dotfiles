@@ -24,7 +24,7 @@ ln -fnsT $(realpath vim-plug/plug.vim) ~/.local/share/nvim/site/autoload/plug.vi
 echo "Done"
 
 echo -n "Setting up vim..."
-nvim -c 'PlugInstall' -c 'qa!'
+nvim -c 'PlugInstall' -c 'VimProcInstall' -c 'qa!'
 echo "Done"
 
 if uname | grep >/dev/null Darwin; then
