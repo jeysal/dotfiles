@@ -12,16 +12,37 @@ function! s:check_back_space() abort
 endfunction
 
 " Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+let g:complete_count = 0
+function ResetCompleteCount()
+  let g:complete_count = 0
+endfunction
+let g:complete_timer = 0
 
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+function! Complete()
+  call timer_stop(g:complete_timer)
+
+  if g:complete_count > 0
+    call coc#start({'source': 'tabnine'})
+  else
+    call coc#start()
+  endif
+  let g:complete_count += 1
+
+  let g:complete_timer = timer_start(1000, {-> ResetCompleteCount()})
+
+  return ''
+endfunction
+
+inoremap <silent> <C-space> <C-R>=Complete()<CR>
+
+" Use <CR> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
-" inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Or use `complete_info` if your vim support it, like:
-inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <CR> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " coc yank list
-nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<CR>
 
 " restore c-6 mapping
 nnoremap <C-6> <C-^>
