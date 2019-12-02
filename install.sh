@@ -29,6 +29,7 @@ zsh -i -c "nvm install $NODE_VERSION && nvm alias default $NODE_VERSION"
 echo "Done"
 
 echo -n "Setting up vim..."
+pip install --user neovim
 nvim -c 'PlugInstall' -c 'VimProcInstall' -c 'qa!'
 echo "Done"
 
