@@ -33,6 +33,10 @@ pip install --user neovim
 nvim -c 'PlugInstall' -c 'VimProcInstall' -c 'qa!'
 echo "Done"
 
+echo -n "Setting up i3..."
+pip install --user i3ipc
+echo "Done"
+
 if uname | grep >/dev/null Darwin; then
   echo "Detected Darwin"
 
