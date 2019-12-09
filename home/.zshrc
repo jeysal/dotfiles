@@ -36,22 +36,20 @@ for PROMPTFILE in {/usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme,$H
   echo $TERM | egrep "(screen|xterm).*" >/dev/null && [[ -f $PROMPTFILE ]] && source ~/.promptcfg && source $PROMPTFILE
 done
 
-PURE_PROMPT_DIR=$HOME/.pure
-if [[ -e $PURE_PROMPT_DIR ]]; then
-  fpath=($PURE_PROMPT_DIR $fpath)
-  autoload -U promptinit; promptinit
-  prompt pure
-fi
+#PURE_PROMPT_DIR=$HOME/.pure
+#if [[ -e $PURE_PROMPT_DIR ]]; then
+#  fpath=($PURE_PROMPT_DIR $fpath)
+#  autoload -U promptinit; promptinit
+#  prompt pure
+#fi
 
-# more completions
-ZSH_COMPLETIONS_DIR=/usr/local/share/zsh-completions
-if [[ -n $ZSH_COMPLETIONS_DIR ]]; then
-  fpath=($ZSH_COMPLETIONS_DIR $fpath)
-  if [[ -n $HOME/.zcompdump(#qN.mh+24) ]]; then
-    compinit
-  else
-    compinit -C;
-  fi
+# completions
+autoload -Uz compinit
+fpath=(/usr/local/share/zsh/site-functions /usr/local/share/zsh-completions $fpath)
+if [[ -n $HOME/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C;
 fi
 
 # Aliases

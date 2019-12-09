@@ -1,5 +1,10 @@
 #!/usr/bin/env zsh
 
+if uname | grep >/dev/null Darwin; then
+  echo "Attempting to use GNU coreutils path on macOS"
+  export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+fi
+
 echo -n "Installing home dir files..."
 cp -nprsT $(realpath home)/ ~/
 mkdir -p ~/.vim/backups ~/.vim/swaps ~/.vim/undo
@@ -39,6 +44,18 @@ echo "Done"
 
 if uname | grep >/dev/null Darwin; then
   echo "Detected Darwin"
+
+  echo -n "Downloading grml-zsh-config"
+  if [[ ! -d ~/.grml.zsh ]]; then
+    curl -L > ~/.grml.zsh https://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
+  fi
+  echo "Done"
+
+  if [[ ! -d ~/.powerlevel10k ]]; then
+    echo -n "Downloading powerlevel10k..."
+    git clone https://github.com/romkatv/powerlevel10k ~/.powerlevel10k
+    echo "Done"
+  fi
 
   echo -n "Installing pure..."
   mkdir -p ~/.pure
