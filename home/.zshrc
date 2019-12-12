@@ -65,6 +65,8 @@ alias fgrep='fgrep --color=auto'
 
 alias gitdir='cd $(git rev-parse --show-toplevel)'
 
+alias y='yarn'
+
 alias xclip='xclip -selection clipboard'
 alias icat='kitty +kitten icat'
 
