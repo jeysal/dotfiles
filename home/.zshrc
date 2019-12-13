@@ -63,7 +63,8 @@ alias sed='sed -r'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-alias gitdir='cd $(git rev-parse --show-toplevel)'
+alias gdmb='git diff $(git merge-base origin/master HEAD)'
+alias groot='cd $(git rev-parse --show-toplevel)'
 
 alias y='yarn'
 
