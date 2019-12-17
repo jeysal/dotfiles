@@ -7,6 +7,5 @@
   "coc.source.around.priority": 5,
   "coc.source.buffer.priority": 1,
 
-  "diagnostic.checkCurrentLine": true,
-  "eslint.autoFixOnSave": true
+  "diagnostic.checkCurrentLine": true
 }

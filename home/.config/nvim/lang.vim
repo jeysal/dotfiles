@@ -17,7 +17,11 @@ nmap <silent> <leader>q :CocList outline<CR>
 " references
 nmap <silent> <leader>7 <Plug>(coc-references)
 " format
-nmap <silent> <C-l> <Plug>(coc-format)
+if executable('eslint')
+  nmap <silent> <C-l> :CocCommand eslint.executeAutofix<CR>
+else
+  nmap <silent> <C-l> <Plug>(coc-format)
+endif
 " insert doc
 autocmd FileType javascript,typescript map <leader>d :JsDoc<CR>
 " rename
