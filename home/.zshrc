@@ -68,6 +68,8 @@ alias groot='cd $(git rev-parse --show-toplevel)'
 
 alias y='yarn'
 
+alias :qa='exit'
+
 alias xclip='xclip -selection clipboard'
 alias icat='kitty +kitten icat'
 
