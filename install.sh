@@ -1,6 +1,12 @@
 #!/usr/bin/env zsh
 
 if uname | grep >/dev/null Darwin; then
+  echo "Detected Darwin"
+
+  export IS_MACOS=true
+fi
+
+if [[ ! -z "$IS_MACOS" ]]; then
   echo "Attempting to use GNU coreutils path on macOS"
   export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 fi
@@ -42,10 +48,8 @@ echo -n "Setting up i3..."
 pip install --user i3ipc
 echo "Done"
 
-if uname | grep >/dev/null Darwin; then
-  echo "Detected Darwin"
-
-  echo -n "Downloading grml-zsh-config"
+if [[ ! -z "$IS_MACOS" ]]; then
+  echo -n "Downloading grml-zsh-config..."
   if [[ ! -d ~/.grml.zsh ]]; then
     curl -L > ~/.grml.zsh https://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
   fi
