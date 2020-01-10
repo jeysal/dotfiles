@@ -3,6 +3,8 @@ set scrolloff=8
 " always show status
 set laststatus=2
 set showmode
+" FFS stop folding the line I'm editing, and folding when I paste so it goes into the wrong place
+set nofoldenable
 " stfu
 set noerrorbells
 " do not reset cursor to start of line
