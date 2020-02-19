@@ -41,7 +41,7 @@ echo "Done"
 
 echo -n "Setting up vim..."
 pip install --user neovim
-nvim -c 'PlugInstall' -c 'VimProcInstall' -c 'qa!'
+nvim -c 'PlugInstall' -c "source $(realpath snapshot.vim)" -c 'VimProcInstall' -c 'qa!'
 echo "Done"
 
 echo -n "Setting up i3..."
