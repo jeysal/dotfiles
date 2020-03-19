@@ -17,7 +17,7 @@ nmap <silent> <leader>q :CocList outline<CR>
 " references
 nmap <silent> <leader>7 <Plug>(coc-references)
 " format
-if executable('eslint')
+if 0 "executable('eslint')
   nmap <silent> <C-l> :CocCommand eslint.executeAutofix<CR>
 else
   nmap <silent> <C-l> <Plug>(coc-format)
