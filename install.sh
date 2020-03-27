@@ -35,7 +35,7 @@ ln -fnsT $(realpath vim-plug/plug.vim) ~/.local/share/nvim/site/autoload/plug.vi
 echo "Done"
 
 echo -n "Setting up nvm..."
-NODE_VERSION=13.9.0
+NODE_VERSION=13.12.0
 zsh -i -c "nvm install $NODE_VERSION && nvm alias default $NODE_VERSION"
 echo "Done"
 
