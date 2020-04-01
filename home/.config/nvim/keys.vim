@@ -53,3 +53,6 @@ nnoremap <C-6> <C-^>
 
 " how tf am I supposed to press shift-6??
 :map § ^
+
+" leader
+map <space> <leader>
