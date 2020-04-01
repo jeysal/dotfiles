@@ -24,10 +24,62 @@
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
-snippet c. "console.log" bA
+snippet "c." "console.log" bA
+console.log($0);
+endsnippet
+snippet "c" "console.log" b
 console.log($0);
 endsnippet
 
-snippet c "console.log" b
-console.log($0);
+snippet "fn" "arrow function" iw
+($1) => {
+  $0
+}
+endsnippet
+snippet "afn" "async arrow function" iw
+async ($1) => {
+  $0
+}
+endsnippet
+snippet "async" "async arrow function" iwA
+async ($1) => {
+  $0
+}
+endsnippet
+
+snippet "test" "test case" b
+test('$1', async () => {
+  $0
+});
+endsnippet
+snippet "it" "test case" b
+it('$1', async () => {
+  $0
+});
+endsnippet
+snippet "describe" "describe block" b
+describe('$1', () => {
+  $0
+});
+endsnippet
+
+snippet "import *" "import namespace" bA
+import * as $1 from '$2';
+endsnippet
+
+snippet "import React" "import React" bA
+import React$0 from 'react';
+endsnippet
+snippet "import" "import React" b
+import React from 'react';
+endsnippet
+
+snippet "comp" "React component file" b
+import React from 'react';
+
+const $1 = () => {
+  $0
+  return null;
+}
+export default $1;
 endsnippet
