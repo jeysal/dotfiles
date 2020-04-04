@@ -39,6 +39,10 @@ NODE_VERSION=13.12.0
 zsh -i -c "nvm install $NODE_VERSION && nvm alias default $NODE_VERSION"
 echo "Done"
 
+echo -n "Setting up Rust..."
+rustup install stable && rustup default stable && rustup component add rls-preview rust-analysis rust-src rustfmt
+echo "Done"
+
 echo -n "Setting up vim..."
 pip install --user neovim
 nvim -c 'PlugInstall' -c "source $(realpath snapshot.vim)" -c 'VimProcInstall' -c 'qa!'
