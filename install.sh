@@ -34,9 +34,10 @@ mkdir -p ~/.local/share/nvim/site/autoload
 ln -fnsT $(realpath vim-plug/plug.vim) ~/.local/share/nvim/site/autoload/plug.vim
 echo "Done"
 
-echo -n "Setting up nvm..."
-NODE_VERSION=13.12.0
-zsh -i -c "nvm install $NODE_VERSION && nvm alias default $NODE_VERSION"
+echo -n "Setting up nvm/npm..."
+NODE_VERSION=14.0.0
+NPM_GLOBAL_PACKAGES=(chrome-remote-interface@0.28.1 serve@11.3.0 typescript-language-server@0.4.0)
+zsh -i -c "nvm install $NODE_VERSION && nvm alias default $NODE_VERSION && npm i -g $NPM_GLOBAL_PACKAGES"
 echo "Done"
 
 echo -n "Setting up Rust..."
