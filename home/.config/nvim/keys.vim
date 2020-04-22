@@ -22,7 +22,8 @@ function! Complete()
   call timer_stop(g:complete_timer)
 
   if g:complete_count > 0
-    call coc#start({'source': 'tabnine'})
+    " call coc#start({'source': 'tabnine'})
+    call coc#start()
   else
     call coc#start()
   endif
