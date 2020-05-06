@@ -1,9 +1,7 @@
 [core]
   eol = lf
   autocrlf = input
-  pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended'
-[interactive]
-  diffFilter = delta --color-only excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
 [color]
   ui = auto
 [alias]
