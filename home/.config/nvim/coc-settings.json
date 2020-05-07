@@ -6,6 +6,7 @@
   "snippets.extends": {
     "cpp": ["c"],
     "javascriptreact": ["javascript"],
-    "typescript": ["javascript"]
+    "typescript": ["javascript"],
+    "typescriptreact": ["javascript"]
   }
 }
