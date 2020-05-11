@@ -131,6 +131,7 @@ if [[ ! -o login ]] || [[ ! -z "$IS_MACOS" ]]; then
   # force load for other commands
   alias nvim="node --version >/dev/null && nvim"
 fi
+NVM_AUTO_USE=true
 ZSH_NVM=$HOME/conf/zsh-nvm/zsh-nvm.plugin.zsh
 [ -s $ZSH_NVM ] && source $ZSH_NVM
 
