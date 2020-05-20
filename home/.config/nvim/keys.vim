@@ -49,11 +49,14 @@ nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<CR>
 nnoremap <C-6> <C-^>
 
 " fuck off, we got :h for that
-:nmap <F1> <nop>
-:imap <F1> <nop>
+nmap <F1> <nop>
+imap <F1> <nop>
 
 " how tf am I supposed to press shift-6??
-:map § ^
+map § ^
+
+" just in case
+nnoremap <leader>R :CocRestart<CR>
 
 " leader
 map <space> <leader>
