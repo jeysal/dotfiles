@@ -4,6 +4,7 @@
 " or execute: vim -S snapshot.vim
 
 silent! let g:plugs['MatchTagAlways'].commit = '352eb47'
+silent! let g:plugs['auto-pairs'].commit = '39f06b8'
 silent! let g:plugs['base16-vim'].commit = '6191622'
 silent! let g:plugs['coc-css'].commit = '41fe312'
 silent! let g:plugs['coc-emmet'].commit = '1e65237'
@@ -12,7 +13,6 @@ silent! let g:plugs['coc-highlight'].commit = 'b4e82eb'
 silent! let g:plugs['coc-html'].commit = '8ae5d28'
 silent! let g:plugs['coc-java'].commit = '3c914c2'
 silent! let g:plugs['coc-json'].commit = '33ca64c'
-silent! let g:plugs['coc-pairs'].commit = '79deeaa'
 silent! let g:plugs['coc-prettier'].commit = '771bb16'
 silent! let g:plugs['coc-rls'].commit = '142353e'
 silent! let g:plugs['coc-snippets'].commit = 'cad8079'
