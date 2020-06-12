@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts | grep '^0\.0\.0\.0' | awk '{print "local-zone: \""$2"\" always_nxdomain"}'
