@@ -1,0 +1,9 @@
+[Unit]
+Description=renew Let's Encrypt certificates when due
+
+[Timer]
+OnStartupSec=1min
+OnUnitActiveSec=6h
+
+[Install]
+WantedBy=timers.target

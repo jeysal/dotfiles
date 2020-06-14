@@ -1,0 +1,6 @@
+[Unit]
+Description=renew Let's Encrypt certificates
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/certbot renew --standalone
