@@ -91,7 +91,7 @@ alias update-mirrors='sudo reflector --verbose -l 16 -p https --sort rate --save
 alias audio-youtube-dl='noglob youtube-dl -f "bestaudio[ext=m4a]" --no-playlist'
 alias m4a-to-mp3='find . -type f -name "*.m4a" -print0 | nice xargs -0 -i -P8 ffmpeg -n -i {} -b:a 320k {}.mp3'
 
-# Functions
+alias cdtmp="cd $(mktemp -d)"
 mkcd() { mkdir -p $1 && cd $1 }
 
 watch_macos() {
