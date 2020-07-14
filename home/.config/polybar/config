@@ -369,6 +369,7 @@ ramp-volume-3 = 
 [module/battery]
 type = internal/battery
 full-at = 95
+poll-interval = 2
 
 label-charging-foreground = ${root.foreground}
 label-discharging-foreground = ${root.foreground}
