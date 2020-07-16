@@ -3,12 +3,11 @@
 xrandr --auto
 # try VirtualBox
 xrandr --output VGA-1 --auto --left-of VGA-2
-# try desktop nvidia
+# try desktop
 xrandr --output HDMI-0 --left-of DP-1
 xrandr --output DVI-I-1 --right-of DP-1
-# try notebook nvidia
-xrandr --output DP-2 --right-of HDMI-1 --rotate left
-xrandr --output eDP-1 --left-of HDMI-1
+# try notebook
+xrandr --fb 7680x2160 --output DP-1 --right-of eDP-1 --mode 1920x1080 --scale 2x2
 
 # keys
 setxkbmap -layout gb -variant mac -option compose:caps
