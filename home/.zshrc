@@ -87,6 +87,8 @@ alias temp='cat /sys/class/thermal/thermal_zone*/temp'
 alias dnd-on='notify-send DUNST_COMMAND_PAUSE'
 alias dnd-off='notify-send DUNST_COMMAND_RESUME'
 
+sshvnc() { ssh -fL 9901:localhost:5900 $* sleep 10; vncviewer localhost:9901 }
+
 alias update-mirrors='sudo reflector --verbose -l 16 -p https --sort rate --save /etc/pacman.d/mirrorlist'
 alias audio-youtube-dl='noglob youtube-dl -f "bestaudio[ext=m4a]" --no-playlist'
 alias m4a-to-mp3='find . -type f -name "*.m4a" -print0 | nice xargs -0 -i -P8 ffmpeg -n -i {} -b:a 320k {}.mp3'
