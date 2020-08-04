@@ -129,6 +129,18 @@ SAVEHIST=$HISTSIZE
 # SSH
 plugins=(git ssh-agent)
 
+# tmux
+if [ -n "$TMUX" ]; then
+  function refresh_tmux_env {
+    export $(tmux show-environment SSH_AUTH_SOCK)
+  }
+else
+  function refresh_tmux_env { }
+fi
+function preexec {
+  refresh_tmux_env
+}
+
 # base16
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
