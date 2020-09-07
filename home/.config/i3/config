@@ -37,7 +37,7 @@ bindsym $mod+Shift+Return exec env NOTMUX=true kitty
 bindsym $mod+Shift+q kill
 
 # launcher
-bindsym $mod+space exec --no-startup-id "rofi -normal-mode -show combi -modi combi -combi-modi window,chrome:chrome-switch-tabs"
+bindsym $mod+space exec --no-startup-id "rofi -normal-mode -show combi -modi combi -combi-modi window,browser:browser-switch-tabs"
 bindsym $mod+Shift+space exec --no-startup-id "rofi -normal-mode -show drun -modi drun,run"
 # emoji picker
 bindsym $mod+u exec --no-startup-id "rofimoji --skin-tone=neutral"
@@ -47,7 +47,7 @@ bindsym $mod+Shift+u exec --no-startup-id "rofimoji -c --skin-tone=neutral"
 bindsym $mod+Shift+f exec pcmanfm
 
 # browser
-bindsym $mod+c exec chrome
+bindsym $mod+c exec browser
 
 # change focus
 bindsym $mod+h focus left
