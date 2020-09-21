@@ -21,4 +21,4 @@ ssh-add
 export SSH_AUTH_SOCK
 
 # wm
-exec i3
+exec i3 2>&1 | tee $HOME/.local/share/i3.log
