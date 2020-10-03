@@ -13,9 +13,6 @@ fi
 # PATH
 export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.jsvu:$CARGO_HOME/bin:$GOPATH/bin:$PATH"
 
-# options
-setopt GLOB_COMPLETE
-
 # Vim mode
 
 bindkey -v
