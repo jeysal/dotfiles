@@ -83,6 +83,10 @@
   ],
   "vim.normalModeKeyBindings": [
     {
+      "before": ["§"],
+      "after": ["^"]
+    },
+    {
       "before": [
         "leader",
         "t"
@@ -190,6 +194,9 @@
     "statusBar.debuggingBackground": "#666"
   },
   "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
