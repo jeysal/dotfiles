@@ -16,8 +16,6 @@ source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 
 # ssh agent
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-eval $(ssh-agent -s)
-ssh-add
 export SSH_AUTH_SOCK
 
 # wm
