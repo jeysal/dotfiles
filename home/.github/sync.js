@@ -13,11 +13,11 @@
   const authorization = `token ${token}`;
   const endpoint = "https://api.github.com/graphql";
 
-  const request = async query => {
+  const request = async (query) => {
     const resp = await fetch(endpoint, {
       method: "POST",
       headers: { authorization, "content-type": "application/json" },
-      body: JSON.stringify({ query })
+      body: JSON.stringify({ query }),
     });
     return (await resp.json()).data;
   };
@@ -34,8 +34,8 @@
     const {
       viewer: {
         login,
-        repositories: { nodes, pageInfo }
-      }
+        repositories: { nodes, pageInfo },
+      },
     } = await request(`
       query {
         viewer {
@@ -74,14 +74,19 @@
       spawnSync("git", ["init"], { cwd: repoDir, stdio: "inherit" });
       spawnSync("git", ["remote", "add", "origin", url.href], {
         cwd: repoDir,
-        stdio: "inherit"
+        stdio: "inherit",
       });
     }
 
+    // update credentials
+    spawnSync("git", ["remote", "set-url", "origin", url.href], {
+      cwd: repoDir,
+      stdio: "inherit",
+    });
     // fetch
     spawnSync("git", [`fetch`, `--prune`, "origin"], {
       cwd: repoDir,
-      stdio: "inherit"
+      stdio: "inherit",
     });
   });
 })();
