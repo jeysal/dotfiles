@@ -191,7 +191,7 @@ exec_always --no-startup-id $HOME/.config/i3/focus-last.py
 bindsym $mod+section exec $HOME/.config/i3/focus-last.py --switch
 
 # xss-lock
-exec --no-startup-id xss-lock -- xss-lock-script
+exec --no-startup-id xss-lock -l -- xss-lock-script
 
 # xautolock
 exec --no-startup-id xautolock -time 8 -detectsleep -locker 'loginctl lock-session' -corners "+00-" -cornerdelay 16 -cornerredelay 64 -notify 16 -notifier "notify-send -u critical -t 15000 xautolock 'Computer will be automatically locked soon due to inactivity'"
