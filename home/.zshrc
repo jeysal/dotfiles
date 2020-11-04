@@ -129,7 +129,7 @@ plugins=(git ssh-agent)
 # tmux
 if [ -n "$TMUX" ]; then
   function refresh_tmux_env {
-    export $(tmux show-environment SSH_AUTH_SOCK)
+    eval "$(tmux show-environment -s SSH_AUTH_SOCK)"
   }
 else
   function refresh_tmux_env { }
