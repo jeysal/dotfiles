@@ -23,7 +23,7 @@ xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Middle Emulation Enab
 xset -b
 
 # background
-feh --bg-fill --randomize ~/conf/assets/bg.png /usr/share/backgrounds/archlinux/archlinux-{aftermath,arrival,underground}.jpg
+feh --bg-fill --randomize ~/conf/assets/bg.png /usr/share/backgrounds/archlinux/{archbtw,archwave,archwaveinv,awesome,wave}.png
 
 # polybar
 ~/.config/polybar/launch.zsh
