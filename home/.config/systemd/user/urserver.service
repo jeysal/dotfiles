@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-Restart=on-failure
+Restart=always
 RestartSec=4
 ExecStart=/bin/bash -ic "tail -f /dev/null | /opt/urserver/urserver"
 
