@@ -6,3 +6,6 @@ let g:AutoPairsMultilineClose=0
 
 " search for exact visual selection
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
+
+" change camel case element
+onoremap ~ :call<space>search('[A-Z0-9[:space:]]')<CR>
