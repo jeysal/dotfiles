@@ -28,6 +28,7 @@ set shortmess+=c
 set signcolumn=yes:2
 set termguicolors
 filetype on
+set mouse=a
 
 " centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups//
