@@ -27,4 +27,4 @@ autocmd FileType javascript,typescript map <leader>d :JsDoc<CR>
 " rename
 nmap <silent> <leader>r <Plug>(coc-rename)
 " quick fix
-nmap <silent> <leader><CR> <Plug>(coc-codeaction)
+nmap <silent> <leader><CR> :CocAction<CR>
