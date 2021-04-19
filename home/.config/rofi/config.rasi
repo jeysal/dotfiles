@@ -1,0 +1,20 @@
+configuration {
+	width: 64;
+	lines: 16;
+	font: "Fira Code Bold 20";
+	bw: 4;
+	padding: 16;
+	line-margin: 8;
+	separator-style: "solid";
+	hide-scrollbar: true;
+	dpi: 210;
+	color-normal: "#00000000,#BCC,#00000000,#E83,#EE222222";
+	color-urgent: "#00000000,#C50,#00000000,#E83,#EE222222";
+	color-active: "#00000000,#0D3,#00000000,#0D3,#EE222222";
+	color-window: "#EE222222,#E83";
+	kb-remove-to-eol: "";
+	kb-accept-entry: "Return,KP_Enter";
+	kb-row-up: "Up,Control+k,Shift+Tab";
+	kb-row-down: "Down,Control+j,Tab";
+	kb-row-tab: "";
+}
