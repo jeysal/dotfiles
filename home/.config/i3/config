@@ -37,8 +37,8 @@ bindsym $mod+Shift+Return exec env NOTMUX=true kitty
 bindsym $mod+Shift+q kill
 
 # launcher
-bindsym $mod+space exec --no-startup-id "rofi -normal-mode -show combi -modi combi -combi-modi window,browser:browser-switch-tabs"
-bindsym $mod+Shift+space exec --no-startup-id "rofi -normal-mode -show drun -modi drun,run"
+bindsym $mod+space exec --no-startup-id "rofi -normal-mode -show combi -modi combi,calc,drun,run -combi-modi window,browser:browser-switch-tabs"
+bindsym $mod+Shift+space exec --no-startup-id "rofi -normal-mode -show drun -modi combi,calc,drun,run -combi-modi window,browser:browser-switch-tabs"
 # emoji picker
 bindsym $mod+u exec --no-startup-id "rofimoji --skin-tone=neutral -a clipboard"
 bindsym $mod+Shift+u exec --no-startup-id "rofimoji --skin-tone=neutral -a type"
