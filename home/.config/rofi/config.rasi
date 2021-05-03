@@ -1,7 +1,7 @@
 configuration {
 	width: 64;
 	lines: 16;
-	font: "Fira Code Bold 20";
+	font: "Fira Code Bold 14";
 	bw: 4;
 	padding: 16;
 	line-margin: 8;
