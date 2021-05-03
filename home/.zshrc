@@ -84,6 +84,8 @@ alias temp='cat /sys/class/thermal/thermal_zone*/temp'
 alias dnd-on='notify-send DUNST_COMMAND_PAUSE'
 alias dnd-off='notify-send DUNST_COMMAND_RESUME'
 
+alias rsync='rsync -aP'
+
 sshvnc() { ssh -fL 9901:localhost:5900 $* sleep 10; vncviewer localhost:9901 }
 
 alias update-mirrors='sudo reflector --verbose -l 16 -p https --sort rate --save /etc/pacman.d/mirrorlist'
