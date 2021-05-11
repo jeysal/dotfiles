@@ -324,7 +324,7 @@ label-connected-foreground = ${root.foreground}
 [module/date]
 type = internal/date
 ;label = %{F#666}%{F-} %date%  %{F#e60053}%{F-} %time%
-date = %%{F#99} %Y-%m-%d%%{F#fff}   %H:%M:%S%%{F-}
+date = %%{F#999} %Y-%m-%d%%{F#fff}   %H:%M:%S%%{F-}
 interval = 1
 
 [module/backlight]
