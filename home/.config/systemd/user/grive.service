@@ -1,7 +1,0 @@
-[Unit]
-Description=grive sync
-
-[Service]
-Type=simple
-ExecStart=%h/bin/grive -p %h/gdrive
-TimeoutSec=30min

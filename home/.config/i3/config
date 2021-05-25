@@ -215,9 +215,6 @@ exec --no-startup-id nm-applet
 # blueman applet
 exec --no-startup-id blueman-applet
 
-# MEGAsync
-exec --no-startup-id sleep 30 && megasync
-
 # redshift
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id sleep 30 && killall redshift; redshift-gtk

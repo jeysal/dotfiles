@@ -1,9 +1,0 @@
-[Unit]
-Description=run grive 1min after startup and every 30mins
-
-[Timer]
-OnStartupSec=1min
-OnUnitActiveSec=30min
-
-[Install]
-WantedBy=timers.target
