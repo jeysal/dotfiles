@@ -10,9 +10,6 @@
 [submodule "zsh-nvm"]
   path = zsh-nvm
   url = https://github.com/lukechilds/zsh-nvm
-[submodule "spacemacs"]
-  path = spacemacs
-  url = https://github.com/syl20bnr/spacemacs
 [submodule "pure"]
   path = pure
   url = https://github.com/sindresorhus/pure
