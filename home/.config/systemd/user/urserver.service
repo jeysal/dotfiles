@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 Restart=always
 RestartSec=4
-ExecStart=/bin/bash -ic "tail -f /dev/null | /opt/urserver/urserver"
+ExecStart=/bin/bash -ic "prcs -s true | /opt/urserver/urserver"
 
 [Install]
 WantedBy=default.target
