@@ -28,6 +28,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
+Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 
 " git
 Plug 'Xuyuanp/nerdtree-git-plugin'
