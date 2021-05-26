@@ -81,8 +81,8 @@ alias less='less -r'
 
 alias temp='cat /sys/class/thermal/thermal_zone*/temp'
 
-alias dnd-on='notify-send DUNST_COMMAND_PAUSE'
-alias dnd-off='notify-send DUNST_COMMAND_RESUME'
+alias dnd-on='dunstctl set-paused true'
+alias dnd-off='dunstctl set-paused false'
 
 alias rsync='rsync -aP'
 
