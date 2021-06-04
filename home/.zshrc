@@ -74,7 +74,6 @@ alias icat='kitty +kitten icat'
 
 [[ ! -z "$IS_MACOS" ]] || alias open='xdg-open'
 
-alias sudo='sudo '
 alias nice='nice '
 
 alias less='less -r'
