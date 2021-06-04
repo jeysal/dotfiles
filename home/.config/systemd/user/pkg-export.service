@@ -1,6 +1,6 @@
 [Unit]
-Description=dump yay package list into gdrive
+Description=dump yay package list
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/bash -c 'yay -Qe >%h/gdrive/tech/pkg-list/%H.txt'
+ExecStart=/usr/bin/bash -c 'yay -Qe >%h/docs/tech/pkg-list/%H.txt'

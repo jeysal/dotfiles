@@ -1,6 +1,6 @@
 [Unit]
-Description=dump vscode extension list into gdrive
+Description=dump vscode extension list
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/bash -c 'ls %h/.vscode/extensions/ >%h/gdrive/tech/vscode-ext-list/%H.txt'
+ExecStart=/usr/bin/bash -c 'ls %h/.vscode/extensions/ >%h/docs/tech/vscode-ext-list/%H.txt'

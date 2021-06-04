@@ -74,14 +74,14 @@ if [[ ! -z "$IS_MACOS" ]]; then
   echo "Done"
 
   echo -n "Running list exports once..."
-  npm ls -g --depth=0 2>/dev/null >$HOME/gdrive/tech/npm-global-list/$HOST.txt
+  npm ls -g --depth=0 2>/dev/null >$HOME/docs/tech/npm-global-list/$HOST.txt
 
-  PKG_LIST=$HOME/gdrive/tech/pkg-list/$HOST.txt
+  PKG_LIST=$HOME/docs/tech/pkg-list/$HOST.txt
   brew list >$PKG_LIST
   echo >>$PKG_LIST
   brew cask list >>$PKG_LIST
 
-  ls $HOME/.vscode/extensions/ >$HOME/gdrive/tech/vscode-ext-list/$HOST.txt
+  ls $HOME/.vscode/extensions/ >$HOME/docs/tech/vscode-ext-list/$HOST.txt
   echo "Done"
 fi
 
