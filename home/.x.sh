@@ -13,7 +13,12 @@ xrandr --fb 7680x2160 --output DP-1 --right-of eDP-1 --mode 1920x1080 --scale 2x
 setxkbmap -layout gb -variant mac -option compose:caps
 numlockx on
 
-# touchpad
+# asus touchpad
+xinput set-prop "ELAN1201:00 04F3:3098 Touchpad" "libinput Natural Scrolling Enabled" 1
+xinput set-prop "ELAN1201:00 04F3:3098 Touchpad" "libinput Tapping Enabled" 0
+xinput set-prop "ELAN1201:00 04F3:3098 Touchpad" "libinput Accel Speed" 0.75
+
+# dell touchpad
 xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Natural Scrolling Enabled" 1
 xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Tapping Enabled" 0
 xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Accel Speed" 1
