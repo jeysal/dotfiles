@@ -203,6 +203,8 @@ exec --no-startup-id bash -c 'lid-sleep-daemon >$HOME/.local/share/lid-sleep-dae
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.zsh
 
+exec --no-startup-id onboard
+
 # compositor
 #exec --no-startup-id compton -b
 
