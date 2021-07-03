@@ -14,15 +14,3 @@ inode/directory=pcmanfm.desktop
 image/svg+xml=brave-browser.desktop
 image/jpeg=brave-browser.desktop
 video/quicktime=vlc.desktop
-application/vnd.openxmlformats-officedocument.presentationml.presentation=google-chrome.desktop
-application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=google-chrome.desktop
-
-[Added Associations]
-application/pdf=org.gnome.Evince.desktop;brave-browser.desktop;google-chrome.desktop;
-image/png=feh.desktop;google-chrome.desktop;
-text/markdown=brave-browser.desktop;google-chrome.desktop;
-image/svg+xml=org.gnome.Evince.desktop;google-chrome.desktop;
-image/heif=org.gnome.gThumb.desktop;org.nomacs.ImageLounge.desktop;google-chrome.desktop;org.gnome.Evince.desktop;
-image/jpeg=brave-browser.desktop;geeqie.desktop;
-application/vnd.openxmlformats-officedocument.presentationml.presentation=brave-browser.desktop;
-application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=google-chrome.desktop;brave-browser.desktop;
