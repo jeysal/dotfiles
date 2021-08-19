@@ -15,6 +15,7 @@
 
 [init]
   templatedir = ~/.git_template
+	defaultBranch = main
 [pull]
   rebase = preserve
 [rebase]
