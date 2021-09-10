@@ -5,6 +5,7 @@ exec tmux
 
 export GOPATH="$HOME/proj/go"
 export CARGO_HOME="$HOME/.cargo"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 export EDITOR=vi
 export VISUAL=nvim
