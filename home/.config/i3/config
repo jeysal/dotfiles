@@ -200,7 +200,7 @@ exec --no-startup-id xautolock -time 8 -detectsleep -locker 'loginctl lock-sessi
 
 # lid-sleep-daemon
 exec_always --no-startup-id pkill -f '/lid-sleep-daemon$'
-exec_always --no-startup-id bash -c 'lid-sleep-daemon >$HOME/.local/share/lid-sleep-daemon.log'
+exec_always --no-startup-id bash -c 'prcs -r=143 -- lid-sleep-daemon >$HOME/.local/share/lid-sleep-daemon.log ; exit'
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.zsh
