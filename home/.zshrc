@@ -69,7 +69,7 @@ alias y='yarn'
 
 alias :qa='exit'
 
-alias xclip='xclip -selection clipboard'
+alias xclip='xclip -r -selection clipboard'
 alias icat='kitty +kitten icat'
 
 [[ ! -z "$IS_MACOS" ]] || alias open='xdg-open'
