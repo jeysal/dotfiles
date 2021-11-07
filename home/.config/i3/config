@@ -221,7 +221,7 @@ exec --no-startup-id blueman-applet
 
 # redshift
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
-exec --no-startup-id sleep 30 && killall redshift; redshift-gtk
+exec --no-startup-id sleep 10 && killall redshift; redshift-gtk
 
 # syncthingtray
-exec --no-startup-id sleep 30 && killall syncthingtray; syncthingtray
+exec --no-startup-id sleep 10 && killall syncthingtray; syncthingtray
