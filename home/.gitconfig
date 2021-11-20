@@ -17,7 +17,7 @@
   templatedir = ~/.git_template
 	defaultBranch = main
 [pull]
-  rebase = preserve
+  rebase = merges
 [rebase]
   autosquash = true
 [rerere]
