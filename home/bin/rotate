@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+const assert = require("assert").strict;
+const process = require("process");
+const { execFileSync } = require("child_process");
+
+const [, , direction] = process.argv;
+
+const transformationMatrix = {
+  normal: [1, 0, 0, 0, 1, 0, 0, 0, 1],
+  left: [0, -1, 1, 1, 0, 0, 0, 0, 1],
+  inverted: [-1, 0, 1, 0, -1, 1, 0, 0, 1],
+  right: [0, 1, 0, -1, 0, 1, 0, 0, 1],
+}[direction];
+
+if (!transformationMatrix) {
+  throw new Error(
+    `Expected normal, left, inverted, or right as direction, but received ${direction}`
+  );
+}
+
+execFileSync("xrandr", ["--output", "eDP-1", "--rotate", direction]);
+execFileSync("xinput", [
+  "set-prop",
+  "ELAN9008:00 04F3:2C82",
+  "Coordinate Transformation Matrix",
+  ...transformationMatrix,
+]);
+execFileSync("xinput", [
+  "set-prop",
+  "ELAN9008:00 04F3:2C82 Stylus Pen (0)",
+  "Coordinate Transformation Matrix",
+  ...transformationMatrix,
+]);
+execFileSync("xinput", [
+  "set-prop",
+  "ELAN9008:00 04F3:2C82 Stylus Eraser (0)",
+  "Coordinate Transformation Matrix",
+  ...transformationMatrix,
+]);
