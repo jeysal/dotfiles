@@ -19,12 +19,7 @@ xinput set-prop "ELAN1201:00 04F3:3098 Touchpad" "libinput Tapping Enabled" 0
 xinput set-prop "ELAN1201:00 04F3:3098 Touchpad" "libinput Accel Speed" 0.5
 xinput set-prop "ELAN1201:00 04F3:3098 Touchpad" "libinput Middle Emulation Enabled" 1 # disable the annoying default middle button region
 xinput set-prop "ELAN1201:00 04F3:3098 Touchpad" "libinput Disable While Typing Enabled" 0
-
-# dell touchpad
-xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Natural Scrolling Enabled" 1
-xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Tapping Enabled" 0
-xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Accel Speed" 1
-xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Middle Emulation Enabled" 1 # disable the annoying default middle button region
+xinput --map-to-output "ELAN9008:00 04F3:2C82" eDP-1
 
 # beep
 xset -b
