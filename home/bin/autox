@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+const { spawn } = require("child_process");
+const { resolve } = require("path");
+
+console.log("spawning udevadm monitor");
+const udevadmMonitor = spawn("udevadm", ["monitor", "-s", "drm", "-k"], {
+  encoding: "utf-8",
+});
+process.on("exit", () => {
+  console.log("killing udevadm monitor");
+  udevadmMonitor.kill();
+});
+
+let configChild = "waiting";
+setTimeout(() => {
+  console.log("starting to respond to monitor data");
+  configChild = null;
+}, 1_000);
+
+udevadmMonitor.stdout.on("data", (data) => {
+  if (!configChild) {
+    console.log("received monitor data", data);
+    console.log("spawning config process");
+    configChild = spawn(resolve(process.env.HOME, ".x.sh"), {
+      stdio: "inherit",
+    });
+    configChild.on("exit", () => {
+      console.log("config process exited");
+      configChild = null;
+    });
+  }
+});

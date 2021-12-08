@@ -3,7 +3,8 @@ if uname | grep >/dev/null Darwin; then
   exit
 fi
 
-source $HOME/.x.sh
+./.x.sh
+prcs -r=143 -- bin/autox >$HOME/.local/share/autox.log &disown
 
 if xrandr | grep >/dev/null 3840x2160; then
   export DPI=210

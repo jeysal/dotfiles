@@ -15,7 +15,7 @@ for monitor in DP-1 DP-0 DVI-D-1 DVI-D-0 HDMI-1 HDMI-0 HDMI1 HDMI0 VGA-1 VGA1 eD
   fi
 done
 
-# Launch bar1 and bar2
-polybar top &
+# Launch
+polybar top &disown
 
 echo "Bars launched..."
