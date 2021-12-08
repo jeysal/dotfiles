@@ -1,6 +1,0 @@
-#/usr/bin/env bash
-[ -z "$INTERFACE" ] && echo 'missing INTERFACE' && exit 1
-iptables -A INPUT -t mangle -p tcp -m multiport --sports http,https -m state --state ESTABLISHED -j MARK --set-mark 10
-tc qdisc add dev $INTERFACE root handle 1:0 htb default 10
-tc class add dev $INTERFACE parent 1:0 classid 1:10 htb rate 32kbit ceil 64kbit prio 0
-tc filter add dev $INTERFACE parent 1:0 u32 match u32 0 0 police rate 100kbit burst 4k
