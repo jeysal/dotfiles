@@ -418,42 +418,65 @@ label-close = 
 label-separator = /
 label-separator-margin = 1
 
-menu-0-0 = kill
+menu-0-0 = rotate
 menu-0-0-foreground = ${colors.accent}
-menu-0-0-exec = menu-open-3
-menu-0-1 = lock
+menu-0-0-exec = #power-menu.open.4
+menu-0-1 = kill
 menu-0-1-foreground = ${colors.accent}
-menu-0-1-exec = loginctl lock-session
-menu-0-2 = suspend
+menu-0-1-exec = #power-menu.open.3
+menu-0-2 = lock
 menu-0-2-foreground = ${colors.accent}
-menu-0-2-exec = systemctl suspend
-menu-0-3 = reboot
+menu-0-2-exec = loginctl lock-session
+menu-0-3 = suspend
 menu-0-3-foreground = ${colors.accent}
-menu-0-3-exec = menu-open-1
-menu-0-4 = poweroff
+menu-0-3-exec = systemctl suspend
+menu-0-4 = reboot
 menu-0-4-foreground = ${colors.accent}
-menu-0-4-exec = menu-open-2
+menu-0-4-exec = #power-menu.open.1
+menu-0-5 = poweroff
+menu-0-5-foreground = ${colors.accent}
+menu-0-5-exec = #power-menu.open.2
 
+# 1: reboot
 menu-1-0 = cancel
 menu-1-0-foreground = ${colors.accent}
-menu-1-0-exec = menu-open-0
+menu-1-0-exec = #power-menu.open.0
 menu-1-1 = reboot
 menu-1-1-foreground = ${colors.accent}
 menu-1-1-exec = reboot
 
+# 2: poweroff
 menu-2-0 = cancel
 menu-2-0-foreground = ${colors.accent}
-menu-2-0-exec = menu-open-0
+menu-2-0-exec = #power-menu.open.0
 menu-2-1 = poweroff
 menu-2-1-foreground = ${colors.accent}
 menu-2-1-exec = poweroff
 
+# 3: kill
 menu-3-0 = cancel
 menu-3-0-foreground = ${colors.accent}
-menu-3-0-exec = menu-open-0
+menu-3-0-exec = #power-menu.open.0
 menu-3-1 = kill
 menu-3-1-foreground = ${colors.accent}
-menu-3-1-exec = i3-msg exit
+menu-3-1-exec = pkill xinit
+
+# 4: rotate
+menu-4-0 = cancel
+menu-4-0-foreground = ${colors.accent}
+menu-4-0-exec = #power-menu.open.0
+menu-4-1 = normal
+menu-4-1-foreground = ${colors.accent}
+menu-4-1-exec = rotate normal
+menu-4-2 = left
+menu-4-2-foreground = ${colors.accent}
+menu-4-2-exec = rotate left
+menu-4-3 = inverted
+menu-4-3-foreground = ${colors.accent}
+menu-4-3-exec = rotate inverted
+menu-4-4 = right
+menu-4-4-foreground = ${colors.accent}
+menu-4-4-exec = rotate right
 
 [module/xkeyboard]
 type = internal/xkeyboard
