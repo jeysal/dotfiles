@@ -1,7 +1,7 @@
 [global]
     ### Display ###
 
-    corner_radius = 8
+    corner_radius = 0
 
     # Which monitor should the notifications be displayed on.
     monitor = 0
@@ -63,10 +63,10 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 1
 
     # Defines color of the frame around the notification window.
-    frame_color = "#aaaaaa"
+    frame_color = "#783a00"
 
     # Define a color for the separator.
     # possible values are:
@@ -248,7 +248,7 @@
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#285577"
+    background = "#a04e00"
     foreground = "#ffffff"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
