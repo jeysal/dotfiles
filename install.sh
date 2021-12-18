@@ -43,7 +43,10 @@ zsh -i -c "nvm install $NODE_VERSION && nvm alias default $NODE_VERSION && npm i
 echo "Done"
 
 echo -n "Setting up Rust..."
-rustup install stable && rustup default stable && rustup component add rls-preview rust-analysis rust-src rustfmt && cargo install --locked cargo-insta cargo-watch cargo-outdated cross prcs
+rustup install stable && rustup default stable && rustup component add rls-preview rust-analysis rust-src rustfmt && cargo install --locked prcs
+if uname -a | grep -v raspberrypi > /dev/null; then
+  cargo install --locked cargo-insta cargo-outdated cargo-watch cross
+fi
 echo "Done"
 
 echo -n "Setting up vim..."
