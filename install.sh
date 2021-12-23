@@ -6,6 +6,12 @@ if uname | grep >/dev/null Darwin; then
   export IS_MACOS=true
 fi
 
+if uname -a | grep >/dev/null rpi-legacy; then
+  echo "Detected raspi"
+
+  export IS_RASPI=true
+fi
+
 if [[ ! -z "$IS_MACOS" ]]; then
   echo "Attempting to use GNU coreutils path on macOS"
   export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -44,7 +50,7 @@ echo "Done"
 
 echo -n "Setting up Rust..."
 rustup install stable && rustup default stable && rustup component add rls-preview rust-analysis rust-src rustfmt && cargo install --locked prcs
-if uname -a | grep -v raspberrypi > /dev/null; then
+if [[ -z "$IS_RASPI" ]]; then
   cargo install --locked cargo-insta cargo-outdated cargo-watch cross
 fi
 echo "Done"

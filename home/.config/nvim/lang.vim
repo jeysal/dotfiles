@@ -2,7 +2,7 @@ autocmd BufNewFile,BufRead COMMIT_EDITMSG set spell
 autocmd FileType markdown,latex set spell
 
 " highlight
-autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd CursorHold * silent if exists("*CocActionAsync") | call CocActionAsync('highlight') | endif
 " show type hint
 nmap <silent> <C-q> :call CocActionAsync('doHover')<CR>
 " navigate errors
