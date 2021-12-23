@@ -8,6 +8,8 @@ Type=oneshot
 ExecStart=/bin/sh -c "echo disabled > /sys/devices/%I/power/wakeup"
 ExecStop=/bin/sh -c "echo enabled > /sys/devices/%I/power/wakeup"
 RemainAfterExit=yes
+Restart=on-failure
+RestartSec=30s
 
 [Install]
 WantedBy=multi-user.target
