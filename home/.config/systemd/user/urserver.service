@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=simple
 Restart=always
-RestartSec=4
+RestartSec=1s
 ExecStart=/bin/bash -ic "tail -f /dev/null | /opt/urserver/urserver"
 
 [Install]
