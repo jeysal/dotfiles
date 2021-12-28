@@ -1,0 +1,9 @@
+[Unit]
+Description=fetch current stevenblack hosts list periodically
+
+[Timer]
+OnStartupSec=1min
+OnUnitActiveSec=24h
+
+[Install]
+WantedBy=timers.target

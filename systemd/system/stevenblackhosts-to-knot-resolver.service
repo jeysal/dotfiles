@@ -1,0 +1,7 @@
+[Unit]
+Description=fetch current stevenblack hosts list
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bash -c "curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts | grep '^0\.0\.0\.0' | cut -d ' ' -f 2 >/var/tmp/blocked-hosts"
+ExecStartPost=/usr/bin/systemctl restart kresd@1

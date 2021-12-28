@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-curl https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling/hosts |\
-  grep '^0\.0\.0\.0' |\
-  cut -d ' ' -f 2 |\
-  sed "s/^/'/;s/$/',/" |\
-  sed '$ s/.$//'
