@@ -176,20 +176,20 @@ hide_edge_borders smart
 focus_follows_mouse no
 focus_on_window_activation focus
 
-# Pulse Audio controls
+# pulseaudio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle # mute mic
 
-# Sreen brightness controls
+# Screen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 bindsym XF86KbdBrightnessUp exec light -A 34 -s $(light -L | grep kbd)
 bindsym XF86KbdBrightnessDown exec light -U 34 -s $(light -L | grep kbd)
 
-# Touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
+# onboard
+bindsym XF86Launch1 exec onboard
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
