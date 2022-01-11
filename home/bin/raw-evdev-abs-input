@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+import sys
+import signal
+import atexit
+from Xlib import X, display
+from evdev import InputDevice, categorize, ecodes, util
+
+inverted = sys.argv[2] == "inverted"
+print("Inverted:", inverted)
+
+dev_path = sys.argv[1]
+print("Opening", dev_path)
+dev = InputDevice(dev_path)
+input_x_max = dev.absinfo(ecodes.ABS_X).max
+input_y_max = dev.absinfo(ecodes.ABS_Y).max
+input_x_current = 0
+input_y_current = 0
+
+d = display.Display()
+s = d.screen()
+root = s.root
+screen_x_max = s.width_in_pixels
+screen_y_max = s.height_in_pixels
+screen_x_current = 0
+screen_y_current = 0
+
+def ungrab_dev_and_exit(*_):
+    print("Ungrabbing", dev_path)
+    dev.ungrab()
+    quit()
+atexit.register(ungrab_dev_and_exit)
+signal.signal(signal.SIGTERM, ungrab_dev_and_exit)
+signal.signal(signal.SIGINT, ungrab_dev_and_exit)
+print("Grabbing", dev_path)
+dev.grab()
+
+for event in dev.read_loop():
+    if event.type == ecodes.EV_ABS:
+        new_screen_x_current = screen_x_current
+        new_screen_y_current = screen_y_current
+        if event.code == ecodes.ABS_X:
+            input_x_current = event.value / input_x_max
+            if inverted:
+                input_x_current = 1 - input_x_current
+            new_screen_x_current = round(input_x_current * screen_x_max)
+
+        if event.code == ecodes.ABS_Y:
+            input_y_current = event.value / input_y_max
+            if inverted:
+                input_y_current = 1 - input_y_current
+            new_screen_y_current = round(input_y_current * screen_y_max)
+
+        if new_screen_x_current != screen_x_current or new_screen_y_current != screen_y_current:
+            root.warp_pointer(screen_x_current, screen_y_current)
+            d.sync()
+
+        screen_x_current = new_screen_x_current
+        screen_y_current = new_screen_y_current

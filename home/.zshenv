@@ -10,6 +10,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR=vi
 export VISUAL=nvim
 export PAGER=less
+export SUDO_ASKPASS=/usr/bin/qt4-ssh-askpass
 
 export LESSOPEN='|~/.lessfilter %s'
 
