@@ -16,7 +16,6 @@ silent! let g:plugs['coc-json'].commit = '95ece4a6268a08fe0b6eeca445cf2066fadbdd
 silent! let g:plugs['coc-prettier'].commit = '7fda02901de563f5ecc2baf98b307f8ffc4ac2f5'
 silent! let g:plugs['coc-rust-analyzer'].commit = '7e80947f18d679fbec043f354c64b2718efe4749'
 silent! let g:plugs['coc-snippets'].commit = '5d598310e0375d680e4301cfe2ecfcdb29e3eefd'
-silent! let g:plugs['coc-tslint'].commit = 'c5303bf8118d94cc2113380e9b0a4118614a530f'
 silent! let g:plugs['coc-tsserver'].commit = '87d54d8a2bfbda4d2486d0cb9721c05d2e3e9793'
 silent! let g:plugs['coc-yaml'].commit = '7b5d5881121a98bd81f516cebbd6e3a804b505c1'
 silent! let g:plugs['coc-yank'].commit = '69fc2deea53c176bd0c95c6b822ed5a63ab469ec'
