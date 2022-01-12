@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
+set -euxo pipefail
 
+sudo -Av
 sudo -A raw-evdev-abs-input /dev/input/$(
   egrep Stylus /sys/class/input/event*/device/name | cut -d : -f 1 | egrep -o "event[0-9]+"
 ) inverted &
