@@ -5,7 +5,7 @@ sudo -Av
 sudo -A raw-evdev-abs-input /dev/input/$(
   egrep Stylus /sys/class/input/event*/device/name | cut -d : -f 1 | egrep -o "event[0-9]+"
 ) inverted &
-sudo rmmod hid_uclogic
+sudo rmmod hid_uclogic || true
 
 /usr/bin/osu-lazer
 
