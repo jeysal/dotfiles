@@ -3,6 +3,8 @@
 [[ -z "$ANDROID_ROOT" ]] && [[ -z "$SSH_CONNECTION" ]] && \
 exec tmux
 
+export FZF_DEFAULT_COMMAND="rg --fixed-strings --ignore-case --no-heading --hidden --no-ignore --glob '!.git/*'"
+
 export GOPATH="$HOME/proj/go"
 export CARGO_HOME="$HOME/.cargo"
 export XDG_CONFIG_HOME="$HOME/.config"
