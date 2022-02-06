@@ -1,0 +1,6 @@
+[Unit]
+Description=update ddns
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/env curl -s http://sync.afraid.org/u/%i/
