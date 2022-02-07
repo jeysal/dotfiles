@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+echo Opening backup device a &&
+ssh "$1" sudo cryptsetup open /dev/sda1 backup-a --key-file=- </etc/luks-keys/backup &&
+echo Opening backup device b &&
+ssh "$1" sudo cryptsetup open /dev/sdb1 backup-b --key-file=- </etc/luks-keys/backup &&
+echo Opening backup device c &&
+ssh "$1" sudo cryptsetup open /dev/sdc1 backup-c --key-file=- </etc/luks-keys/backup &&
+echo Mounting backup fs &&
+ssh "$1" sudo zpool import -d /dev/disk/by-id backup &&
+true

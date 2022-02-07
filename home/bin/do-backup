@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+echo Backing up &&
+rsync --delete --inplace -aPhvR ~/./data/ ~/./docs/ ~/./img/ ~/./games/ --exclude /data/virtualbox --exclude /games/legendary "$1":/mnt/backup/ "${@:2}" &&
+echo Creating snapshot &&
+ssh $1 bash <<"EOF"
+  sudo zfs snapshot -r backup@$(date +"%Y-%m-%dT%H:%M:%S%Z")
+EOF

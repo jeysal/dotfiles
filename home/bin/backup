@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+~/bin/mount-backup "$1" &&
+~/bin/do-backup "$@"
+STATUS=$?
+
+~/bin/unmount-backup "$1"
+
+exit $STATUS
