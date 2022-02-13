@@ -1,6 +1,7 @@
 # grml in user folder (for systems that do not have it installed globally)
 ZSH_GRML_CONF=$HOME/.grml.zsh
 [[ -f $ZSH_GRML_CONF ]] && source $ZSH_GRML_CONF
+prompt off # We will configure our own prompt
 
 # macOS PATH
 if [[ ! -z "$IS_MACOS" ]]; then
@@ -17,30 +18,10 @@ export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.jsvu:$CARGO_HOME/bin:$GOPATH/bin:
 
 bindkey -v
 
-# termite vte
-
-if [[ $TERM == xterm-termite ]]; then
-  . /etc/profile.d/vte.sh
-  __vte_osc7
-  export TERM=xterm-256color
-fi
 # kitty TERM
 if [[ $TERM == xterm-kitty ]]; then
   export TERM=xterm-256color
 fi
-
-# Prompt
-
-for PROMPTFILE in {/usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme,$HOME/.powerlevel10k/powerlevel10k.zsh-theme}; do
-  echo $TERM | egrep "(screen|xterm).*" >/dev/null && [[ -f $PROMPTFILE ]] && source ~/.promptcfg && source $PROMPTFILE
-done
-
-#PURE_PROMPT_DIR=$HOME/.pure
-#if [[ -e $PURE_PROMPT_DIR ]]; then
-#  fpath=($PURE_PROMPT_DIR $fpath)
-#  autoload -U promptinit; promptinit
-#  prompt pure
-#fi
 
 # completions
 autoload -Uz compinit
@@ -152,6 +133,10 @@ fi
 NVM_AUTO_USE=true
 ZSH_NVM=$HOME/conf/zsh-nvm/zsh-nvm.plugin.zsh
 [ -s $ZSH_NVM ] && source $ZSH_NVM
+
+# Prompt
+
+eval "$(starship init zsh)"
 
 # extra
 ZSH_EXTRA_CONF=$HOME/.extra.zsh
