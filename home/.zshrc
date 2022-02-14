@@ -136,7 +136,9 @@ ZSH_NVM=$HOME/conf/zsh-nvm/zsh-nvm.plugin.zsh
 
 # Prompt
 
-eval "$(starship init zsh)"
+for PROMPTFILE in {/usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme,$HOME/.powerlevel10k/powerlevel10k.zsh-theme}; do
+  echo $TERM | egrep "(screen|xterm).*" >/dev/null && [[ -f $PROMPTFILE ]] && source ~/.promptcfg && source $PROMPTFILE
+done
 
 # extra
 ZSH_EXTRA_CONF=$HOME/.extra.zsh
