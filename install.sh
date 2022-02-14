@@ -48,12 +48,11 @@ NPM_GLOBAL_PACKAGES=(chrome-remote-interface@0.28.1 lid-sleep-daemon@2.0.1 serve
 zsh -i -c "nvm install $NODE_VERSION && nvm alias default $NODE_VERSION && npm i -g $NPM_GLOBAL_PACKAGES"
 echo "Done"
 
-echo -n "Setting up Rust..."
-rustup install stable && rustup default stable && rustup component add rls-preview rust-analysis rust-src rustfmt && cargo install --locked prcs
 if [[ -z "$IS_RASPI" ]]; then
-  cargo install --locked cargo-insta cargo-outdated cargo-watch cross
+  echo -n "Setting up Rust..."
+  rustup install stable && rustup default stable && rustup component add rls-preview rust-analysis rust-src rustfmt && cargo install --locked prcs cargo-insta cargo-outdated cargo-watch cross
+  echo "Done"
 fi
-echo "Done"
 
 echo -n "Setting up vim..."
 pip install --user neovim
