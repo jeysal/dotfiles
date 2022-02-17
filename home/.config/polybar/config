@@ -493,7 +493,7 @@ label-indicator-background = ${colors.accent}
 
 [module/xwindow]
 type = internal/xwindow
-format = %{T2}<label>%{T-}
+format = %{T1}<label>%{T-}
 label-maxlen = 42
 
 [module/counter]
