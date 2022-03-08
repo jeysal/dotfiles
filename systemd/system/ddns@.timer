@@ -3,7 +3,7 @@ Description=Update ddns
 
 [Timer]
 Unit=ddns@%i.service
-OnStartupSec=30sec
+OnStartupSec=1min
 OnUnitActiveSec=10min
 
 [Install]
