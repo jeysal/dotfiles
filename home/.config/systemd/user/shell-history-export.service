@@ -3,4 +3,4 @@ Description=backup shell history
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/cp %h/.histfile %h/docs/tech/shell/history/%H.histfile
+ExecStart=/usr/bin/cp %h/.histfile %h/docs/tech/shell-history/%H.histfile
