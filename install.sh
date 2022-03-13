@@ -6,7 +6,7 @@ if uname | grep >/dev/null Darwin; then
   export IS_MACOS=true
 fi
 
-if uname -a | grep >/dev/null rpi-legacy; then
+if uname -a | grep >/dev/null -rpi-; then
   echo "Detected raspi"
 
   export IS_RASPI=true
