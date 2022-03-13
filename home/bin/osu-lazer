@@ -1,13 +1,5 @@
-#!/usr/bin/env zsh
-set -euxo pipefail
-sudo -Av
+#!/usr/bin/env bash
 
-sudo -A raw-evdev-abs-input /dev/input/$(
-  egrep Stylus /sys/class/input/event*/device/name | cut -d : -f 1 | egrep -o "event[0-9]+"
-) inverted &
-sudo rmmod hid_uclogic || true
-
+touch /tmp/libinput-direct-abs-input && \
 /usr/bin/osu-lazer
-
-sudo -A pkill -f raw-evdev-abs-input
-sudo modprobe hid_uclogic
+rm /tmp/libinput-direct-abs-input
