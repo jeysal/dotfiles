@@ -1,0 +1,9 @@
+[Unit]
+Description=Move files that have not been modified for a month into archive dir daily
+
+[Timer]
+Unit=dir-archive@%i.service
+OnCalendar=daily
+
+[Install]
+WantedBy=timers.target
