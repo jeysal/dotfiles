@@ -3,4 +3,4 @@ Description=Move files that have not been modified for a month into archive dir
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/env find "%I" -maxdepth 1 -type f -mtime +30 -exec mv {} -nt "%I"/archive ";"
+ExecStart=/usr/bin/env find "%I" -maxdepth 1 -type f -mtime +30 -exec mv {} -vnt "%I"/archive ";"
