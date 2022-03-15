@@ -5,5 +5,5 @@ const process = require("process");
 const [, , str] = process.argv;
 assert.equal(typeof str, "string");
 
-const regex = str.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
+const regex = str.replace(/[-\/\\^$*+?.()|[\]]/g, "\\$&");
 process.stdout.write(regex);
