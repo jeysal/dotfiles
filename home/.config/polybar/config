@@ -84,8 +84,9 @@ wm-restack = i3
 ;click-right =
 ;scroll-up = bspwm-deskprev
 ;scroll-down = bspwm-desknext
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
+enable-scroll = false
+;scroll-up = i3wm-wsnext
+;scroll-down = i3wm-wsprev
 ;double-click-left = notify-send -u low doubleclick
 ;double-click-right = notify-send -u low doubleclick2
 
