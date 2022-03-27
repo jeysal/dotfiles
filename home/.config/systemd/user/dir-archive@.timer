@@ -4,6 +4,7 @@ Description=Move files that have not been modified for a month into archive dir 
 [Timer]
 Unit=dir-archive@%i.service
 OnCalendar=daily
+Persistent=true
 
 [Install]
 WantedBy=timers.target
