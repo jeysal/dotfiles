@@ -59,10 +59,10 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = "Hack:style=Bold:pixelsize=12;4"
-font-1 = "Railway:style=Regular:size=13;3"
+font-1 = "Railway:style=Regular:size=12;3"
 font-2 = "Roboto Condensed:style=Regular:size=11;2.5"
-font-3 = "Font Awesome 6 Free:style=solid:size=14;4"
-font-4 = "Font Awesome 6 Brands:size=14;4"
+font-3 = "Font Awesome 6 Free:style=solid:size=12;4"
+font-4 = "Font Awesome 6 Brands:size=12;4"
 
 modules-left = power-menu i3 xwindow
 ;modules-center = mpd
@@ -494,7 +494,7 @@ label-indicator-background = ${colors.accent}
 
 [module/xwindow]
 type = internal/xwindow
-format = %{T1}<label>%{T-}
+format = %{T2}<label>%{T-}
 label-maxlen = 42
 
 [module/counter]
