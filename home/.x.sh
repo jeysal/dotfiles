@@ -28,4 +28,4 @@ xset -b
 feh --bg-fill --randomize ~/conf/assets/bg.png /usr/share/backgrounds/archlinux/{archbtw,archwave,archwaveinv,awesome,wave}.png
 
 # polybar
-~/.config/polybar/launch.zsh
+~/.config/polybar/launch.zsh &disown
