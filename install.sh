@@ -26,12 +26,6 @@ echo -n "Installing base16-shell..."
 ln -fnsT $(realpath base16-shell) ~/.config/base16-shell
 echo "Done"
 
-echo -n "Installing pure..."
-mkdir -p ~/.pure
-ln -fnsT $(realpath pure/pure.zsh) ~/.pure/prompt_pure_setup
-ln -fnsT $(realpath pure/async.zsh) ~/.pure/async
-echo "Done"
-
 echo -n "Installing vim-pathogen..."
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 ln -fnsT $(realpath vim-pathogen/autoload/pathogen.vim) ~/.vim/autoload/pathogen.vim
