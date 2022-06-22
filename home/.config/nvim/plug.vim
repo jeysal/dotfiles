@@ -10,6 +10,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'machakann/vim-swap'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tomtom/tcomment_vim'
+Plug 'github/copilot.vim'
 
 " fancy
 Plug 'junegunn/goyo.vim'
