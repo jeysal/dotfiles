@@ -344,7 +344,7 @@ label = %percentage:3%%
 label-foreground = ${root.foreground}
 format-prefix = 
 format-prefix-foreground = #80A
-card = amdgpu_bl1
+card = amdgpu_bl0
 
 [module/volume]
 type = internal/pulseaudio
