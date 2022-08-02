@@ -66,7 +66,7 @@ font-4 = "Font Awesome 6 Brands:size=12;4"
 
 modules-left = power-menu i3 xwindow
 ;modules-center = mpd
-modules-right = cpu memory volume intel_backlight amdgpu_backlight battery wifi ethernet date
+modules-right = cpu memory volume intel_backlight amdgpu_backlight1 amdgpu_backlight0 battery wifi ethernet date
 
 tray-position = right
 tray-padding = 1
@@ -337,7 +337,7 @@ format-prefix = 
 format-prefix-foreground = #80A
 card = intel_backlight
 
-[module/amdgpu_backlight]
+[module/amdgpu_backlight0]
 type = internal/backlight
 format = <label>
 label = %percentage:3%%
@@ -345,6 +345,15 @@ label-foreground = ${root.foreground}
 format-prefix = 
 format-prefix-foreground = #80A
 card = amdgpu_bl0
+
+[module/amdgpu_backlight1]
+type = internal/backlight
+format = <label>
+label = %percentage:3%%
+label-foreground = ${root.foreground}
+format-prefix = 
+format-prefix-foreground = #80A
+card = amdgpu_bl1
 
 [module/volume]
 type = internal/pulseaudio
