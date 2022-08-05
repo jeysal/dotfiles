@@ -1,0 +1,6 @@
+[Unit]
+Description=Index PhotoPrism originals
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/env docker compose --project-directory %h/photoprism exec photoprism photoprism index
