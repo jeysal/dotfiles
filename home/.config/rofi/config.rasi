@@ -131,8 +131,8 @@ configuration {
 /*	kb-select-10: "Super+0";*/
 	kb-remove-to-eol: "";
 	kb-accept-entry: "Return,KP_Enter";
-	kb-row-up: "Up,Control+k,Shift+Tab";
-	kb-row-down: "Down,Control+j,Tab";
+	kb-row-up: "Up,Control+k";
+	kb-row-down: "Down,Control+j";
 	kb-row-tab: "";
 /*	ml-row-left: "ScrollLeft";*/
 /*	ml-row-right: "ScrollRight";*/
