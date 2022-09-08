@@ -3,6 +3,8 @@
 
   "diagnostic.checkCurrentLine": true,
 
+  "coc.preferences.enableMarkdown": true,
+
   "snippets.extends": {
     "cpp": ["c"],
     "javascriptreact": ["javascript"],
