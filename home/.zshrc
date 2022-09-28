@@ -37,11 +37,8 @@ fi
 alias df='df -h'
 alias du='du -h'
 
-alias grep='egrep'
+alias grep='grep -E'
 alias sed='sed -r'
-
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
 
 alias gdmb='git diff $(git merge-base origin/master HEAD)'
 alias groot='cd $(git rev-parse --show-toplevel)'
@@ -137,7 +134,7 @@ ZSH_NVM=$HOME/conf/zsh-nvm/zsh-nvm.plugin.zsh
 # Prompt
 
 for PROMPTFILE in {/usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme,$HOME/.powerlevel10k/powerlevel10k.zsh-theme}; do
-  echo $TERM | egrep "(screen|xterm).*" >/dev/null && [[ -f $PROMPTFILE ]] && source ~/.promptcfg && source $PROMPTFILE
+  echo $TERM | grep -E "(screen|xterm).*" >/dev/null && [[ -f $PROMPTFILE ]] && source ~/.promptcfg && source $PROMPTFILE
 done
 
 # extra
