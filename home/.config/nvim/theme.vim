@@ -1,5 +1,4 @@
 " theme
-colorscheme base16-spacemacs
 if filereadable(expand("~/.vimrc_background"))
   autocmd FocusGained * source ~/.vimrc_background
 endif
