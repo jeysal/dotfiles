@@ -23,7 +23,6 @@ Plug 'inside/vim-search-pulse'
 " for FocusGained
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
-
 " files
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

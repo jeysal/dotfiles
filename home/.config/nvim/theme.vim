@@ -1,7 +1,12 @@
 " theme
-if filereadable(expand("~/.vimrc_background"))
-  autocmd FocusGained * source ~/.vimrc_background
-endif
+function ReloadTheme()
+  if filereadable(expand("~/.base16_theme"))
+    let theme = matchlist(resolve(expand("~/.base16_theme")), '/\([^/]*\)\.sh$')[1]
+    execute 'colorscheme ' .. theme
+  endif
+endfunction
+
+autocmd FocusGained * call ReloadTheme()
 
 " powerline
 let g:airline_left_sep = ''
