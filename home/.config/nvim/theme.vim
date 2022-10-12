@@ -1,4 +1,6 @@
 " theme
+let base16colorspace=256
+
 function ReloadTheme()
   if filereadable(expand("~/.base16_theme"))
     let theme = matchlist(resolve(expand("~/.base16_theme")), '/\([^/]*\)\.sh$')[1]
