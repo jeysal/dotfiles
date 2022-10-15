@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+NODE_VERSION=18.11.0
+NPM_GLOBAL_PACKAGES=(chrome-remote-interface@0.31.3 lid-sleep-daemon@2.0.1)
+
 if uname | grep >/dev/null Darwin; then
   echo "Detected Darwin"
 
@@ -37,8 +40,6 @@ ln -fnsT $(realpath vim-plug/plug.vim) ~/.local/share/nvim/site/autoload/plug.vi
 echo "Done"
 
 echo -n "Setting up nvm/npm..."
-NODE_VERSION=18.9.1
-NPM_GLOBAL_PACKAGES=(chrome-remote-interface@0.31.3 lid-sleep-daemon@2.0.1)
 zsh -i -c "nvm install $NODE_VERSION && nvm alias default $NODE_VERSION && npm i -g $NPM_GLOBAL_PACKAGES"
 echo "Done"
 

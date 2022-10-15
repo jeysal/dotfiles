@@ -24,7 +24,7 @@
 #
 # Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
 
-snippet "c." "console.log" bA
+snippet "c l" "console.log" bA
 console.log(${0:'hi'});
 endsnippet
 snippet "c" "console.log" b
@@ -71,21 +71,4 @@ import ${2:dep} from '$1';
 endsnippet
 snippet "import *" "import namespace" bA
 import * as ${2:ns} from '$1';
-endsnippet
-
-snippet "import React" "import React" bA
-import React$0 from 'react';
-endsnippet
-snippet "import" "import React" b
-import React from 'react';
-endsnippet
-
-snippet "comp" "React component file" b
-import React from 'react';
-
-const $1 = () => {
-  $0
-  return null;
-}
-export default $1;
 endsnippet

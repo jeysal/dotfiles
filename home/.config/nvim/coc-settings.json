@@ -1,6 +1,4 @@
 {
-  "suggest.enablePreview": true,
-
   "diagnostic.checkCurrentLine": true,
 
   "coc.preferences.enableMarkdown": true,
@@ -9,6 +7,6 @@
     "cpp": ["c"],
     "javascriptreact": ["javascript"],
     "typescript": ["javascript"],
-    "typescriptreact": ["javascript"]
+    "typescriptreact": ["jaavascriptreact", "typescript"]
   }
 }
