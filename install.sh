@@ -98,10 +98,11 @@ if [[ "$1" == "-a" ]] && uname | grep >/dev/null Linux; then
   echo "Done"
 fi
 
-DANGLING_SYMLINKS=`find ~ -maxdepth 4 -xtype l`
+DANGLING_SYMLINKS_CMD='find ~ -maxdepth 4 -xtype l ! -path "*/.config/BraveSoftware/*" ! -path "*/.config/Signal/*" ! -path "*/.mozilla/firefox/*" ! -path "*/.steampath"'
+DANGLING_SYMLINKS=`eval $DANGLING_SYMLINKS_CMD`
 if [ -n "$DANGLING_SYMLINKS" ]; then
   echo "Dangling symlinks:"
   echo $DANGLING_SYMLINKS
   echo "To remove, use:"
-  echo "find ~ -maxdepth 4 -xtype l -delete"
+  echo "$DANGLING_SYMLINKS_CMD -delete"
 fi
