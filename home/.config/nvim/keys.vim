@@ -56,6 +56,7 @@ imap <F1> <nop>
 map § ^
 
 " just in case
+nnoremap <leader>? :CocCommand workspace.showOutput<CR>
 nnoremap <leader>R :CocRestart<CR>
 
 " leader
