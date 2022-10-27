@@ -64,7 +64,7 @@ alias dnd-off='dunstctl set-paused false'
 alias rsync='rsync -aP'
 
 sshvnc0() { ssh -fL 9901:localhost:5900 $* sleep 10; vncviewer localhost:9901 }
-sshvnc1() { ssh -fL 9901:localhost:5901 $* sleep 10; vncviewer localhost:9901 }
+sshvnc1() { ssh -fL 9902:localhost:5901 $* sleep 10; vncviewer localhost:9902 }
 
 alias update-mirrors='sudo reflector --verbose -l 16 -p https --sort rate --save /etc/pacman.d/mirrorlist'
 alias audio-youtube-dl='noglob youtube-dl -f "bestaudio[ext=m4a]" --no-playlist'
