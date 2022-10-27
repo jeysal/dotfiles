@@ -82,11 +82,11 @@
     # Don't remove messages, if the user is idle (no mouse or keyboard input)
     # for longer than idle_threshold seconds.
     # Set to 0 to disable.
-    idle_threshold = 120
+    idle_threshold = 60
 
     ### Text ###
 
-    font = Roboto 9
+    font = Noto Sans 9
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -206,6 +206,10 @@
     # layout changes.
     force_xinerama = false
 
+    ### Mouse
+    mouse_left_click = do_action
+    mouse_right_click = close_current
+
 # Experimental features that may or may not work correctly. Do not expect them
 # to have a consistent behaviour across releases.
 [experimental]
@@ -320,3 +324,6 @@
 #    urgency = normal
 #
 # vim: ft=cfg
+
+[fullscreen_pushback_everything]
+    fullscreen = pushback
