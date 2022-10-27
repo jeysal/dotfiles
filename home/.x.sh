@@ -9,6 +9,7 @@ xrandr --output DVI-I-1 --right-of DP-1
 # try notebook
 xrandr --output HDMI-1 --right-of eDP-1
 xrandr --output DP-1 --right-of eDP-1
+xrandr --output DP-2 --right-of eDP-1
 
 # keys
 setxkbmap -layout gb -variant mac -option compose:caps
