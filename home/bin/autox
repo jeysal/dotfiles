@@ -3,9 +3,13 @@ const { spawn } = require("child_process");
 const { resolve } = require("path");
 
 console.log("spawning udevadm monitor");
-const udevadmMonitor = spawn("udevadm", ["monitor", "-s", "drm", "-k"], {
-  encoding: "utf-8",
-});
+const udevadmMonitor = spawn(
+  "udevadm",
+  ["monitor", "-s", "drm", "-s ", "input", "-k"],
+  {
+    encoding: "utf-8",
+  }
+);
 process.on("exit", () => {
   console.log("killing udevadm monitor");
   udevadmMonitor.kill();
