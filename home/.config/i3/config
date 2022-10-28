@@ -212,7 +212,7 @@ exec_always --no-startup-id pkill -f '/lid-sleep-daemon$'
 exec_always --no-startup-id bash -c 'prcs -r=143 -- lid-sleep-daemon >$HOME/.local/share/lid-sleep-daemon.log ; exit'
 
 # polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.zsh
+exec --no-startup-id polybar top
 
 exec --no-startup-id onboard
 
