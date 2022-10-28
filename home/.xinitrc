@@ -3,9 +3,6 @@ if uname | grep >/dev/null Darwin; then
   exit
 fi
 
-./.x.sh
-prcs -r=143 -- bin/autox >$HOME/.local/share/autox.log &disown
-
 if xrandr | grep >/dev/null 3840x2160; then
   export DPI=210
   export POLYBAR_HEIGHT=64
@@ -27,6 +24,8 @@ source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 # ssh agent
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
+
+./.x.sh
 
 # wm
 exec i3 2>&1 | tee $HOME/.local/share/i3.log

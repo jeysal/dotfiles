@@ -1,12 +1,14 @@
-#!/usr/bin/env sh
+#!/usr/bin/env zsh
 
-# Terminate already running bar instances
-killall -q polybar
+(
+  flock -n 9 || exit 1
 
-# Wait until the processes have been shut down
-while pgrep -x polybar >/dev/null; do sleep 1; done
+  # Terminate already running bar instances
+  killall -q polybar
 
-# Launch
-polybar top &disown
+  # Wait until the processes have been shut down
+  while pgrep -x polybar >/dev/null; do sleep 1; done
 
-echo "Bars launched..."
+  # Launch
+  polybar top &disown
+) 9>~/.local/state/polybar-restart.lock

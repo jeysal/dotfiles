@@ -1,0 +1,1 @@
+SUBSYSTEM=="drm", RUN+="/bin/bash /home/seckinger/.display.sh"
