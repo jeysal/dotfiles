@@ -18,7 +18,12 @@ if (!transformationMatrix) {
   );
 }
 
-execFileSync("xrandr", ["--output", "eDP-1", "--rotate", direction]);
+execFileSync("xrandr", [
+  "--output",
+  process.env.MAIN_MONITOR || "eDP",
+  "--rotate",
+  direction,
+]);
 execFileSync("xinput", [
   "set-prop",
   "ELAN9008:00 04F3:2C82",

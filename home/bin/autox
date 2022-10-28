@@ -21,9 +21,10 @@ setTimeout(() => {
   configChild = null;
 }, 1_000);
 
-udevadmMonitor.stdout.on("data", (data) => {
+udevadmMonitor.stdout.on("data", async (data) => {
   if (!configChild) {
     console.log("received monitor data", data);
+    await new Promise((resolve) => setTimeout(resolve, 1_000));
     console.log("spawning config process");
     configChild = spawn(resolve(process.env.HOME, ".x.sh"), {
       stdio: "inherit",

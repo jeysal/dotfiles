@@ -12,6 +12,15 @@ if xrandr | grep >/dev/null 3840x2160; then
   xrdb $HOME/.hidpi.Xresources
 fi
 
+# detect main monitor
+xrandrOutput=$(xrandr -q | grep " connected ")
+for monitor in VNC-0 DP-1 DP-0 DisplayPort-1 DisplayPort-0 DVI-D-1 DVI-D-0 HDMI-1 HDMI-0 HDMI1 HDMI0 HDMI-A-1 HDMI-A-0 VGA-1 VGA1 eDP eDP-1 eDP1 eDP-1-1; do
+  echo $monitor;
+  if echo "$xrandrOutput" | grep "$monitor"; then
+    export MAIN_MONITOR=$monitor
+  fi
+done
+
 # see arch wiki
 source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 
