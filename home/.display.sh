@@ -9,12 +9,12 @@ xrandr --output VGA-1 --auto --left-of VGA-2
 xrandr --output HDMI-0 --left-of DP-1
 xrandr --output DVI-I-1 --right-of DP-1
 # try notebook
-xrandr --output HDMI-A-0 --right-of eDP
-xrandr --output HDMI-A-1 --right-of eDP
-xrandr --output DisplayPort-1 --right-of eDP
+xrandr --output HDMI-1 --right-of eDP-1
+xrandr --output DP-1 --right-of eDP-1
+xrandr --output DP-2 --right-of eDP-1
 
 # map input devices
-xinput --map-to-output "ELAN9008:00 04F3:2C82" eDP
+xinput --map-to-output "ELAN9008:00 04F3:2C82" eDP-1
 
 # background
 feh --bg-fill --randomize ~/conf/assets/bg.png /usr/share/backgrounds/archlinux/{archbtw,archwave,archwaveinv,awesome,wave}.png
