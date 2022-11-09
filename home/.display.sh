@@ -9,7 +9,7 @@ xrandr --output VGA-1 --auto --left-of VGA-2
 xrandr --output HDMI-0 --left-of DP-1
 xrandr --output DVI-I-1 --right-of DP-1
 # try notebook
-xrandr --output HDMI-1 --right-of eDP-1
+xrandr --output HDMI-1 --left-of eDP-1
 xrandr --output DP-1 --right-of eDP-1
 xrandr --output DP-2 --right-of eDP-1
 
