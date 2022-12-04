@@ -174,7 +174,7 @@ hide_edge_borders smart
 
 # focus
 focus_follows_mouse no
-focus_on_window_activation urgent
+# focus_on_window_activation urgent
 no_focus [window_type="splash"]
 no_focus [window_role="pop-up"]
 no_focus [class="Steam"]
