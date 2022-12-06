@@ -3,4 +3,4 @@ Description=Index PhotoPrism originals
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/env docker compose --project-directory %h/photoprism exec photoprism sh -c "echo Indexing... && photoprism index && echo Converting... && photoprism convert"
+ExecStart=/usr/bin/env docker compose --project-directory %h/photoprism exec photoprism sh -c "echo Indexing... && photoprism index && echo Thumbs... && photoprism thumbs && echo Converting... && photoprism convert"
