@@ -3,6 +3,11 @@
 
   "coc.preferences.enableMarkdown": true,
 
+  "rust-analyzer.completion.autoimport.enable": true,
+  "rust-analyzer.completion.autoself.enable": true,
+  "rust-analyzer.completion.postfix.enable": true,
+  "rust-analyzer.completion.privateEditable.enable": true,
+
   "snippets.extends": {
     "cpp": ["c"],
     "javascriptreact": ["javascript"],
