@@ -20,6 +20,8 @@ export TERMINFO=~/.terminfo
 
 export DEFAULT_USER=$USER
 
+export HUSKY=0
+
 # grml-zsh-config for some reason completes globs with a menu instead of inserting all matches, unless this is set
 export NOCOR=1
 
