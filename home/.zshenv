@@ -31,6 +31,3 @@ fi
 if uname -a | grep >/dev/null rpi-legacy; then
   export IS_RASPI=true
 fi
-
-[ -z "$LANG" ] && export LANG=en_US.UTF-8
-[ -z "$LC_ALL" ] && export LC_ALL=en_US.UTF-8
