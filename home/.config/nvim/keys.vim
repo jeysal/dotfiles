@@ -48,6 +48,9 @@ nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<CR>
 " restore c-6 mapping
 nnoremap <C-6> <C-^>
 
+" running InsertLeave would be pretty nice actually
+imap <C-c> <Esc>
+
 " fuck off, we got :h for that
 nmap <F1> <nop>
 imap <F1> <nop>
