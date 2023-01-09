@@ -30,3 +30,6 @@ nmap <silent> <leader>r <Plug>(coc-rename)
 nmap <silent> <leader>\ <Plug>(coc-codeaction-selected)iw
 " codeaction
 nmap <silent> <leader><CR> <Plug>(coc-codeaction)
+" copilot
+imap <silent><script><expr> <M-Tab> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
