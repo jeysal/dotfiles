@@ -1,1 +1,1 @@
-SUBSYSTEM=="drm", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/seckinger/.Xauthority", RUN+="/bin/bash /home/seckinger/.display.sh"
+SUBSYSTEM=="drm", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/seckinger/.Xauthority", RUN+="/bin/bash -c 'sleep 3s && /home/seckinger/.display.sh'"
