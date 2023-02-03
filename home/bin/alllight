@@ -1,0 +1,30 @@
+#!/usr/bin/env zx
+/* vim: set filetype=javascript: */
+
+const diff = Promise.resolve(Math.round(Number(process.argv[3])));
+if (!((await diff) >= -100 && (await diff) <= +100)) {
+  throw new Error(`Expected diff in [-100, 100], received ${diff}`);
+}
+
+const curr = $`light`.then(({ stdout }) => Math.round(Number(stdout)));
+const next = Promise.all([curr, diff]).then(([curr, diff]) =>
+  Math.max(0, Math.min(100, curr + diff))
+);
+
+const displayNumbers = $`ddcutil detect --terse`.then(({ stdout }) =>
+  [...stdout.matchAll(/display (\d+)/gi)].map(
+    ([, displayNumber]) => displayNumber
+  )
+);
+
+// Set backlight
+next.then((next) => $`light -S ${next}`);
+
+// Set DDC brightness
+const DDC_BRIGHTNESS_FEATURE_CODE = "0x10";
+
+Promise.all([next, displayNumbers]).then(([next, displayNumbers]) => {
+  for (const displayNumber of displayNumbers) {
+    $`ddcutil setvcp -d ${displayNumber} ${DDC_BRIGHTNESS_FEATURE_CODE} ${next}`;
+  }
+});
