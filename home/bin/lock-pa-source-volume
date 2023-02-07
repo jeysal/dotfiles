@@ -1,0 +1,45 @@
+#!/usr/bin/env node
+const { spawn, spawnSync } = require("child_process");
+const pactlSubscribe = spawn("pactl", ["subscribe"]);
+
+let reacting = false;
+setTimeout(() => {
+  console.debug("starting to react to events");
+  reacting = true;
+}, 100);
+
+const killPactlSubscribe = () => {
+  console.debug("killing pactl subscribe");
+  pactlSubscribe.kill();
+};
+
+pactlSubscribe.stdout.on("data", (data) => {
+  if (reacting) {
+    console.log("pausing reactions");
+    reacting = false;
+    setTimeout(() => {
+      console.log("resuming reactions");
+      reacting = true;
+    }, 100);
+    console.info("running pactl set-source-volume", process.argv.slice(2));
+    const { status, stderr } = spawnSync("pactl", [
+      "set-source-volume",
+      ...process.argv.slice(2),
+    ]);
+    if (status) {
+      console.error("pactl failed with error:\n", stderr.toString());
+      killPactlSubscribe();
+      process.exit(status);
+    }
+  }
+});
+
+process.on("SIGTERM", killPactlSubscribe);
+process.on("SIGINT", killPactlSubscribe);
+
+setTimeout(() => {
+  const exit100 = () => {
+    process.exit(100);
+  };
+  pactlSubscribe.on("exit", exit100);
+}, 100);
