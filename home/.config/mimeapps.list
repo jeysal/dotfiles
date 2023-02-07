@@ -14,3 +14,5 @@ inode/directory=pcmanfm.desktop
 image/svg+xml=brave-browser.desktop
 image/jpeg=brave-browser.desktop
 video/quicktime=vlc.desktop
+text/javascript=nvim.desktop
+text/typescript=nvim.desktop
