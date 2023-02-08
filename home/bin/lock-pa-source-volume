@@ -4,12 +4,14 @@ const pactlSubscribe = spawn("pactl", ["subscribe"]);
 
 let reacting = false;
 setTimeout(() => {
+  console.debug(new Date().toISOString());
   console.debug("starting to react to events");
   reacting = true;
 }, 100);
 
 const killPactlSubscribe = () => {
-  console.debug("killing pactl subscribe");
+  console.debug(new Date().toISOString());
+  console.trace("killing pactl subscribe");
   pactlSubscribe.kill();
 };
 
@@ -21,12 +23,14 @@ pactlSubscribe.stdout.on("data", (data) => {
       console.log("resuming reactions");
       reacting = true;
     }, 100);
+    console.info(new Date().toISOString());
     console.info("running pactl set-source-volume", process.argv.slice(2));
     const { status, stderr } = spawnSync("pactl", [
       "set-source-volume",
       ...process.argv.slice(2),
     ]);
     if (status) {
+      console.error(new Date().toISOString());
       console.error("pactl failed with error:\n", stderr.toString());
       killPactlSubscribe();
       process.exit(status);
@@ -35,7 +39,6 @@ pactlSubscribe.stdout.on("data", (data) => {
 });
 
 process.on("SIGTERM", killPactlSubscribe);
-process.on("SIGINT", killPactlSubscribe);
 
 setTimeout(() => {
   const exit100 = () => {
