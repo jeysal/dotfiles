@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { spawn, spawnSync } = require("child_process");
-const pactlSubscribe = spawn("pactl", ["subscribe"]);
+const pactlSubscribe = spawn("timeout", ["60", "pactl", "subscribe"]);
 
 let reacting = false;
 setTimeout(() => {
