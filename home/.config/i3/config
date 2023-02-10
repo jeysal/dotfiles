@@ -221,7 +221,7 @@ exec --no-startup-id xautolock -time 10 -detectsleep -locker 'loginctl lock-sess
 
 # polybar
 exec_always --no-startup-id pkill polybar
-exec_always --no-startup-id polybar top
+exec_always --no-startup-id bash -c "sleep 1s && polybar top"
 
 # screen keyboard
 exec --no-startup-id onboard
