@@ -42,6 +42,7 @@ process.on("SIGTERM", killPactlSubscribe);
 
 setTimeout(() => {
   const exit100 = () => {
+    console.info("pactl subscribe died, exiting 100");
     process.exit(100);
   };
   pactlSubscribe.on("exit", exit100);

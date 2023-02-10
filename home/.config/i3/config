@@ -205,7 +205,6 @@ bindsym XF86AudioPrev exec playerctl previous
 exec_always --no-startup-id pkill prcs
 exec_always --no-startup-id pkill -f /focus-last.py
 exec_always --no-startup-id pkill -f /lid-sleep-daemon
-exec_always --no-startup-id pkill -f /lock-pa-source-volume
 
 # focus last script
 exec_always --no-startup-id bash -c 'prcs -r=143 -- $HOME/.config/i3/focus-last.py >$HOME/.local/share/focus-last.log ; exit'
@@ -213,9 +212,6 @@ bindsym $mod+section exec $HOME/.config/i3/focus-last.py --switch
 
 # lid-sleep-daemon
 exec_always --no-startup-id bash -c 'prcs -r=143 -- lid-sleep-daemon >$HOME/.local/share/lid-sleep-daemon.log ; exit'
-
-# lock pulseaudio volumes
-exec_always --no-startup-id bash -c 'prcs -r=100 -r=143 -- lock-pa-source-volume alsa_input.pci-0000_08_00.6.analog-stereo 16000 >$HOME/.local/share/lock-pa-source-volume.log ; exit'
 
 # xss-lock
 exec --no-startup-id xss-lock -l -- xss-lock-script
