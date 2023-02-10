@@ -220,8 +220,10 @@ exec --no-startup-id xss-lock -l -- xss-lock-script
 exec --no-startup-id xautolock -time 10 -detectsleep -locker 'loginctl lock-session' -corners "+00-" -cornerdelay 16 -cornerredelay 64 -notify 16 -notifier "notify-send -u critical -t 15000 xautolock 'Computer will be automatically locked soon due to inactivity'"
 
 # polybar
-exec --no-startup-id polybar top
+exec_always --no-startup-id pkill polybar
+exec_always --no-startup-id polybar top
 
+# screen keyboard
 exec --no-startup-id onboard
 
 # compositor
