@@ -6,7 +6,7 @@ After=pipewire-pulse.service
 Type=simple
 Restart=always
 RestartSec=1s
-ExecStart=/usr/bin/zsh -c "lock-pa-source-volume %I >%h/.local/share/lock-pa-source-volume.log"
+ExecStart=/usr/bin/zsh -c "%h/bin/lock-pa-source-volume %I"
 
 [Install]
 WantedBy=default.target
