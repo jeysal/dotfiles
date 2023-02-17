@@ -38,7 +38,7 @@ alias df='df -h'
 alias du='du -h'
 
 alias grep='grep -E'
-alias sed='sed -r'
+alias sed='sed -r --follow-symlinks'
 
 alias gdmb='git diff $(git merge-base origin/master HEAD)'
 alias groot='cd $(git rev-parse --show-toplevel)'
