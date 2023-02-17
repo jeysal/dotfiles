@@ -1,0 +1,10 @@
+[Unit]
+Description=Update ddns v6
+
+[Timer]
+Unit=ddns@%i.service
+OnStartupSec=1min
+OnUnitActiveSec=10min
+
+[Install]
+WantedBy=timers.target
