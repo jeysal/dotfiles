@@ -2,7 +2,7 @@
 Description=Update ddns v6
 
 [Timer]
-Unit=ddns@%i.service
+Unit=ddns6@%i.service
 OnStartupSec=1min
 OnUnitActiveSec=10min
 
