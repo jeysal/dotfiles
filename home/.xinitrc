@@ -4,12 +4,6 @@ if uname | grep >/dev/null Darwin; then
   exit
 fi
 
-if xrandr | grep >/dev/null 3840x2160; then
-  export DPI=210
-  export POLYBAR_HEIGHT=64
-  xrdb $HOME/.hidpi.Xresources
-fi
-
 # detect main monitor
 xrandrOutput=$(xrandr -q | grep " connected ")
 echo Detecting main monitor
