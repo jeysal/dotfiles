@@ -4,4 +4,4 @@ Description=renew Let's Encrypt certificates
 [Service]
 Type=simple
 ExecStart=/usr/bin/certbot renew --standalone
-ExecStartPost=/usr/bin/bash -c "systemctl restart kresd@1 || true"
+ExecStartPost=/usr/bin/bash -c "systemctl list-units --full --all | grep kresd@1 && systemctl restart kresd@1 || true"
