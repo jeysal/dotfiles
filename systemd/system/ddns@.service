@@ -1,5 +1,7 @@
 [Unit]
 Description=update ddns
+Requires=network-online.target
+After=network-online.target
 
 [Service]
 Type=simple
