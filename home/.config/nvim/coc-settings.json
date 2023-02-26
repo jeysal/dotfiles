@@ -3,6 +3,8 @@
 
   "coc.preferences.enableMarkdown": true,
 
+  "inlayHint.enable": false,
+
   "rust-analyzer.completion.autoimport.enable": true,
   "rust-analyzer.completion.autoself.enable": true,
   "rust-analyzer.completion.postfix.enable": true,
