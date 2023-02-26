@@ -1,5 +1,7 @@
 [Unit]
 Description=Update ddns v6
+Requires=network-online.target
+After=network-online.target
 
 [Timer]
 Unit=ddns6@%i.service
