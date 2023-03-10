@@ -194,7 +194,7 @@ bindsym XF86KbdBrightnessDown exec light -U 34 -s $(light -L | grep kbd)
 
 # onboard
 bindsym XF86Launch1 exec onboard
-bindsym $mod+XF86Launch1 exec $HOME/.display.sh
+bindsym $mod+XF86Launch1 exec autorandr -c
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
