@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-~/.display.sh
+autorandr -c
 
 # asus touchpad
 xinput set-prop "ELAN1201:00 04F3:3098 Touchpad" "libinput Natural Scrolling Enabled" 1
