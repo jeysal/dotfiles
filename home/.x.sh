@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 
-~/.display.sh # autorandr also executes this after profile load, but it might not find a profile on portable systems
-autorandr -c
+autorandr -c || ~/.display.sh
 
 # asus touchpad
 xinput set-prop "ELAN1201:00 04F3:3098 Touchpad" "libinput Natural Scrolling Enabled" 1
