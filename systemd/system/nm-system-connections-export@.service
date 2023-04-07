@@ -1,0 +1,6 @@
+[Unit]
+Description=export NetworkManager system connections
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bash -c "rsync -a --delete /etc/NetworkManager/system-connections/ '%I/%H' && chown -R --reference '%I' '%I/%H' && chmod -R 644 '%I/%H' && chmod 755 '%I/%H'"

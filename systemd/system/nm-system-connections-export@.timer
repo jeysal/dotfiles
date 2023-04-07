@@ -1,0 +1,10 @@
+[Unit]
+Description=run nm-system-connections-export once a week
+
+[Timer]
+Unit=nm-system-connections-export@%i.service
+OnCalendar=weekly
+Persistent=true
+
+[Install]
+WantedBy=timers.target
