@@ -97,8 +97,8 @@ which colordiff >& /dev/null && alias diff='colordiff'
 which nvim >& /dev/null && alias vi='nvim' && alias vim='nvim'
 
 # aliases from oh-my-zsh
-
 source $HOME/conf/oh-my-zsh/plugins/git/git.plugin.zsh
+source $HOME/conf/oh-my-zsh/plugins/systemd/systemd.plugin.zsh
 
 # History
 HISTFILE=~/.histfile
