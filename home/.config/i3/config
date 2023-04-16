@@ -218,8 +218,8 @@ bindsym $mod+Shift+x exec flameshot gui
 # xss-lock
 exec --no-startup-id xss-lock -l -- xss-lock-script
 
-# xautolock
-exec --no-startup-id xautolock -time 10 -detectsleep -locker 'loginctl lock-session' -corners "+00-" -cornerdelay 16 -cornerredelay 64 -notify 16 -notifier "notify-send -u critical -t 15000 xautolock 'Computer will be automatically locked soon due to inactivity'"
+# auto lock
+exec --no-startup-id xidlehook --detect-sleep --not-when-audio --not-when-fullscreen --timer 300 'notify-send -u critical -r 1337 -t 15000 "idle autolock imminent"' 'notify-send -r 1337 -t 1000 "idle autolock aborted"' --timer 15 'notify-send -r 1337 -t 1 "idle autolock engaging"; loginctl lock-session' ''
 
 # polybar
 exec_always --no-startup-id pkill polybar
