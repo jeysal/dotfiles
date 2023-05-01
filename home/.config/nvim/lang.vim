@@ -13,23 +13,19 @@ nmap <silent> gd <Plug>(coc-definition)
 " goto type definition
 nmap <silent> gD <Plug>(coc-type-definition)
 " outline
-nmap <silent> <leader>q :CocList outline<CR>
+map <silent> <leader>q :CocList outline<CR>
 " references
-nmap <silent> <leader>7 <Plug>(coc-references)
+map <silent> <leader>7 <Plug>(coc-references)
 " format
-if 0 "executable('eslint')
-  nmap <silent> <C-l> :CocCommand eslint.executeAutofix<CR>
-else
-  nmap <silent> <C-l> <Plug>(coc-format)
-endif
+nmap <silent> <C-l> <Plug>(coc-format)
 " insert doc
 autocmd FileType javascript,typescript map <leader>d :JsDoc<CR>
 " rename
-nmap <silent> <leader>r <Plug>(coc-rename)
+map <silent> <leader>r <Plug>(coc-rename)
 " quick fix
-nmap <silent> <leader>\ <Plug>(coc-codeaction-selected)iw
+map <silent> <leader>\ <Plug>(coc-codeaction-selected)iw
 " codeaction
-nmap <silent> <leader><CR> <Plug>(coc-codeaction)
+map <silent> <leader><CR> <Plug>(coc-codeaction)
 " copilot
 imap <silent><script><expr> <M-Tab> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
