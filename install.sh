@@ -21,7 +21,7 @@ if [[ ! -z "$IS_MACOS" ]]; then
 fi
 
 echo -n "Installing home dir files..."
-cp -nprsT $(realpath home)/ ~/
+cp -prsT --update=none $(realpath home)/ ~/
 mkdir -p ~/.vim/backups ~/.vim/swaps ~/.vim/undo
 echo "Done"
 
@@ -90,11 +90,11 @@ fi
 
 if [[ "$1" == "-a" ]] && uname | grep >/dev/null Linux; then
   echo -n "Installing systemd files..."
-  sudo cp -nprsT $(realpath systemd)/ /etc/systemd/
+  sudo cp -prsT --update=none $(realpath systemd)/ /etc/systemd/
   echo "Done"
 
   echo -n "Installing udev files..."
-  sudo cp -nprsT $(realpath udev)/ /etc/udev/
+  sudo cp -prsT --update=none $(realpath udev)/ /etc/udev/
   echo "Done"
 fi
 
