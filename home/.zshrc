@@ -61,6 +61,10 @@ alias temp='cat /sys/class/thermal/thermal_zone*/temp'
 alias dnd-on='dunstctl set-paused true'
 alias dnd-off='dunstctl set-paused false'
 
+alias insecure-dns="sudo resolvectl dns $(nmcli dev | grep ' connected' | head -n1 | cut -d ' ' -f1) 1.1.1.1 && sudo resolvectl dnsovertls $(nmcli dev | grep ' connected' | head -n1 | cut -d ' ' -f1) no"
+alias guess-dns="sudo resolvectl dns $(nmcli dev | grep ' connected' | head -n1 | cut -d ' ' -f1) $(ip route show default | cut -d ' ' -f 3) && sudo resolvectl dnsovertls $(nmcli dev | grep ' connected' | head -n1 | cut -d ' ' -f1) no"
+alias revert-dns="sudo resolvectl revert $(nmcli dev | grep ' connected' | head -n1 | cut -d ' ' -f1)"
+
 alias rsync='rsync -aP'
 
 sshvnc0() { ssh -fL 9901:localhost:5900 $* sleep 10; vncviewer localhost:9901 }
