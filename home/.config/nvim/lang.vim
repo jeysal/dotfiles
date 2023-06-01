@@ -23,7 +23,7 @@ autocmd FileType javascript,typescript map <leader>d :JsDoc<CR>
 " rename
 map <silent> <leader>r <Plug>(coc-rename)
 " quick fix
-map <silent> <leader>\ <Plug>(coc-codeaction-selected)iw
+map <silent> <leader>\ <Plug>(coc-codeaction-selected)
 " codeaction
 map <silent> <leader><CR> <Plug>(coc-codeaction)
 " copilot
