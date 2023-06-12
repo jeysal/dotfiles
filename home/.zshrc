@@ -45,6 +45,9 @@ alias groot='cd $(git rev-parse --show-toplevel)'
 
 alias y='yarn'
 
+alias sc='systemctl'
+alias scu='systemctl --user'
+
 alias :qa='exit'
 
 alias xclip='xclip -r -selection clipboard'
