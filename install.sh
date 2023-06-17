@@ -50,12 +50,7 @@ if [[ -z "$IS_RASPI" ]]; then
 fi
 
 echo -n "Setting up vim..."
-pip install --user neovim
 nvim -c 'PlugInstall' -c "source $(realpath snapshot.vim)" -c 'VimProcInstall' -c 'qa!'
-echo "Done"
-
-echo -n "Setting up i3..."
-pip install --user i3ipc
 echo "Done"
 
 if [[ ! -z "$IS_MACOS" ]]; then
