@@ -13,7 +13,7 @@ nmap <silent> gd <Plug>(coc-definition)
 " goto type definition
 nmap <silent> gD <Plug>(coc-type-definition)
 " outline
-map <silent> <leader>q :CocList outline<CR>
+map <silent> <leader>q :CocOutline<CR>
 " references
 map <silent> <leader>7 <Plug>(coc-references)
 " format
