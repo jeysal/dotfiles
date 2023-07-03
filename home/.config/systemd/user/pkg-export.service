@@ -1,6 +1,6 @@
 [Unit]
-Description=dump yay package list
+Description=dump paru package list
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/bash -c 'yay -Qe >%h/docs/tech/pkg-list/%H.txt'
+ExecStart=/usr/bin/bash -c 'paru -Qe >%h/docs/tech/pkg-list/%H.txt'
