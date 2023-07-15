@@ -64,9 +64,18 @@ alias temp='cat /sys/class/thermal/thermal_zone*/temp'
 alias dnd-on='dunstctl set-paused true'
 alias dnd-off='dunstctl set-paused false'
 
-alias insecure-dns='sudo resolvectl dns $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1) 1.1.1.1 && sudo resolvectl dnsovertls $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1) no'
-alias guess-dns='sudo resolvectl dns $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1) $(ip route show default | cut -d " " -f 3) && sudo resolvectl dnsovertls $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1) no'
-alias revert-dns='sudo resolvectl revert $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1)'
+function dns-dhcp() {
+  sudo resolvectl dns $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1) $(nmcli -f name con show --active | grep -v NAME | awk '{$1=$1};1' | xargs -d "\n" nmcli con show | zx --eval 'console.log(/^DHCP4\.OPTION.+\sdomain_name_servers\s*=\s*([\d\.]+)$/m.exec(await stdin())[1])') && sudo resolvectl dnsovertls $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1) no # TODO deal with multiple space-separated DNS servers
+}
+function dns-cf() {
+  sudo resolvectl dns $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1) 1.1.1.1 && sudo resolvectl dnsovertls $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1) no
+}
+function dns-default-route() {
+  sudo resolvectl dns $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1) $(ip route show default | cut -d " " -f 3) && sudo resolvectl dnsovertls $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1) no
+}
+function dns-revert() {
+  sudo resolvectl revert $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1)
+}
 
 alias rsync='rsync -aP'
 
