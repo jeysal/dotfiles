@@ -193,7 +193,9 @@ bindsym XF86KbdBrightnessDown exec --no-startup-id light -U 34 -s $(light -L | g
 
 # onboard
 bindsym XF86Launch1 exec --no-startup-id onboard
-bindsym $mod+XF86Launch1 exec --no-startup-id autorandr -c
+
+# autorandr
+bindsym $mod+Delete exec --no-startup-id autorandr -l default
 
 # Media player controls
 bindsym XF86AudioPlay exec --no-startup-id playerctl play
