@@ -108,7 +108,6 @@ watch_linux() {
 which autorandr >& /dev/null && test "$DISPLAY" && for profile in $(autorandr --list); do alias $profile="autorandr -l $profile"; done
 
 # "Better version" aliases
-which exa >& /dev/null && alias ls='exa' && alias l='exa -l' && alias la="exa -la"
 which colordiff >& /dev/null && alias diff='colordiff'
 which nvim >& /dev/null && alias vi='nvim' && alias vim='nvim'
 
