@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
-NODE_VERSION=20.3.1
-NPM_GLOBAL_PACKAGES=(chrome-remote-interface@0.32.2 zx@7.2.2)
+NODE_VERSION=20.7.0
+NPM_GLOBAL_PACKAGES=(chrome-remote-interface@0.33.0 zx@7.2.3)
 
 if uname | grep >/dev/null Darwin; then
   echo "Detected Darwin"
