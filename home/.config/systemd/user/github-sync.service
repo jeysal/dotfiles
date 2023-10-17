@@ -1,5 +1,7 @@
 [Unit]
 Description=fetch all GitHub repos into .github
+Requires=network-online.target
+After=network-online.target
 
 [Service]
 Type=simple
