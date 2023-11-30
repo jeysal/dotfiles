@@ -5,11 +5,13 @@
 
   "inlayHint.enable": false,
 
+  "prettier.formatterPriority": 0,
+
   "rust-analyzer.completion.autoimport.enable": true,
   "rust-analyzer.completion.autoself.enable": true,
   "rust-analyzer.completion.postfix.enable": true,
   "rust-analyzer.completion.privateEditable.enable": true,
-  "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.check.command": "clippy",
 
   "snippets.extends": {
     "cpp": ["c"],
