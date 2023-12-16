@@ -173,11 +173,10 @@ hide_edge_borders smart
 
 # focus
 focus_follows_mouse no
-# focus_on_window_activation urgent
+focus_on_window_activation focus
 no_focus [window_type="splash"]
 no_focus [window_role="pop-up"]
 no_focus [class="Steam"]
-no_focus [class="Discord"]
 
 # pulseaudio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
