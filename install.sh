@@ -85,11 +85,11 @@ fi
 
 if [[ "$1" == "-a" ]] && uname | grep >/dev/null Linux; then
   echo -n "Installing systemd files..."
-  sudo cp -prsT --update=none $(realpath systemd)/ /etc/systemd/
+  sudo cp -prT $(realpath systemd)/ /etc/systemd/
   echo "Done"
 
   echo -n "Installing udev files..."
-  sudo cp -prsT --update=none $(realpath udev)/ /etc/udev/
+  sudo cp -prT $(realpath udev)/ /etc/udev/
   echo "Done"
 fi
 
