@@ -70,6 +70,9 @@ function dns-dhcp() {
 function dns-cf() {
   sudo resolvectl dns $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1) 1.1.1.1 && sudo resolvectl dnsovertls $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1) no
 }
+function dns-quad9() {
+  sudo resolvectl dns $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1) 9.9.9.9 && sudo resolvectl dnsovertls $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1) no
+}
 function dns-default-route() {
   sudo resolvectl dns $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1) $(ip route show default | cut -d " " -f 3) && sudo resolvectl dnsovertls $(nmcli dev | grep " connected" | head -n1 | cut -d " " -f1) no
 }
