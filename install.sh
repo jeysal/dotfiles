@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-NODE_VERSION=21.4.0
+NODE_VERSION=21.6.2
 NPM_GLOBAL_PACKAGES=(chrome-remote-interface@0.33.0 zx@7.2.3)
 
 if uname | grep >/dev/null Darwin; then
