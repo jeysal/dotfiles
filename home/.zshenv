@@ -2,21 +2,19 @@
 [[ -z "$TMUX" ]] && [[ -z "$NOTMUX" ]] && \
 [[ -z "$ANDROID_ROOT" ]] && [[ -z "$SSH_CONNECTION" ]] && \
 exec tmux
+export EDITOR=vi
+export VISUAL=nvim
+export PAGER=less
 
-export FZF_DEFAULT_COMMAND="rg --fixed-strings --ignore-case --no-heading --hidden --no-ignore --glob '!.git/*'"
+export SUDO_ASKPASS=/usr/bin/qt4-ssh-askpass
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 
 export GOPATH="$HOME/proj/go"
 export CARGO_HOME="$HOME/.cargo"
 export XDG_CONFIG_HOME="$HOME/.config"
 
-export EDITOR=vi
-export VISUAL=nvim
-export PAGER=less
-export SUDO_ASKPASS=/usr/bin/qt4-ssh-askpass
-
+export FZF_DEFAULT_COMMAND="rg --fixed-strings --ignore-case --no-heading --hidden --no-ignore --glob '!.git/*'"
 export LESSOPEN='|~/.lessfilter %s'
-
-export TERMINFO=~/.terminfo
 
 export DEFAULT_USER=$USER
 

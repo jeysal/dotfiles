@@ -22,8 +22,7 @@ source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 unset SSH_CONNECTION
 
 # ssh agent
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
 
 ./.x.sh
 
