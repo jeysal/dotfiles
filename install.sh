@@ -39,7 +39,7 @@ mkdir -p ~/.local/share/nvim/site/autoload
 ln -fnsT $(realpath vim-plug/plug.vim) ~/.local/share/nvim/site/autoload/plug.vim
 echo "Done"
 
-echo -n "Setting up nvm/npm..."
+echo -n "Setting up fnm/npm..."
 zsh -i -c "fnm install $NODE_VERSION && npm i -g $NPM_GLOBAL_PACKAGES"
 echo "Done"
 
