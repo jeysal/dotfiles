@@ -144,18 +144,10 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         source "$BASE16_SHELL/profile_helper.sh"
 
-# zsh-nvm
-if [[ ! -o login ]] || [[ ! -z "$IS_MACOS" ]]; then
-  NVM_LAZY_LOAD=true
-  # force load for other commands
-  alias nvim="node --version >/dev/null && nvim"
-fi
-NVM_AUTO_USE=true
-ZSH_NVM=$HOME/conf/zsh-nvm/zsh-nvm.plugin.zsh
-[ -s $ZSH_NVM ] && source $ZSH_NVM
+# fnm
+eval "$(fnm env --use-on-cd)"
 
 # Prompt
-
 for PROMPTFILE in {/usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme,$HOME/.powerlevel10k/powerlevel10k.zsh-theme}; do
   echo $TERM | grep -E "(screen|xterm).*" >/dev/null && [[ -f $PROMPTFILE ]] && source ~/.promptcfg && source $PROMPTFILE
 done

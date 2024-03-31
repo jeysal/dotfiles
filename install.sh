@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-NODE_VERSION=21.6.2
+NODE_VERSION=$(cat home/.node-version)
 NPM_GLOBAL_PACKAGES=(chrome-remote-interface@0.33.0 zx@7.2.3)
 
 if uname | grep >/dev/null Darwin; then
@@ -40,7 +40,7 @@ ln -fnsT $(realpath vim-plug/plug.vim) ~/.local/share/nvim/site/autoload/plug.vi
 echo "Done"
 
 echo -n "Setting up nvm/npm..."
-zsh -i -c "nvm install $NODE_VERSION && nvm alias default $NODE_VERSION && npm i -g $NPM_GLOBAL_PACKAGES"
+zsh -i -c "fnm install $NODE_VERSION && npm i -g $NPM_GLOBAL_PACKAGES"
 echo "Done"
 
 if [[ -z "$IS_RASPI" ]]; then
