@@ -7,7 +7,7 @@ export VISUAL=nvim
 export PAGER=less
 
 export SUDO_ASKPASS=/usr/bin/qt4-ssh-askpass
-[[ -f "$XDG_RUNTIME_DIR/gcr/ssh" ]] && export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
+[[ -e "$XDG_RUNTIME_DIR/gcr/ssh" ]] && export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
 
 export GOPATH="$HOME/proj/go"
 export CARGO_HOME="$HOME/.cargo"
