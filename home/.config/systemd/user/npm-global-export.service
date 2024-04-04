@@ -3,4 +3,4 @@ Description=dump npm global package list
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/zsh -c 'source %h/conf/zsh-nvm/zsh-nvm.plugin.zsh && npm ls -g --depth=0 2>/dev/null >%h/docs/tech/npm-global-list/%H.txt'
+ExecStart=/usr/bin/zsh -c 'eval "$(fnm env)" && npm ls -g --depth=0 2>/dev/null >%h/docs/tech/npm-global-list/%H.txt'
