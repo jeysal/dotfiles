@@ -2,7 +2,7 @@
 Description=update blocked hosts 1min after startup
 
 [Timer]
-OnStartupSec=1min
+OnCalendar=weekly
 
 [Install]
 WantedBy=timers.target
