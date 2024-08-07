@@ -39,8 +39,8 @@ mkdir -p ~/.local/share/nvim/site/autoload
 ln -fnsT $(realpath vim-plug/plug.vim) ~/.local/share/nvim/site/autoload/plug.vim
 echo "Done"
 
-echo -n "Setting up fnm/npm..."
-zsh -i -c "fnm install $NODE_VERSION && npm i -g $NPM_GLOBAL_PACKAGES"
+echo -n "Setting up fnm and npm global packages..."
+zsh -i -c "fnm install $NODE_VERSION; npm i -g $NPM_GLOBAL_PACKAGES"
 echo "Done"
 
 if [[ -z "$IS_RASPI" ]]; then
