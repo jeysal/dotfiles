@@ -1,11 +1,11 @@
 {
   "diagnostic.checkCurrentLine": true,
 
-  "coc.preferences.enableMarkdown": true,
-
   "inlayHint.enable": false,
 
   "prettier.formatterPriority": 0,
+
+  "tsserver.useLocalTsdk": true,
 
   "rust-analyzer.completion.autoimport.enable": true,
   "rust-analyzer.completion.autoself.enable": true,
