@@ -6,7 +6,7 @@ After=network-online.target
 [Timer]
 Unit=ddns@%i.service
 OnStartupSec=1min
-OnUnitActiveSec=10min
+OnUnitActiveSec=2min
 
 [Install]
 WantedBy=timers.target
