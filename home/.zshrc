@@ -48,6 +48,7 @@ alias y='yarn'
 alias sc='systemctl'
 alias scu='systemctl --user'
 
+alias :q='exit'
 alias :qa='exit'
 
 alias xclip='xclip -r -selection clipboard'
