@@ -24,7 +24,7 @@ unset SSH_CONNECTION
 # ssh agent
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
 
-./.x.sh
+~/.x.sh
 
 # wm
 exec i3 2>&1 | tee $HOME/.local/share/i3.log
