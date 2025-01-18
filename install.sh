@@ -84,14 +84,8 @@ if [[ ! -z "$IS_MACOS" ]]; then
 fi
 
 if [[ "$1" == "-a" ]] && uname | grep >/dev/null Linux; then
-  echo -n "Installing systemd files..."
-  sudo cp -prT $(realpath systemd)/ /etc/systemd/
-  sudo cp -prT $(realpath environment.d)/ /etc/environment.d/
-  sudo cp -prT $(realpath profile.d)/ /etc/profile.d/
-  echo "Done"
-
-  echo -n "Installing udev files..."
-  sudo cp -prT $(realpath udev)/ /etc/udev/
+  echo -n "Installing system files..."
+  sudo cp -prT $(realpath etc)/ /etc/
   echo "Done"
 fi
 
