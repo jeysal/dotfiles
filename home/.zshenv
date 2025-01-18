@@ -11,11 +11,6 @@ export HUSKY=0
 # grml-zsh-config for some reason completes globs with a menu instead of inserting all matches, unless this is set
 export NOCOR=1
 
-# kitty TERM
-if [[ $TERM == xterm-kitty ]]; then
-  export TERM=xterm-256color
-fi
-
 if uname | grep >/dev/null Darwin; then
   export IS_MACOS=true
   export PATH="/usr/local/opt/less/bin:/usr/local/opt/openssl/bin:$HOME/.jenv/shims:$PATH"
