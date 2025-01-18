@@ -56,8 +56,8 @@ bindsym $mod+Shift+u exec --no-startup-id "rofimoji --skin-tone=neutral -a clipb
 bindsym $mod+Shift+f exec pcmanfm
 
 # browser
-bindsym $mod+c exec browser
-bindsym $mod+Shift+c exec chrome
+bindsym $mod+c exec brave
+bindsym $mod+Shift+c exec firefox
 
 # change focus
 bindsym $mod+h focus left

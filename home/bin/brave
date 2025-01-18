@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+/usr/bin/brave --remote-debugging-port=9222 "$@"
