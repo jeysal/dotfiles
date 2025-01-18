@@ -21,9 +21,6 @@ source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 # if starting a VNC server from SSH, forget that we're in SSH because we'll use the session from VNC client
 unset SSH_CONNECTION
 
-# ssh agent
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets)
-
 ~/.x.sh
 
 # wm

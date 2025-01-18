@@ -1,18 +1,14 @@
 [core]
   eol = lf
   autocrlf = input
-  excludesfile = ~/.gitignore
 [color]
   ui = auto
 [alias]
   l = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-  dah-fus = push --force-with-lease
 
 [user]
   name = Tim Seckinger
   email = seckinger.tim@gmail.com
-[credential]
-  helper = cache --timeout 3600
 
 [init]
 	defaultBranch = main
@@ -26,19 +22,6 @@
 [merge]
   ff = false
   log = true
-  tool = vscode
-[mergetool "vscode"]
-  cmd = code --wait $MERGED
-[mergetool "intellij"]
-  cmd = idea merge $(cd $(dirname "$LOCAL") && pwd)/$(basename "$LOCAL") $(cd $(dirname "$REMOTE") && pwd)/$(basename "$REMOTE") $(cd $(dirname "$BASE") && pwd)/$(basename "$BASE") $(cd $(dirname "$MERGED") && pwd)/$(basename "$MERGED")
-  trustExitCode = true
-[diff]
-    tool = kitty
-[difftool]
-    prompt = false
-    trustExitCode = true
-[difftool "kitty"]
-    cmd = kitty +kitten diff $LOCAL $REMOTE
 
 [color "branch"]
   current = yellow reverse
