@@ -4,13 +4,14 @@ if [[ ! -z "$IS_MACOS" ]]; then
   [[ -f $ZSH_GRML_CONF ]] && source $ZSH_GRML_CONF
 fi
 
-prompt off # We will configure our own prompt
+# We will configure our own prompt
+prompt off
 
 # Vim mode
-
 bindkey -v
 
 # completions
+
 autoload -Uz compinit
 fpath=(/usr/local/share/zsh/site-functions /usr/local/share/zsh-completions $fpath)
 if [[ -n $HOME/.zcompdump(#qN.mh+24) ]]; then
@@ -110,9 +111,6 @@ source $HOME/conf/oh-my-zsh/plugins/systemd/systemd.plugin.zsh
 HISTFILE=~/.histfile
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
-
-# SSH
-plugins=(git ssh-agent)
 
 # tmux
 if [ -n "$TMUX" ]; then
