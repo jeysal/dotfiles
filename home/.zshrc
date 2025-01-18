@@ -1,27 +1,14 @@
-# grml in user folder (for systems that do not have it installed globally)
-ZSH_GRML_CONF=$HOME/.grml.zsh
-[[ -f $ZSH_GRML_CONF ]] && source $ZSH_GRML_CONF
-prompt off # We will configure our own prompt
-
-# macOS PATH
 if [[ ! -z "$IS_MACOS" ]]; then
-  export PATH="/usr/local/opt/less/bin:/usr/local/opt/openssl/bin:$HOME/.jenv/shims:$PATH"
-  for package in {coreutils,findutils,gnu-sed,gnu-tar,grep}; do
-    export PATH="/usr/local/opt/$package/libexec/gnubin:$PATH"
-  done
+  # grml in user folder (for systems that do not have it installed globally)
+  ZSH_GRML_CONF=$HOME/.grml.zsh
+  [[ -f $ZSH_GRML_CONF ]] && source $ZSH_GRML_CONF
 fi
 
-# PATH
-export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.jsvu:$CARGO_HOME/bin:$GOPATH/bin:$PATH"
+prompt off # We will configure our own prompt
 
 # Vim mode
 
 bindkey -v
-
-# kitty TERM
-if [[ $TERM == xterm-kitty ]]; then
-  export TERM=xterm-256color
-fi
 
 # completions
 autoload -Uz compinit
