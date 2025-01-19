@@ -1,2 +1,0 @@
-# Razer DeathAdder Chroma
-ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="1532", ATTRS{idProduct}=="0043", ATTR{power/wakeup}="disabled"
