@@ -85,7 +85,7 @@ fi
 
 if [[ "$1" == "-a" ]] && uname | grep >/dev/null Linux; then
   echo -n "Installing system files..."
-  sudo cp -prT $(realpath etc)/ /etc/
+  sudo cp -rT --preserve=mode,timestamps $(realpath etc)/ /etc/
   echo "Done"
 fi
 
