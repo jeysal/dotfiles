@@ -112,18 +112,6 @@ HISTFILE=~/.histfile
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
 
-# tmux
-if [ -n "$TMUX" ]; then
-  function refresh_tmux_env {
-    eval "$(tmux show-environment -s SSH_AUTH_SOCK)"
-  }
-else
-  function refresh_tmux_env { }
-fi
-function preexec {
-  refresh_tmux_env
-}
-
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
