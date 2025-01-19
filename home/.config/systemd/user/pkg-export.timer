@@ -1,5 +1,5 @@
 [Unit]
-Description=run pkg-export once a week
+Description=run pkg-export weekly
 
 [Timer]
 OnCalendar=weekly

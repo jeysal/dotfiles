@@ -1,5 +1,5 @@
 [Unit]
-Description=run nm-system-connections-export once a week
+Description=run nm-system-connections-export weekly
 
 [Timer]
 Unit=nm-system-connections-export@%i.service

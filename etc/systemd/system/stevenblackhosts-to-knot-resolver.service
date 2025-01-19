@@ -1,5 +1,7 @@
 [Unit]
 Description=fetch current stevenblack hosts list
+Requires=network-online.target
+After=network-online.target
 
 [Service]
 Type=simple

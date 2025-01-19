@@ -1,5 +1,7 @@
 [Unit]
-Description=renew Let's Encrypt certificates when due
+Description=renew Let's Encrypt certificates on startup and regularly
+Requires=network-online.target
+After=network-online.target
 
 [Timer]
 OnStartupSec=1min

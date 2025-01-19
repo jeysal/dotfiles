@@ -1,5 +1,7 @@
 [Unit]
 Description=update /etc/hosts with StevenBlack's blocked hosts
+Requires=network-online.target
+After=network-online.target
 
 [Service]
 Type=simple

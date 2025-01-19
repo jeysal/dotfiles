@@ -1,6 +1,6 @@
 [Unit]
 Description=Lock PulseAudio source volume
-After=pipewire-pulse.service
+BindsTo=pipewire-pulse.service
 
 [Service]
 Type=simple

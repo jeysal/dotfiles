@@ -1,5 +1,7 @@
 [Unit]
-Description=update blocked hosts 1min after startup
+Description=update blocked hosts weekly
+Requires=network-online.target
+After=network-online.target
 
 [Timer]
 OnCalendar=weekly

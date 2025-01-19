@@ -1,5 +1,7 @@
 [Unit]
-Description=fetch current stevenblack hosts list periodically
+Description=fetch current stevenblack hosts list periodically and on startup
+Requires=network-online.target
+After=network-online.target
 
 [Timer]
 OnStartupSec=1min
