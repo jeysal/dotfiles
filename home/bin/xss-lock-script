@@ -20,6 +20,8 @@ post_lock() {
 
 pre_lock
 
+if (( RANDOM % 2 )); then args=(16 2); else args=(8 pixel); fi
+
 # We set a trap to kill the locker if we get killed, then start the locker and
 # wait for it to exit. The waiting is not that straightforward when the locker
 # forks, so we use this polling only if we have a sleep lock to deal with.
@@ -31,7 +33,7 @@ if [[ -e /dev/fd/${XSS_SLEEP_LOCK_FD:--1} ]]; then
     trap kill_i3lock TERM INT
 
     # we have to make sure the locker does not inherit a copy of the lock fd
-    i3lock-fancy-rapid 16 2 {XSS_SLEEP_LOCK_FD}<&-
+    i3lock-fancy-rapid ${args[@]} {XSS_SLEEP_LOCK_FD}<&-
 
     # now close our fd (only remaining copy) to indicate we're ready to sleep
     exec {XSS_SLEEP_LOCK_FD}<&-
@@ -41,7 +43,7 @@ if [[ -e /dev/fd/${XSS_SLEEP_LOCK_FD:--1} ]]; then
     done
 else
     trap 'kill %%' TERM INT
-    i3lock-fancy-rapid 16 2 -n &
+    i3lock-fancy-rapid ${args[@]} -n &
     wait
 fi
 
