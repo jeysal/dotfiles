@@ -45,7 +45,7 @@ echo "Done"
 
 if [[ -z "$IS_RASPI" ]]; then
   echo -n "Setting up Rust..."
-  rustup install stable && rustup default stable && rustup component add rls-preview rust-analysis rust-src rustfmt && cargo install --locked prcs cargo-insta cargo-outdated cargo-watch cross
+  rustup install stable && rustup default stable && rustup component add rust-analysis rust-src rustfmt && cargo install --locked prcs cargo-insta cargo-outdated cargo-watch cross
   echo "Done"
 fi
 
