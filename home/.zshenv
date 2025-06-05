@@ -3,7 +3,8 @@
 [[ -z "$ANDROID_ROOT" ]] && [[ -z "$SSH_CONNECTION" ]] && \
 exec tmux
 
-export FZF_DEFAULT_COMMAND="rg --fixed-strings --ignore-case --no-heading --hidden --no-ignore --glob '!.git/*'"
+# Fuck do I know why this dies without `2| tee`
+export FZF_DEFAULT_COMMAND="rg -l --fixed-strings --ignore-case --hidden --no-ignore --glob '!.git/*' --glob '!.stversions/*' 2| tee /dev/null "
 export LESSOPEN='|~/.lessfilter %s'
 
 export HUSKY=0
