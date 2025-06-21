@@ -208,18 +208,12 @@ exec_always --no-startup-id pkill -f /focus-last.py
 exec_always --no-startup-id bash -c 'prcs -r=143 -- $HOME/.config/i3/focus-last.py >$HOME/.local/share/focus-last.log ; exit'
 bindsym $mod+section exec --no-startup-id $HOME/.config/i3/focus-last.py --switch
 
-# xss-lock
-exec --no-startup-id xss-lock -l -- xss-lock-script
-
 # auto lock
 exec --no-startup-id xidlehook --detect-sleep --not-when-audio --not-when-fullscreen --timer 300 'notify-send -u critical -r 1337 -t 15000 "idle autolock imminent"' 'notify-send -r 1337 -t 1000 "idle autolock aborted"' --timer 15 'notify-send -r 1337 -t 1 "idle autolock engaging"; loginctl lock-session' ''
 
 # polybar
 exec_always --no-startup-id pkill polybar
 exec_always --no-startup-id bash -c "sleep 1s && polybar top"
-
-# redshift
-exec --no-startup-id sleep 10 && killall redshift; redshift-gtk
 
 # mark i3 started
 exec --no-startup-id systemctl --user start i3-session.service
