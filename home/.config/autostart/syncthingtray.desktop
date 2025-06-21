@@ -1,10 +1,1 @@
-[Desktop Entry]
-Name=Syncthing Tray
-Exec="/usr/bin/syncthingtray" qt-widgets-gui --single-instance --wait
-Comment=Tray application for Syncthing v1
-Icon=syncthingtray
-Type=Application
-Terminal=false
-X-GNOME-Autostart-Delay=0
-X-GNOME-Autostart-enabled=true
-X-LXQt-Need-Tray=true
+/usr/share/applications/syncthingtray.desktop
