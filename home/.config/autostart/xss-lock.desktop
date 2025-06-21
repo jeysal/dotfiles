@@ -1,5 +1,0 @@
-[Desktop Entry]
-Name=XSS Lock
-Exec=xss-lock -l -- xss-lock-script
-Type=Application
-X-GNOME-Autostart-enabled=true
