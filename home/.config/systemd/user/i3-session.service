@@ -1,0 +1,16 @@
+# https://github.com/i3/i3/issues/5186#issuecomment-2463357316
+[Unit]
+Description=i3 window manager session
+PartOf=i3-session.target
+Wants=i3-session.target
+
+# this service is started by i3 in its config file
+# it's done like this so i3 and its launched child processes
+# are not a service itself, but in the regular session scope.
+[Service]
+Type=exec
+ExecStart=/bin/bash -c 'socat -u "UNIX-CONNECT:$(ls /run/user/%U/i3/ipc-socket.*)" /dev/null'
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

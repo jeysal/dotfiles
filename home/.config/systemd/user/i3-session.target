@@ -1,0 +1,12 @@
+# https://github.com/i3/i3/issues/5186#issuecomment-2463357316
+[Unit]
+Description=i3 Session
+Requires=basic.target
+BindsTo=graphical-session.target xdg-desktop-autostart.target
+Before=graphical-session.target xdg-desktop-autostart.target
+
+DefaultDependencies=no
+RefuseManualStart=yes
+RefuseManualStop=yes
+Requires=basic.target
+StopWhenUnneeded=yes

@@ -202,19 +202,11 @@ bindsym XF86AudioPause exec --no-startup-id playerctl pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
+# focus last script
 exec_always --no-startup-id pkill prcs
 exec_always --no-startup-id pkill -f /focus-last.py
-#exec_always --no-startup-id pkill -f /lid-sleep-daemon
-
-# focus last script
 exec_always --no-startup-id bash -c 'prcs -r=143 -- $HOME/.config/i3/focus-last.py >$HOME/.local/share/focus-last.log ; exit'
 bindsym $mod+section exec --no-startup-id $HOME/.config/i3/focus-last.py --switch
-
-# Screenshot
-bindsym $mod+Shift+x exec flameshot gui
-
-# lid-sleep-daemon
-#exec_always --no-startup-id bash -c 'prcs -r=143 -- lid-sleep-daemon >$HOME/.local/share/lid-sleep-daemon.log ; exit'
 
 # xss-lock
 exec --no-startup-id xss-lock -l -- xss-lock-script
@@ -226,26 +218,8 @@ exec --no-startup-id xidlehook --detect-sleep --not-when-audio --not-when-fullsc
 exec_always --no-startup-id pkill polybar
 exec_always --no-startup-id bash -c "sleep 1s && polybar top"
 
-# screen keyboard
-exec --no-startup-id onboard
-
-# compositor
-#exec --no-startup-id compton -b
-
-# clipboard manager
-exec --no-startup-id xfce4-clipman
-
-# audio applet
-exec --no-startup-id pasystray
-
-# network manager applet
-exec --no-startup-id nm-applet
-
-# blueman applet
-exec --no-startup-id blueman-applet
-
 # redshift
 exec --no-startup-id sleep 10 && killall redshift; redshift-gtk
 
-# syncthingtray
-exec --no-startup-id sleep 10 && killall syncthingtray; syncthingtray
+# mark i3 started
+exec --no-startup-id systemctl --user start i3-session.service
