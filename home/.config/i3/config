@@ -215,8 +215,7 @@ exec --no-startup-id xss-lock -l -- xss-lock-i3lock
 exec --no-startup-id xidlehook --detect-sleep --not-when-audio --not-when-fullscreen --timer 300 'notify-send -u critical -r 1337 -t 15000 "idle autolock imminent"' 'notify-send -r 1337 -t 1000 "idle autolock aborted"' --timer 15 'notify-send -r 1337 -t 1 "idle autolock engaging"; loginctl lock-session' ''
 
 # polybar
-exec_always pkill polybar
-exec_always polybar top
+exec polybar top
 
 # mark i3 started
 exec --no-startup-id systemctl --user start i3-session.service
