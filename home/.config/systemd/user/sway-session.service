@@ -1,0 +1,13 @@
+# https://github.com/i3/i3/issues/5186#issuecomment-2463357316
+[Unit]
+Description=sway window manager session
+PartOf=sway-session.target
+Wants=sway-session.target
+
+# this service is started by sway in its config file
+# it's done like this so sway and its launched child processes
+# are not a service itself, but in the regular session scope.
+[Service]
+Type=exec
+ExecStart=/bin/bash -c 'socat -u "UNIX-CONNECT:$(ls /run/user/%U/sway-ipc.%U.*.sock)" /dev/null'
+Restart=on-failure

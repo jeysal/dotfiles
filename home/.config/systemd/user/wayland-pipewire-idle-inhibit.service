@@ -1,0 +1,11 @@
+[Unit]
+Description=PipeWire Wayland idle inhibit
+BindsTo=sway-session.service
+
+[Service]
+Type=simple
+ExecStart=wayland-pipewire-idle-inhibit
+Restart=on-failure
+
+[Install]
+WantedBy=sway-session.target

@@ -1,0 +1,9 @@
+# https://github.com/i3/i3/issues/5186#issuecomment-2463357316
+[Unit]
+Description="Waits for sway to startup before binding a service to it"
+
+[Path]
+PathExistsGlob=/run/user/%U/sway-ipc.%U.*.sock
+
+[Install]
+WantedBy=graphical-session.target

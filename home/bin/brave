@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-/usr/bin/brave --remote-debugging-port=9222 "$@"
+/usr/bin/brave --remote-debugging-port=9222 --ozone-platform-hint=auto "$@"

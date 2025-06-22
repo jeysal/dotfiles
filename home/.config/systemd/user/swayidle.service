@@ -1,0 +1,11 @@
+[Unit]
+Description=Idle screen-lock daemon
+BindsTo=sway-session.service
+
+[Service]
+Type=simple
+ExecStart=swayidle -w timeout 300 'notify-send -u critical -r 1337 -t 15000 "idle autolock imminent"' resume 'notify-send -r 1337 -t 1000 "idle autolock aborted"' timeout 315 'notify-send -r 1337 -t 1 "idle autolock engaging"; loginctl lock-session' before-sleep 'loginctl lock-session' lock 'swaylock' unlock 'pkill -SIGUSR1 swaylock'
+Restart=on-failure
+
+[Install]
+WantedBy=sway-session.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=i3-back in sway
+BindsTo=sway-session.service
+
+[Service]
+Type=simple
+ExecStart=i3-back
+Restart=on-failure
+
+[Install]
+WantedBy=sway-session.target

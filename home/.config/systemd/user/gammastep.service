@@ -1,0 +1,11 @@
+[Unit]
+Description=Gammastep
+BindsTo=sway-session.service
+
+[Service]
+Type=simple
+ExecStart=gammastep-indicator
+Restart=on-failure
+
+[Install]
+WantedBy=sway-session.target

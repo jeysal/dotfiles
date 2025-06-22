@@ -1,0 +1,11 @@
+[Unit]
+Description=Clipboard history
+BindsTo=sway-session.service
+
+[Service]
+Type=simple
+ExecStart=wl-paste --watch cliphist store
+Restart=on-failure
+
+[Install]
+WantedBy=sway-session.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Clipboard monitor
+BindsTo=sway-session.service
+
+[Service]
+Type=simple
+ExecStart=/usr/lib/clipmon
+Restart=on-failure
+
+[Install]
+WantedBy=sway-session.target

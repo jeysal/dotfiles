@@ -6,6 +6,7 @@ xinput set-prop "ELAN1201:00 04F3:3098 Touchpad" "libinput Middle Emulation Enab
 xinput set-prop "ELAN1201:00 04F3:3098 Touchpad" "libinput Disable While Typing Enabled" 0
 
 # logitech wireless all-in-one keyboard
+# TODO
 xinput set-prop "pointer:Logitech K400 Plus" "libinput Accel Speed" 1.0
 xinput set-prop "pointer:Logitech K400 Plus" "libinput Natural Scrolling Enabled" 1
 xinput set-prop "pointer:Logitech Wireless Device PID:404d" "libinput Accel Speed" 1.0
