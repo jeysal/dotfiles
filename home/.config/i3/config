@@ -205,9 +205,6 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 # xss-lock i3lock
 exec --no-startup-id xss-lock -l -- xss-lock-i3lock
 
-# auto lock
-exec --no-startup-id xidlehook --detect-sleep --not-when-audio --not-when-fullscreen --timer 300 'notify-send -u critical -r 1337 -t 15000 "idle autolock imminent"' 'notify-send -r 1337 -t 1000 "idle autolock aborted"' --timer 15 'notify-send -r 1337 -t 1 "idle autolock engaging"; loginctl lock-session' ''
-
 # Start the daemon which listens to focus changes and sets _back mark
 exec --no-startup-id i3-back
 # Bind a switch key, which focuses the previously focused window

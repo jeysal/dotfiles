@@ -1,0 +1,11 @@
+[Unit]
+Description=Idle screen-lock daemon
+BindsTo=i3-session.service
+
+[Service]
+Type=simple
+ExecStart=xidlehook --detect-sleep --not-when-audio --not-when-fullscreen --timer 300 'notify-send -u critical -r 1337 -t 15000 "idle autolock imminent"' 'notify-send -r 1337 -t 1000 "idle autolock aborted"' --timer 15 'notify-send -r 1337 -t 1 "idle autolock engaging"; loginctl lock-session' ''
+Restart=on-failure
+
+[Install]
+WantedBy=i3-session.target
