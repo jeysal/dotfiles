@@ -139,7 +139,7 @@ bindsym $mod+m move workspace to output right
 
 # exit i3 (logs you out of your X session)
 # lock screen
-bindsym $mod+Escape exec "loginctl lock-session"
+bindsym $mod+Escape exec --no-startup-id "loginctl lock-session"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -202,17 +202,16 @@ bindsym XF86AudioPause exec --no-startup-id playerctl pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
-# focus last script
-exec_always --no-startup-id pkill prcs
-exec_always --no-startup-id pkill -f /focus-last.py
-exec_always --no-startup-id bash -c 'prcs -r=143 -- $HOME/.config/i3/focus-last.py >$HOME/.local/share/focus-last.log ; exit'
-bindsym $mod+section exec --no-startup-id $HOME/.config/i3/focus-last.py --switch
-
 # xss-lock i3lock
 exec --no-startup-id xss-lock -l -- xss-lock-i3lock
 
 # auto lock
 exec --no-startup-id xidlehook --detect-sleep --not-when-audio --not-when-fullscreen --timer 300 'notify-send -u critical -r 1337 -t 15000 "idle autolock imminent"' 'notify-send -r 1337 -t 1000 "idle autolock aborted"' --timer 15 'notify-send -r 1337 -t 1 "idle autolock engaging"; loginctl lock-session' ''
+
+# Start the daemon which listens to focus changes and sets _back mark
+exec --no-startup-id i3-back
+# Bind a switch key, which focuses the previously focused window
+bindsym $mod+section [con_mark=_back] focus
 
 # polybar
 exec polybar top
