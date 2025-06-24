@@ -193,6 +193,9 @@ bindsym XF86KbdBrightnessDown exec --no-startup-id light -U 34 -s $(light -L | g
 # onboard
 bindsym XF86Launch1 exec --no-startup-id onboard
 
+# screenshot
+bindsym $mod+Shift+x exec flameshot gui
+
 # autorandr
 bindsym $mod+Delete exec --no-startup-id autorandr -l default
 
