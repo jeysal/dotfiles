@@ -6,6 +6,7 @@ function ReloadTheme()
 endfunction
 
 autocmd FocusGained * call ReloadTheme()
+call ReloadTheme()
 
 " powerline
 let g:airline_left_sep = ''
