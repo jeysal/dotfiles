@@ -1,2 +1,0 @@
- #!/usr/bin/bash
- /usr/bin/mongodb-compass --ignore-additional-command-line-flags --password-store=gnome-libsecret

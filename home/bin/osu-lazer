@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-touch /tmp/libinput-direct-abs-input && \
-/usr/bin/osu-lazer
-rm /tmp/libinput-direct-abs-input
