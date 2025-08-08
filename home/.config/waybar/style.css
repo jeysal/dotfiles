@@ -9,6 +9,7 @@ window {
     FiraCode Nerd Font,
     monospace;
   font-size: 14px;
+  font-weight: 600;
 }
 
 window#waybar {
