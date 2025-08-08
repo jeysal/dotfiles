@@ -1,0 +1,220 @@
+@import url("./colors.css");
+
+* {
+  border-radius: 1px;
+}
+
+window {
+  font-family:
+    FiraCode Nerd Font,
+    monospace;
+  font-size: 14px;
+}
+
+window#waybar {
+  background-color: @mantle;
+  color: @text;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+tooltip {
+  background-color: @base;
+  border: 1px solid @surface1;
+}
+
+tooltip label {
+  color: @text;
+}
+
+button {
+  box-shadow: inset 0 -3px transparent;
+  border: none;
+  border-radius: 1px;
+}
+
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px @text;
+}
+
+#workspaces button {
+  padding: 0 0;
+  background-color: @mantle;
+  color: @text;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  background-image: linear-gradient(0deg, @surface1, @mantle);
+}
+
+#workspaces button.focused {
+  background-image: linear-gradient(0deg, @mauve, @surface1);
+  box-shadow: inset 0 -3px @text;
+}
+
+#workspaces button.urgent {
+  background-image: linear-gradient(0deg, @red, @mantle);
+}
+
+#taskbar button.active {
+  background-image: linear-gradient(0deg, @surface1, @mantle);
+}
+
+#mode {
+  background-color: @base;
+  box-shadow: inset 0 -2px @text;
+}
+
+#window,
+#mpris,
+#clock,
+#language,
+#pulseaudio,
+#backlight,
+#battery,
+#network,
+#memory,
+#cpu,
+#temperature,
+#idle_inhibitor,
+#systemd-failed-units,
+#privacy,
+#scratchpad {
+  padding: 0 10px;
+  margin: 4px 1px;
+  color: @text;
+}
+
+#mpris,
+#window,
+#mode {
+  font-family:
+    Railway Sans,
+    Roboto,
+    sans-serif;
+}
+
+#window {
+  margin: 0 20px;
+  border: 1px solid @text;
+  border-top: none;
+  border-bottom: none;
+}
+#tray {
+  margin: 0 0 0 8px;
+  border-left: 1px solid @text;
+}
+
+label:focus {
+  background-color: @mantle;
+}
+
+#cpu {
+  color: @mauve;
+}
+#cpu.critical {
+  background-color: yellow;
+  color: @mantle;
+}
+
+#memory {
+  color: @red;
+}
+#memory.critical {
+  background-color: yellow;
+  color: @mantle;
+}
+
+#network {
+  color: @peach;
+}
+
+#network.disconnected {
+  color: red;
+}
+
+#pulseaudio {
+  color: @green;
+}
+
+#pulseaudio.muted {
+  color: red;
+}
+
+#backlight {
+  color: @lavender;
+}
+
+#battery {
+  color: @yellow;
+}
+#battery.warning {
+  background-color: yellow;
+  color: @mantle;
+}
+#battery.critical {
+  background-color: red;
+  color: @mantle;
+}
+#battery.charging {
+  background-color: unset;
+  color: @yellow;
+}
+
+#temperature {
+  color: @pink;
+}
+
+#temperature.critical {
+  background-color: red;
+  color: @mantle;
+}
+
+#systemd-failed-units {
+  background-color: red;
+  color: @mantle;
+}
+
+#mpris {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  background-color: @base;
+}
+
+#tray {
+  padding: 0 10px;
+  background-color: @crust;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: @mantle;
+}
+
+#idle_inhibitor {
+  background-color: @base;
+  color: @text;
+}
+
+#idle_inhibitor.activated {
+  background-color: @text;
+  color: @base;
+}
+
+#scratchpad {
+  background-color: @base;
+}
+
+#scratchpad.empty {
+  background-color: transparent;
+}

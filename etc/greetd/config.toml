@@ -17,4 +17,4 @@ user = "greeter"
 
 [initial_session]
 user = "seckinger"
-command = "/bin/zsh -ic startx"
+command = "/bin/zsh -ic systemd-cat -t sway sway"

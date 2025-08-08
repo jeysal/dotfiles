@@ -164,7 +164,6 @@ input type:touchpad {
 
 # --- special keybinds ---
 
-# exit i3 (logs you out of your X session)
 # lock screen
 bindsym $mod+Escape exec --no-startup-id "loginctl lock-session"
 
@@ -179,8 +178,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+space exec --no-startup-id "rofi -normal-mode -show combi -modi combi,calc,drun,run -combi-modi window,browser:browser-switch-tabs"
 bindsym $mod+Shift+space exec --no-startup-id "rofi -normal-mode -show drun -modi combi,calc,drun,run -combi-modi window,browser:browser-switch-tabs"
 # emoji picker
-bindsym $mod+u exec --no-startup-id "rofimoji --skin-tone=neutral -a type"
-bindsym $mod+Shift+u exec --no-startup-id "rofimoji --skin-tone=neutral -a clipboard"
+bindsym $mod+u exec --no-startup-id "rofimoji --skin-tone=neutral"
 # clipboard history
 bindsym $mod+p exec --no-startup-id "rofi -modi clipboard:cliphist-rofi-img -show clipboard -show-icons"
 
@@ -206,6 +204,9 @@ bindsym XF86KbdBrightnessDown exec --no-startup-id light -U 34 -s $(light -L | g
 # onboard
 bindsym XF86Launch1 exec --no-startup-id onboard
 
+# screenshot
+bindsym $mod+Shift+x exec flameshot gui
+
 # Media player controls
 bindsym XF86AudioPlay exec --no-startup-id playerctl play
 bindsym XF86AudioPause exec --no-startup-id playerctl pause
@@ -215,14 +216,9 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 # Bind a switch key, which focuses the previously focused window
 bindsym $mod+section workspace back_and_forth
 
-# polybar
-exec polybar top
-for_window [class=Polybar] sticky enable, border none, move output HDMI-1, move output eDP-1, move position 0 -24
-# TODO waybar
-bar placeholder {
-  id 0
-  position top
-  height 24
+bar {
+  swaybar_command waybar
+  id waybar
   output HDMI-1
   output eDP-1
 }
