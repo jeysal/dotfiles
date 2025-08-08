@@ -211,7 +211,7 @@ exec --no-startup-id xss-lock -l -- xss-lock-i3lock
 # Start the daemon which listens to focus changes and sets _back mark
 exec --no-startup-id i3-back
 # Bind a switch key, which focuses the previously focused window
-bindsym $mod+section [con_mark=_back] focus
+bindsym $mod+section workspace back_and_forth
 
 # polybar
 exec polybar top

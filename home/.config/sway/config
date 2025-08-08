@@ -213,7 +213,7 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Bind a switch key, which focuses the previously focused window
-bindsym $mod+section [con_mark=_back] focus
+bindsym $mod+section workspace back_and_forth
 
 # polybar
 exec polybar top
