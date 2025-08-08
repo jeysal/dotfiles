@@ -221,6 +221,7 @@
     "ignore-monitor": true,
   },
   "systemd-failed-units": {
+    "hide-on-ok": true,
     "format": "✗ {nr_failed}",
     "system": true,
     "user": true
