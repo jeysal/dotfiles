@@ -83,7 +83,6 @@ button:hover {
 #cpu,
 #temperature,
 #idle_inhibitor,
-#systemd-failed-units,
 #privacy,
 #scratchpad {
   padding: 0 10px;
@@ -178,8 +177,7 @@ label:focus {
 }
 
 #systemd-failed-units {
-  background-color: red;
-  color: @mantle;
+  color: red;
 }
 
 #mpris {
