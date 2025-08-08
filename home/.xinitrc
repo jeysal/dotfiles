@@ -4,7 +4,6 @@ if uname | grep >/dev/null Darwin; then
   exit
 fi
 
-# TODO detect main monitor
 xrandrOutput=$(xrandr -q | grep " connected ")
 echo Detecting main monitor
 echo $xrandrOutput

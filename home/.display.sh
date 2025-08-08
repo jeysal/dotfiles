@@ -2,7 +2,6 @@ set -x
 exec >~/.local/share/display.log 2>&1
 date
 
-# TODO does this work
 # map input devices
 xinput --map-to-output "ELAN9008:00 04F3:2C82" eDP-1
 xinput --map-to-output "ELAN9008:00 04F3:2C82 Stylus Pen (0)" eDP-1
