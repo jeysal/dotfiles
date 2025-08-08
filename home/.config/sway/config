@@ -162,6 +162,18 @@ input type:touchpad {
   dwt disabled
 }
 
+# --- output ---
+
+output eDP-1 {
+  position 0 0
+}
+output DP-1 {
+  position 0 0
+}
+output DP-2 {
+  position -1920 0
+}
+
 # --- special keybinds ---
 
 # lock screen
