@@ -223,5 +223,5 @@ bar {
   output eDP-1
 }
 
-# mark i3 started
+# mark sway started
 exec --no-startup-id systemctl --user start sway-session.service
