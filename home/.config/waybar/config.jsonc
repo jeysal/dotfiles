@@ -56,6 +56,9 @@
       "artist",
       "title"
     ],
+    "title-len": 50,
+    "artist-len": 50,
+    "dynamic-len": 64,
     "player-icons": {
       "default": "▶",
       // "firefox": "▶",
