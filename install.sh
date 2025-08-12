@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+set -uo pipefail
 
 NODE_VERSION=$(cat home/.node-version)
 NPM_GLOBAL_PACKAGES=(chrome-remote-interface@0.33.3 zx@8.5.5)
@@ -7,12 +8,16 @@ if uname | grep >/dev/null Darwin; then
   echo "Detected Darwin"
 
   export IS_MACOS=true
+else
+  export IS_MACOS=
 fi
 
 if uname -a | grep >/dev/null -- -rpi- || grep &>/dev/null -i "raspberry pi" /sys/firmware/devicetree/base/model; then
   echo "Detected raspi"
 
   export IS_RASPI=true
+else
+  export IS_RASPI=
 fi
 
 if [[ ! -z "$IS_MACOS" ]]; then
@@ -23,6 +28,10 @@ fi
 echo -n "Installing home dir files..."
 cp -prsT --update=none $(realpath home)/ ~/
 mkdir -p ~/.vim/backups ~/.vim/swaps ~/.vim/undo
+echo "Done"
+
+echo -n "Generating system-specific configuration..."
+$(dirname $0)/generate.sh
 echo "Done"
 
 echo -n "Installing base16-shell..."
@@ -83,7 +92,7 @@ if [[ ! -z "$IS_MACOS" ]]; then
   echo "Done"
 fi
 
-if [[ "$1" == "-a" ]] && uname | grep >/dev/null Linux; then
+if [[ "${1-}" == "-a" ]] && uname | grep >/dev/null Linux; then
   echo -n "Installing system files..."
   sudo cp -rT --preserve=mode,timestamps $(realpath etc)/ /etc/
   echo "Done"
