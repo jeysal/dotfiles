@@ -176,6 +176,16 @@ output DP-2 {
   position -1920 0
 }
 
+output 'Ancor Communications Inc VX248 E8LMQS165027' {
+  position -1920 0
+}
+output 'Samsung Electric Company C27F398 HTQJ501243' {
+  position 0 0
+}
+output 'Samsung Electric Company SMBX2331 0x42324335' {
+  position 1920 0
+}
+
 # --- special keybinds ---
 
 # lock screen
@@ -219,7 +229,7 @@ bindsym XF86KbdBrightnessDown exec --no-startup-id light -U 34 -s $(light -L | g
 bindsym XF86Launch1 exec --no-startup-id onboard
 
 # screenshot
-for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move output left, move output up, move position 0 0
+for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move output left, move output left, move output up, move position 0 0
 bindsym $mod+Shift+x exec flameshot gui
 
 # Media player controls
