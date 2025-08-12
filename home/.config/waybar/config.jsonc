@@ -30,6 +30,9 @@
     "tray",
     "privacy",
   ],
+  "sway/window": {
+    "all-outputs": true,
+  },
   "sway/workspaces": {
     "disable-scroll": false,
     "all-outputs": true,
