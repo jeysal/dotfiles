@@ -2,6 +2,7 @@
   // Adapted from https://github.com/hajosattila/dotfiles
   "layer": "top",
   "output": [
+    "HDMI-A-1",
     "HDMI-1",
     "eDP-1"
   ],
