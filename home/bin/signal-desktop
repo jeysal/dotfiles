@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+/usr/bin/signal-desktop --ozone-platform-hint=auto --enable-features=AcceleratedVideoDecodeLinuxGL,AcceleratedVideoDecodeLinuxZeroCopyGL "$@"
