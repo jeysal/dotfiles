@@ -167,7 +167,7 @@ input type:touchpad {
 output * adaptive_sync on
 
 output eDP-1 {
-  position 0 0
+  position 1920 0
 }
 output DP-1 {
   position 0 0
