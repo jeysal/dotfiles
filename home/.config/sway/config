@@ -8,6 +8,9 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:Railway, Roboto 10
 
+exec_always gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
+exec_always gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+
 # class                 border  backgr. text    indicator child_border
 client.focused          #783a00 #a04e00 #ffffff #ff7b00   #a04e00
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
