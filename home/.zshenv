@@ -1,7 +1,11 @@
 [[ $- == *i* ]] && echo $TERM | grep "xterm.*" >/dev/null && \
 [[ -z "$TMUX" ]] && [[ -z "$NOTMUX" ]] && \
-[[ -z "$ANDROID_ROOT" ]] && [[ -z "$SSH_CONNECTION" ]] && \
-exec tmux
+[[ -z "$ANDROID_ROOT" ]] && [[ -z "$SSH_CONNECTION" ]] && {
+    user_id=$(id -u)
+    socket_name=${WAYLAND_DISPLAY:-default}
+    socket_path="/run/user/$user_id/tmux-$socket_name"
+    exec tmux -S "$socket_path"
+}
 
 # Fuck do I know why this dies without `2| tee`
 export FZF_DEFAULT_COMMAND="rg -l --fixed-strings --ignore-case --hidden --no-ignore --glob '!.git/*' --glob '!.stversions/*' 2| tee /dev/null "
