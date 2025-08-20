@@ -2,7 +2,7 @@
 set -uo pipefail
 
 NODE_VERSION=$(cat home/.node-version)
-NPM_GLOBAL_PACKAGES=(chrome-remote-interface@0.33.3 zx@8.5.5)
+NPM_GLOBAL_PACKAGES=(chrome-remote-interface@0.33.3 zx@8.8.1)
 
 if uname | grep >/dev/null Darwin; then
   echo "Detected Darwin"
