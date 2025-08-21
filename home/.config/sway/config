@@ -33,6 +33,12 @@ seat seat0 xcursor_theme Bibata-Original-Ice 32
 
 # bg
 output * bg `find ~/conf/assets/bg.png /usr/share/backgrounds/archlinux/{archbtw,archwave,archwaveinv,awesome,wave}.png -type f | shuf -n 1` fill
+output eDP-1 bg `find ~/conf/assets/bg.png /usr/share/backgrounds/archlinux/{archbtw,archwave,archwaveinv,awesome,wave}.png -type f | shuf -n 1` fill
+output DP-1 bg `find ~/conf/assets/bg.png /usr/share/backgrounds/archlinux/{archbtw,archwave,archwaveinv,awesome,wave}.png -type f | shuf -n 1` fill
+output DP-2 bg `find ~/conf/assets/bg.png /usr/share/backgrounds/archlinux/{archbtw,archwave,archwaveinv,awesome,wave}.png -type f | shuf -n 1` fill
+output HDMI-1 bg `find ~/conf/assets/bg.png /usr/share/backgrounds/archlinux/{archbtw,archwave,archwaveinv,awesome,wave}.png -type f | shuf -n 1` fill
+output HDMI-2 bg `find ~/conf/assets/bg.png /usr/share/backgrounds/archlinux/{archbtw,archwave,archwaveinv,awesome,wave}.png -type f | shuf -n 1` fill
+output HDMI-A-1 bg `find ~/conf/assets/bg.png /usr/share/backgrounds/archlinux/{archbtw,archwave,archwaveinv,awesome,wave}.png -type f | shuf -n 1` fill
 
 # focus
 focus_follows_mouse no
