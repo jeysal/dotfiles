@@ -42,7 +42,7 @@ alias :qa='exit'
 alias xclip='xclip -r -selection clipboard'
 alias icat='kitty +kitten icat'
 
-[[ ! -z "$IS_MACOS" ]] || alias open='xdg-open'
+[[ ! -z "$IS_MACOS" ]] || open() { local pids=(); for arg; do xdg-open "$arg" & pids+=($!); done; wait "${pids[@]}"; }
 
 alias nice='nice '
 
