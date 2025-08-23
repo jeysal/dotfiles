@@ -91,8 +91,8 @@
     "spacing": 10
   },
   "clock": {
-    "interval": 2,
-    "format": "{:%F %R }",
+    "interval": 1,
+    "format": "{:%F %H:%M:%S }",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode": "year",
