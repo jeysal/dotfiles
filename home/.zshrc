@@ -99,9 +99,9 @@ watch_linux() {
   done
 }
 
-which autorandr >& /dev/null && test "$DISPLAY" && for profile in $(
-  find ~/.config/autorandr -mindepth 1 -maxdepth 1 -type d ! -path "*/postswitch.d" -printf %f\\n
-); do alias $profile="autorandr -l $profile"; done
+# monitors
+alias sofa='cat ~/.config/sway/sofa | xargs -d \\\\n swaymsg'
+alias unsofa='swaymsg reload'
 
 # "Better version" aliases
 which colordiff >& /dev/null && alias diff='colordiff'
