@@ -194,6 +194,10 @@ output 'Samsung Electric Company C27F398 HTQJ501243' {
 output 'Samsung Electric Company SMBX2331 0x42324335' {
   position 1920 0
 }
+output 'LG Electronics LG TV SSCR2 0x01010101' {
+  position -5760 0
+  mode '3840x2160@120.000Hz'
+}
 
 # --- special keybinds ---
 
