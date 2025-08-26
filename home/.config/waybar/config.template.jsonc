@@ -2,8 +2,8 @@
   // Adapted from https://github.com/hajosattila/dotfiles
   "layer": "top",
   "output": [
-    "HDMI-A-1",
-    "HDMI-1",
+    "Samsung Electric Company SMBX2331 0x42324335",
+    "LG Electronics LG TV SSCR2 0x01010101",
     "eDP-1"
   ],
   "position": "top",
