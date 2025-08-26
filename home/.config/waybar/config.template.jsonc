@@ -49,6 +49,9 @@
   "sway/mode": {
     "format": "<span style=\"italic\">{}</span>"
   },
+  "sway/window": {
+    "all-outputs": true,
+  },
   "mpris": {
     "interval": 2,
     "format": "{player_icon} {dynamic}",
