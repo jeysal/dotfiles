@@ -158,7 +158,9 @@ bindsym $mod+r mode "resize"
 
 # --- input ---
 
-input type:keyboard {
+input * {
+  dwt disabled
+
   xkb_layout gb
   xkb_variant mac
   xkb_options compose:caps
@@ -168,7 +170,11 @@ input type:keyboard {
 input type:touchpad {
   natural_scroll enabled
   pointer_accel 0.75
-  dwt disabled
+}
+
+input 1133:16461:Logitech_K400_Plus {
+  natural_scroll enabled
+  pointer_accel 1
 }
 
 # --- output ---
