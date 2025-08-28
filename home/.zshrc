@@ -101,7 +101,8 @@ watch_linux() {
 
 # monitors
 alias sofa='cat ~/.config/sway/sofa | xargs -d \\\\n swaymsg'
-alias unsofa='swaymsg reload'
+alias stand='cat ~/.config/sway/stand | xargs -d \\\\n swaymsg'
+alias default='swaymsg reload'
 
 # "Better version" aliases
 which colordiff >& /dev/null && alias diff='colordiff'
