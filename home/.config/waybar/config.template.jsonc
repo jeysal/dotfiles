@@ -1,11 +1,6 @@
 {
   // Adapted from https://github.com/hajosattila/dotfiles
   "layer": "top",
-  "output": [
-    "Samsung Electric Company SMBX2331 0x42324335",
-    "LG Electronics LG TV SSCR2 0x01010101",
-    "eDP-1"
-  ],
   "position": "top",
   "spacing": 1,
   "modules-left": [
