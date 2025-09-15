@@ -207,6 +207,7 @@ output 'LG Electronics LG TV SSCR2 0x01010101' {
 
 # lock screen
 bindsym $mod+Escape exec --no-startup-id "loginctl lock-session"
+bindsym XF86LogOff exec --no-startup-id "loginctl lock-session"
 
 # start a terminal
 bindsym $mod+Return exec kitty
