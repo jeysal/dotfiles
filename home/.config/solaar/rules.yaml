@@ -1,0 +1,5 @@
+%YAML 1.3
+---
+- Key: [Lock PC, pressed]
+- Execute: [loginctl, lock-session]
+...

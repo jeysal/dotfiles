@@ -1,0 +1,63 @@
+- 1.1.14
+- _NAME: MX Keys S
+  _absent: [hi-res-scroll, lowres-scroll-mode, hires-smooth-invert, hires-smooth-resolution, hires-scroll-mode, scroll-ratchet, smart-shift, thumb-scroll-invert,
+    thumb-scroll-mode, onboard_profiles, report_rate, report_rate_extended, pointer_speed, dpi, dpi_extended, speed-change, backlight-timed, led_control,
+    led_zone_, rgb_control, rgb_zone_, brightness_control, per-key-lighting, reprogrammable-keys, persistent-remappable-keys, crown-smooth, divert-crown,
+    divert-gkeys, m-key-leds, mr-key-led, gesture2-gestures, gesture2-divert, gesture2-params, sidetone, equalizer, adc_power_management]
+  _battery: 4100
+  _modelId: B37800000000
+  _sensitive: {backlight: false, backlight_level: false, disable-keyboard-keys: false, divert-keys: false}
+  _serial: E920059D
+  _unitId: E920059D
+  _wpid: B378
+  backlight: 1
+  backlight_duration_hands_in: 30
+  backlight_duration_hands_out: 15
+  backlight_duration_powered: 300
+  backlight_level: 2
+  change-host: null
+  disable-keyboard-keys: {1: false, 2: true, 4: false, 8: false, 16: false}
+  divert-keys: {10: 0, 111: 1, 199: 0, 200: 0, 226: 0, 227: 0, 228: 0, 229: 0, 230: 0, 231: 0, 232: 0, 233: 0, 234: 0, 259: 0, 264: 0, 266: 0, 284: 0}
+  fn-swap: true
+  multiplatform: 0
+- _NAME: MX Master 3S
+  _absent: [hi-res-scroll, lowres-scroll-mode, onboard_profiles, report_rate, report_rate_extended, pointer_speed, dpi_extended, speed-change, backlight,
+    backlight_level, backlight_duration_hands_out, backlight_duration_hands_in, backlight_duration_powered, backlight-timed, led_control, led_zone_, rgb_control,
+    rgb_zone_, brightness_control, per-key-lighting, fn-swap, persistent-remappable-keys, disable-keyboard-keys, crown-smooth, divert-crown, divert-gkeys,
+    m-key-leds, mr-key-led, multiplatform, gesture2-gestures, gesture2-divert, gesture2-params, sidetone, equalizer, adc_power_management]
+  _battery: 4100
+  _modelId: B03400000000
+  _sensitive: {dpi: true, smart-shift: false}
+  _serial: 9678519E
+  _unitId: 9678519E
+  _wpid: B034
+  change-host: null
+  divert-keys: {82: 0, 83: 0, 86: 0, 195: 0, 196: 0}
+  dpi: 4000
+  hires-scroll-mode: false
+  hires-smooth-invert: false
+  hires-smooth-resolution: false
+  reprogrammable-keys: {80: 80, 81: 81, 82: 82, 83: 83, 86: 86, 195: 195, 196: 196}
+  scroll-ratchet: 2
+  smart-shift: 50
+  thumb-scroll-invert: false
+  thumb-scroll-mode: false
+- _NAME: Wireless Touch Keyboard K400 Plus
+  _absent: [hi-res-scroll, lowres-scroll-mode, hires-smooth-invert, hires-smooth-resolution, hires-scroll-mode, scroll-ratchet, smart-shift, thumb-scroll-invert,
+    thumb-scroll-mode, onboard_profiles, report_rate, report_rate_extended, pointer_speed, dpi, dpi_extended, speed-change, backlight, backlight_level,
+    backlight_duration_hands_out, backlight_duration_hands_in, backlight_duration_powered, backlight-timed, led_control, led_zone_, rgb_control, rgb_zone_,
+    brightness_control, per-key-lighting, reprogrammable-keys, persistent-remappable-keys, crown-smooth, divert-crown, divert-gkeys, m-key-leds, mr-key-led,
+    multiplatform, change-host, sidetone, equalizer, adc_power_management]
+  _battery: 4096
+  _modelId: 404D00000000
+  _sensitive: {disable-keyboard-keys: false, gesture2-gestures: false, hires-scroll-mode: ignore, hires-smooth-invert: ignore, hires-smooth-resolution: ignore}
+  _serial: FCCB6CC8
+  _unitId: 981E11C6
+  _wpid: 404D
+  disable-keyboard-keys: {1: false, 4: false, 8: false, 16: false}
+  divert-keys: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 8: 0, 34: 0, 40: 0, 62: 0, 64: 0, 79: 0, 84: 0, 110: 0, 145: 0, 149: 0, 183: 0, 184: 0}
+  fn-swap: true
+  gesture2-divert: {1: false, 2: false, 10: false, 44: false, 64: false, 65: false, 67: false, 84: false, 85: false, 100: false}
+  gesture2-gestures: {1: true, 2: true, 10: true, 30: true, 34: false, 42: true, 43: true, 45: false, 64: false, 65: false, 67: false, 84: true}
+  gesture2-params:
+    4: {scale: 256}
