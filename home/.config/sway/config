@@ -220,6 +220,7 @@ bindsym $mod+space exec --no-startup-id "rofi -show combi -modi combi,calc,drun,
 bindsym $mod+Shift+space exec --no-startup-id "rofi -show drun -modi combi,calc,drun,run -combi-modi window,browser:browser-switch-tabs"
 # emoji picker
 bindsym $mod+u exec --no-startup-id "rofimoji -a clipboard --skin-tone=neutral"
+bindsym $mod+Shift+Ctrl+Alt+space exec --no-startup-id "rofimoji -a clipboard --skin-tone=neutral"
 # clipboard history
 bindsym $mod+p exec --no-startup-id "rofi -modi clipboard:cliphist-rofi-img -show clipboard -show-icons"
 
@@ -235,6 +236,11 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle # mute mic
+# Media player controls
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPause exec --no-startup-id playerctl pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
@@ -248,12 +254,7 @@ bindsym XF86Launch1 exec --no-startup-id onboard
 # screenshot
 for_window [app_id="flameshot"] border pixel 0, fullscreen disable, floating enable, move absolute position -10000 -10000, move position 0 -30
 bindsym $mod+Shift+x exec flameshot gui
-
-# Media player controls
-bindsym XF86AudioPlay exec --no-startup-id playerctl play
-bindsym XF86AudioPause exec --no-startup-id playerctl pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym $mod+Shift+s exec flameshot gui
 
 # Bind a switch key, which focuses the previously focused window
 bindsym $mod+section [con_mark=_back] focus
