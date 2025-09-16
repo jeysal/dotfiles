@@ -27,7 +27,7 @@
     m-key-leds, mr-key-led, multiplatform, gesture2-gestures, gesture2-divert, gesture2-params, sidetone, equalizer, adc_power_management]
   _battery: 4100
   _modelId: B03400000000
-  _sensitive: {dpi: true, smart-shift: false}
+  _sensitive: {dpi: false, smart-shift: false}
   _serial: 9678519E
   _unitId: 9678519E
   _wpid: B034
