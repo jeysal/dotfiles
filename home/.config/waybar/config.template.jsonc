@@ -14,7 +14,6 @@
   "modules-right": [
     "sway/scratchpad",
     "pulseaudio",
-    "mpris",
     "backlight",
     "network",
     "temperature",
