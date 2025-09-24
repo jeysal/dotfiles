@@ -75,20 +75,11 @@ if [[ ! -z "$IS_MACOS" ]]; then
     echo "Done"
   fi
 
-  echo -n "Linking VSCode files..."
-  mkdir -p "$HOME/Library/Application Support/Code/User"
-  ln -fst "$HOME/Library/Application Support/Code/User" ~/.config/Code/User/*
-  echo "Done"
-
-  echo -n "Running list exports once..."
-  npm ls -g --depth=0 2>/dev/null >$HOME/docs/tech/npm-global-list/$HOST.txt
-
+  echo -n "Running brew list export once..."
   PKG_LIST=$HOME/docs/tech/pkg-list/$HOST.txt
   brew list >$PKG_LIST
   echo >>$PKG_LIST
   brew cask list >>$PKG_LIST
-
-  ls $HOME/.vscode/extensions/ >$HOME/docs/tech/vscode-ext-list/$HOST.txt
   echo "Done"
 fi
 
