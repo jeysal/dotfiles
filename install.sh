@@ -99,7 +99,8 @@ if [[ "${1-}" == "-a" ]] && uname | grep >/dev/null Linux; then
 fi
 
 echo -n "Looking for dangling symlinks..."
-DANGLING_SYMLINKS_CMD='find ~ -maxdepth 4 -xtype l ! -path "*/.config/BraveSoftware/*" ! -path "*/.thunderbird/*" ! -path "*/.config/discord/*" ! -path "*/.config/Signal/*" ! -path "*/.mozilla/firefox/*" ! -path "*/.steampath" ! -path "*/.config/autostart/*"'
+DANGLING_SYMLINKS_CMD="find ~ -maxdepth 4 -xtype l ! -path '*/.config/BraveSoftware/*' ! -path '*/.thunderbird/*' ! -path '*/.config/discord/*' ! -path '*/.config/Signal/*' ! -path '*/.mozilla/firefox/*' ! -path '*/.steampath'"
+if [[ ! -z "$IS_MACOS" || ! -z "$IS_RASPI" ]] DANGLING_SYMLINKS_CMD="${DANGLING_SYMLINKS_CMD} ! -path '*/.config/autostart/*'"
 DANGLING_SYMLINKS=`eval $DANGLING_SYMLINKS_CMD`
 if [ -n "$DANGLING_SYMLINKS" ]; then
   echo "Dangling symlinks:"
