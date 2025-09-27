@@ -12,10 +12,9 @@
   ],
   "modules-center": [],
   "modules-right": [
-    "sway/scratchpad",
+    "network",
     "pulseaudio",
     "backlight",
-    "network",
     "temperature",
     "cpu",
     "memory",
@@ -65,16 +64,6 @@
       "paused": "⏸"
     },
     // "ignored-players": ["cmus"]
-  },
-  "sway/scratchpad": {
-    "format": "{icon} {count}",
-    "show-empty": false,
-    "format-icons": [
-      "",
-      ""
-    ],
-    "tooltip": true,
-    "tooltip-format": "{app}: {title}"
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -159,8 +148,8 @@
     "interval": 2,
     "interface-ethernet": "enp1s*",
     "interface-wifi": "wlan0",
-    "format-ethernet": "eth ",
-    "format-wifi": "{signalStrength}% ",
+    "format-ethernet": "eth  {bandwidthDownBytes} {bandwidthUpBytes}",
+    "format-wifi": "{signalStrength}%  {bandwidthDownBytes} {bandwidthUpBytes}",
     "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
     "tooltip-format-wifi": "{ifname}: {ipaddr}/{cidr} ",
     "format-linked": "(No IP) ",
