@@ -34,6 +34,12 @@ echo -n "Generating system-specific configuration..."
 $(dirname $0)/generate.sh
 echo "Done"
 
+if [[ "${1-}" == "-a" ]] && uname | grep >/dev/null Linux; then
+  echo -n "Installing system files..."
+  sudo cp -rT --preserve=mode,timestamps $(realpath etc)/ /etc/
+  echo "Done"
+fi
+
 echo -n "Installing base16-shell..."
 ln -fnsT $(realpath base16-shell) ~/.config/base16-shell
 echo "Done"
@@ -80,12 +86,6 @@ if [[ ! -z "$IS_MACOS" ]]; then
   brew list >$PKG_LIST
   echo >>$PKG_LIST
   brew cask list >>$PKG_LIST
-  echo "Done"
-fi
-
-if [[ "${1-}" == "-a" ]] && uname | grep >/dev/null Linux; then
-  echo -n "Installing system files..."
-  sudo cp -rT --preserve=mode,timestamps $(realpath etc)/ /etc/
   echo "Done"
 fi
 
