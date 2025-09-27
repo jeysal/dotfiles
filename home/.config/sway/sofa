@@ -2,4 +2,4 @@ output * disable
 output 'LG Electronics LG TV SSCR2 0x01010101' enable
 output 'LG Electronics LG TV SSCR2 0x01010101' position 0 0
 output 'LG Electronics LG TV SSCR2 0x01010101' mode '3840x2160@120.000Hz'
-output 'LG Electronics LG TV SSCR2 0x01010101' scale 2.5
+output 'LG Electronics LG TV SSCR2 0x01010101' scale 3
