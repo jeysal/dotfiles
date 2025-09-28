@@ -219,8 +219,8 @@ bindsym $mod+Shift+q kill
 # launcher
 bindsym $mod+space exec --no-startup-id "rofi -show combi -modi combi,calc -combi-modi window,drun,run"
 # emoji picker
-bindsym $mod+u exec --no-startup-id "rofimoji --skin-tone=neutral"
-bindsym $mod+Shift+Ctrl+Alt+space exec --no-startup-id "rofimoji --skin-tone=neutral"
+bindsym $mod+u exec --no-startup-id "rofimoji -a clipboard --skin-tone=neutral"
+bindsym $mod+Shift+Ctrl+Alt+space exec --no-startup-id "rofimoji -a clipboard --skin-tone=neutral"
 # clipboard history
 bindsym $mod+p exec --no-startup-id "rofi -modi clipboard:cliphist-rofi-img -show clipboard -show-icons"
 
