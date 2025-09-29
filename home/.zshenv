@@ -27,4 +27,3 @@ export HUSKY=0
 
 # grml-zsh-config for some reason completes globs with a menu instead of inserting all matches, unless this is set
 export NOCOR=1
-. "$HOME/.cargo/env"
