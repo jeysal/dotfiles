@@ -22,7 +22,7 @@ fi
 
 if [[ ! -z "$IS_MACOS" ]]; then
   echo "Attempting to use GNU coreutils path on macOS"
-  export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
+  export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$HOMEBREW_PREFIX/opt/findutils/libexec/gnubin:$PATH"
 fi
 
 echo -n "Installing home dir files..."
