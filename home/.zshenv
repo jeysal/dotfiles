@@ -1,10 +1,13 @@
 [[ $- == *i* ]] && echo $TERM | grep "xterm.*" >/dev/null && \
 [[ -z "$TMUX" ]] && [[ -z "$NOTMUX" ]] && \
 [[ -z "$ANDROID_ROOT" ]] && [[ -z "$SSH_CONNECTION" ]] && {
-    user_id=$(id -u)
+  if [ ! -z "$XDG_RUNTIME_DIR" ]; then
     socket_name=${WAYLAND_DISPLAY:-default}
-    socket_path="/run/user/$user_id/tmux-$socket_name"
+    socket_path="$XDG_RUNTIME_DIR/tmux-$socket_name"
     exec tmux -S "$socket_path"
+  else
+    exec tmux
+  fi
 }
 
 # Fuck do I know why this dies without `2| tee`
