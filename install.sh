@@ -75,12 +75,6 @@ if [[ ! -z "$IS_MACOS" ]]; then
   fi
   echo "Done"
 
-  if [[ ! -d ~/.powerlevel10k ]]; then
-    echo -n "Downloading powerlevel10k..."
-    git clone https://github.com/romkatv/powerlevel10k ~/.powerlevel10k
-    echo "Done"
-  fi
-
   echo -n "Running brew list export once..."
   PKG_LIST=$HOME/docs/tech/pkg-list/$HOST.txt
   brew list >$PKG_LIST
