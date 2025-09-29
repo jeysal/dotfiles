@@ -1,5 +1,6 @@
 if uname | grep >/dev/null Darwin; then
   export IS_MACOS=true
+  source ~/.macos.zshenv
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 if uname -a | grep >/dev/null rpi-legacy; then
@@ -26,3 +27,4 @@ export HUSKY=0
 
 # grml-zsh-config for some reason completes globs with a menu instead of inserting all matches, unless this is set
 export NOCOR=1
+. "$HOME/.cargo/env"
