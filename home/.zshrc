@@ -1,8 +1,29 @@
-if [[ ! -z "$IS_MACOS" ]]; then
-  # grml in user folder (for systems that do not have it installed globally)
+if uname | grep >/dev/null Darwin; then
+  export IS_MACOS=true
+
   ZSH_GRML_CONF=$HOME/.grml.zsh
   [[ -f $ZSH_GRML_CONF ]] && source $ZSH_GRML_CONF
+
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+
+  source ~/.macos-env.zshrc
 fi
+if uname -a | grep >/dev/null rpi-legacy; then
+  export IS_RASPI=true
+fi
+
+[[ $- == *i* ]] && echo $TERM | grep "xterm.*" >/dev/null && \
+[[ -z "$TMUX" ]] && [[ -z "$NOTMUX" ]] && \
+[[ -z "$ANDROID_ROOT" ]] && [[ -z "$SSH_CONNECTION" ]] && {
+  if [ ! -z "$XDG_RUNTIME_DIR" ]; then
+    socket_name=${WAYLAND_DISPLAY:-default}
+    socket_path="$XDG_RUNTIME_DIR/tmux-$socket_name"
+    exec tmux -S "$socket_path"
+  else
+    exec tmux
+  fi
+}
+
 
 # We will configure our own prompt
 prompt off
