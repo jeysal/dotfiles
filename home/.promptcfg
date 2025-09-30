@@ -33,7 +33,7 @@ POWERLEVEL9K_VI_COMMAND_MODE_STRING='vi mode'
 POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND='white'
 
 function prompt_sc_status() {
-  systemctl is-system-running >/dev/null && systemctl --user is-system-running >/dev/null;
+  command -v systemctl >/dev/null && systemctl is-system-running >/dev/null && systemctl --user is-system-running >/dev/null;
   if [ "$?" -ne 0 ]; then
     p10k segment -i '‼️' -b white
   fi
