@@ -75,6 +75,10 @@ if [[ ! -z "$IS_MACOS" ]]; then
   fi
   echo "Done"
 
+  echo -n "Removing low-quality Homebrew git completions..."
+  rm -r /opt/homebrew/share/zsh/site-functions/{_git,git-completion.bash}
+  echo "Done"
+
   echo -n "Running brew list export once..."
   PKG_LIST=$HOME/docs/tech/pkg-list/$HOST.txt
   brew list >$PKG_LIST
