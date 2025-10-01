@@ -1,6 +1,6 @@
 " config
 let g:NERDTreeShowHidden=1
-let g:NERDTreeWinSize=32
+let g:NERDTreeWinSize=40
 
 noremap <leader>t :NERDTreeFind<CR>
 
