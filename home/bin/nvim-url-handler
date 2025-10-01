@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Parse the nvim:// URL (e.g. nvim://open?file=/path/to/file&line=123)
+uri="$1"
+decoded_uri=$(printf '%b' "${uri//%/\\x}")
+
+# Extract file and line from the query string
+file=$(echo "$decoded_uri" | sed -n 's|.*file=\([^&]*\).*|\1|p')
+line=$(echo "$decoded_uri" | sed -n 's|.*line=\([0-9]*\).*|\1|p')
+line=${line:-1}
+
+# Find a running Neovim server socket
+# /var/folders for macOS
+server=$(find ${XDG_RUNTIME_DIR:-/var/folders} -type s -name 'nvim.*' 2>/dev/null | head -n 1)
+
+if [[ -n "$server" ]]; then
+   nvim --server "$server" --remote-send "<C-\\><C-N>:tabedit $file<CR>:${line}<CR>"
+else
+    nvim +$line $file
+fi
