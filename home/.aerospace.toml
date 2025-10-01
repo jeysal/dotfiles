@@ -121,7 +121,8 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-cmd-f = 'fullscreen'
 
     ctrl-s = 'layout v_accordion' # 'layout stacking' in i3
-    ctrl-e = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
+    ctrl-shift-w = 'layout h_accordion' # 'layout tabbed' in i3
+    ctrl-shift-e = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
     ctrl-h = 'focus left'
@@ -170,6 +171,7 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-shift-9 = 'move-node-to-workspace 9'
     ctrl-shift-0 = 'move-node-to-workspace 10'
 
+    # Lock
     ctrl-esc = '''exec-and-forget osascript -e 'tell application "System Events" to keystroke "q" using {control down, command down}' '''
 
     ctrl-enter = 'exec-and-forget kitty -1 -d ~'
@@ -180,6 +182,7 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-b = 'exec-and-forget /Applications/Firefox.app/Contents/MacOS/firefox --new-window about:blank'
     ctrl-shift-b = 'exec-and-forget "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"'
 
-    ctrl-u = '''exec-and-forget osascript -e 'tell application "System Events" to keystroke space using {control down, command down}' '''
+    # Emoji
+    ctrl-shift-u = '''exec-and-forget osascript -e 'tell application "System Events" to keystroke space using {control down, command down}' '''
 
     ctrl-shift-s = 'exec-and-forget open -a Screenshot'

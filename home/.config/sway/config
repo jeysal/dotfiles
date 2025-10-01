@@ -219,7 +219,7 @@ bindsym $mod+Shift+q kill
 # launcher
 bindsym $mod+space exec --no-startup-id "rofi -show combi -modi combi,calc -combi-modi window,drun,run"
 # emoji picker
-bindsym $mod+u exec --no-startup-id "rofimoji -a clipboard --skin-tone=neutral"
+bindsym $mod+Shift+u exec --no-startup-id "rofimoji -a clipboard --skin-tone=neutral"
 bindsym $mod+Shift+Ctrl+Alt+space exec --no-startup-id "rofimoji -a clipboard --skin-tone=neutral"
 # clipboard history
 bindsym $mod+p exec --no-startup-id "rofi -modi clipboard:cliphist-rofi-img -show clipboard -show-icons"
@@ -228,8 +228,8 @@ bindsym $mod+p exec --no-startup-id "rofi -modi clipboard:cliphist-rofi-img -sho
 bindsym $mod+Shift+f exec pcmanfm
 
 # browser
-bindsym $mod+c exec firefox
-bindsym $mod+Shift+c exec chromium
+bindsym $mod+b exec firefox
+bindsym $mod+Shift+b exec chromium
 
 # pulseaudio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
