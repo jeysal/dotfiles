@@ -222,7 +222,7 @@ bindsym $mod+space exec --no-startup-id "rofi -show combi -modi combi,calc -comb
 bindsym $mod+Shift+u exec --no-startup-id "rofimoji -a clipboard --skin-tone=neutral"
 bindsym $mod+Shift+Ctrl+Alt+space exec --no-startup-id "rofimoji -a clipboard --skin-tone=neutral"
 # clipboard history
-bindsym $mod+p exec --no-startup-id "rofi -modi clipboard:cliphist-rofi-img -show clipboard -show-icons"
+bindsym $mod+Shift+p exec --no-startup-id "rofi -modi clipboard:cliphist-rofi-img -show clipboard -show-icons"
 
 # file manager
 bindsym $mod+Shift+f exec pcmanfm
