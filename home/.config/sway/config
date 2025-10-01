@@ -253,7 +253,6 @@ bindsym XF86Launch1 exec --no-startup-id onboard
 
 # screenshot
 for_window [app_id="flameshot"] border pixel 0, fullscreen disable, floating enable, move absolute position -10000 -10000, move position 0 -30
-bindsym $mod+Shift+x exec flameshot gui
 bindsym $mod+Shift+s exec flameshot gui
 
 # Bind a switch key, which focuses the previously focused window

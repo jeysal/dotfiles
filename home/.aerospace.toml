@@ -118,7 +118,7 @@ automatically-unhide-macos-hidden-apps = false
     # end tell'
     # '''
 
-    ctrl-cmd-f = 'fullscreen'
+    ctrl-shift-f = 'fullscreen'
 
     ctrl-s = 'layout v_accordion' # 'layout stacking' in i3
     ctrl-shift-w = 'layout h_accordion' # 'layout tabbed' in i3
@@ -142,11 +142,11 @@ automatically-unhide-macos-hidden-apps = false
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     ctrl-shift-semicolon = 'mode service'
-    ctrl-cmd-r = 'mode resize'
+    ctrl-shift-r = 'mode resize'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-    ctrl-cmd-n = 'move-workspace-to-monitor --wrap-around next'
-    ctrl-cmd-m = 'move-workspace-to-monitor --wrap-around prev'
+    ctrl-shift-n = 'move-workspace-to-monitor --wrap-around next'
+    ctrl-shift-m = 'move-workspace-to-monitor --wrap-around prev'
 
     ctrl-shift-q = 'close'
 
