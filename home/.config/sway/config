@@ -83,7 +83,7 @@ bindsym $mod+Shift+v split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -127,8 +127,8 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # move workspace around monitors
-bindsym $mod+n move workspace to output left
-bindsym $mod+m move workspace to output right
+bindsym $mod+Shift+n move workspace to output left
+bindsym $mod+Shift+m move workspace to output right
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -154,7 +154,7 @@ mode "resize" {
   bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+shift+r mode "resize"
 
 # --- input ---
 
@@ -225,7 +225,7 @@ bindsym $mod+Shift+Ctrl+Alt+space exec --no-startup-id "rofimoji -a clipboard --
 bindsym $mod+Shift+p exec --no-startup-id "rofi -modi clipboard:cliphist-rofi-img -show clipboard -show-icons"
 
 # file manager
-bindsym $mod+Shift+f exec pcmanfm
+bindsym $mod+alt+f exec pcmanfm
 
 # browser
 bindsym $mod+grave exec firefox
