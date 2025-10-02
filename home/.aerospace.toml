@@ -177,10 +177,10 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-enter = 'exec-and-forget kitty -1 -d ~'
     ctrl-shift-enter = 'exec-and-forget NOTMUX=true kitty -1 -d ~'
 
-    ctrl-shift-f = 'exec-and-forget open -a Finder'
+    ctrl-alt-f = 'exec-and-forget open -a Finder'
 
-    ctrl-b = 'exec-and-forget /Applications/Firefox.app/Contents/MacOS/firefox --new-window about:blank'
-    ctrl-shift-b = 'exec-and-forget "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"'
+    ctrl-backtick = 'exec-and-forget /Applications/Firefox.app/Contents/MacOS/firefox --new-window about:blank'
+    ctrl-shift-backtick = 'exec-and-forget "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"'
 
     # Emoji
     ctrl-shift-u = '''exec-and-forget osascript -e '
