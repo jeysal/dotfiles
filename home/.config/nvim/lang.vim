@@ -17,7 +17,7 @@ map <silent> <leader>q :CocOutline<CR>
 " references
 map <silent> <leader>7 <Plug>(coc-references)
 " format
-nmap <silent> <C-l> <Plug>(coc-format)
+nmap <silent> <C-\> <Plug>(coc-format)
 " insert doc
 autocmd FileType javascript,typescript map <leader>d :JsDoc<CR>
 " rename

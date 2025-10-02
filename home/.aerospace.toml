@@ -136,10 +136,6 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-shift-k = 'move up'
     ctrl-shift-l = 'move right'
 
-    # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-    ctrl-minus = 'resize smart -50'
-    ctrl-equal = 'resize smart +50'
-
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     ctrl-shift-semicolon = 'mode service'
     ctrl-shift-r = 'mode resize'

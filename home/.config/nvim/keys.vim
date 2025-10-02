@@ -45,8 +45,8 @@ inoremap <expr> <CR> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<
 " coc yank list
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<CR>
 
-" restore c-6 mapping
-nnoremap <C-6> <C-^>
+" switch back and forth
+nnoremap <C-h> <C-^>
 
 " running InsertLeave would be pretty nice actually
 imap <C-c> <Esc>
