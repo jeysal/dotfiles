@@ -6,6 +6,7 @@
   "prettier.formatterPriority": 0,
 
   "tsserver.useLocalTsdk": true,
+  "tsserver.log": "terse",
 
   "rust-analyzer.completion.autoimport.enable": true,
   "rust-analyzer.completion.autoself.enable": true,
