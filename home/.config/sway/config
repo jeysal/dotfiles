@@ -65,19 +65,19 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+shift+h move left
+bindsym $mod+shift+j move down
+bindsym $mod+shift+k move up
+bindsym $mod+shift+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+shift+Left move left
+bindsym $mod+shift+Down move down
+bindsym $mod+shift+Up move up
+bindsym $mod+shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+Shift+v split h
+bindsym $mod+shift+v split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -94,7 +94,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Alt+section floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+Shift+section focus mode_toggle
+bindsym $mod+shift+section focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -115,20 +115,20 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+shift+1 move container to workspace 1
+bindsym $mod+shift+2 move container to workspace 2
+bindsym $mod+shift+3 move container to workspace 3
+bindsym $mod+shift+4 move container to workspace 4
+bindsym $mod+shift+5 move container to workspace 5
+bindsym $mod+shift+6 move container to workspace 6
+bindsym $mod+shift+7 move container to workspace 7
+bindsym $mod+shift+8 move container to workspace 8
+bindsym $mod+shift+9 move container to workspace 9
+bindsym $mod+shift+0 move container to workspace 10
 
 # move workspace around monitors
-bindsym $mod+Shift+n move workspace to output left
-bindsym $mod+Shift+m move workspace to output right
+bindsym $mod+n move workspace to output left
+bindsym $mod+m move workspace to output right
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -211,25 +211,25 @@ bindsym XF86LogOff exec --no-startup-id "loginctl lock-session"
 
 # start a terminal
 bindsym $mod+Return exec kitty
-bindsym $mod+Shift+Return exec env NOTMUX=true kitty
+bindsym $mod+shift+Return exec env NOTMUX=true kitty
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+shift+q kill
 
 # launcher
 bindsym $mod+space exec --no-startup-id "rofi -show combi -modi combi,calc -combi-modi window,drun,run"
 # emoji picker
-bindsym $mod+Shift+u exec --no-startup-id "rofimoji -a clipboard --skin-tone=neutral"
-bindsym $mod+Shift+Ctrl+Alt+space exec --no-startup-id "rofimoji -a clipboard --skin-tone=neutral"
+bindsym $mod+shift+u exec --no-startup-id "rofimoji -a clipboard --skin-tone=neutral"
+bindsym $mod+shift+Ctrl+Alt+space exec --no-startup-id "rofimoji -a clipboard --skin-tone=neutral"
 # clipboard history
-bindsym $mod+Shift+p exec --no-startup-id "rofi -modi clipboard:cliphist-rofi-img -show clipboard -show-icons"
+bindsym $mod+shift+p exec --no-startup-id "rofi -modi clipboard:cliphist-rofi-img -show clipboard -show-icons"
 
 # file manager
 bindsym $mod+alt+f exec pcmanfm
 
 # browser
 bindsym $mod+grave exec firefox
-bindsym $mod+Shift+grave exec chromium
+bindsym $mod+shift+grave exec chromium
 
 # pulseaudio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
@@ -253,7 +253,7 @@ bindsym XF86Launch1 exec --no-startup-id onboard
 
 # screenshot
 for_window [app_id="flameshot"] border pixel 0, fullscreen disable, floating enable, move absolute position -10000 -10000, move position 0 -30
-bindsym $mod+Shift+s exec flameshot gui
+bindsym $mod+shift+s exec flameshot gui
 
 # Bind a switch key, which focuses the previously focused window
 bindsym $mod+section [con_mark=_back] focus
