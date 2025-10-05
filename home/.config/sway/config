@@ -83,7 +83,7 @@ bindsym $mod+shift+v split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+shift+f fullscreen toggle
+bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -225,7 +225,7 @@ bindsym $mod+shift+Ctrl+Alt+space exec --no-startup-id "rofimoji -a clipboard --
 bindsym $mod+shift+p exec --no-startup-id "rofi -modi clipboard:cliphist-rofi-img -show clipboard -show-icons"
 
 # file manager
-bindsym $mod+alt+f exec pcmanfm
+bindsym $mod+shift+f exec pcmanfm
 
 # browser
 bindsym $mod+grave exec firefox
