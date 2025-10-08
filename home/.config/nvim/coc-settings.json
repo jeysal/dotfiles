@@ -1,5 +1,6 @@
 {
   "diagnostic.checkCurrentLine": true,
+  "coc.preferences.formatOnSave": true,
 
   "inlayHint.enable": false,
 
