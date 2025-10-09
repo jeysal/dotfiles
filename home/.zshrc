@@ -51,6 +51,7 @@ alias sed='sed -r --follow-symlinks'
 
 alias gdmb='git diff $(git merge-base origin/master HEAD)'
 alias groot='cd $(git rev-parse --show-toplevel)'
+alias gfa='git fetch --all --prune'
 
 alias y='yarn'
 
