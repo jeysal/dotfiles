@@ -125,24 +125,24 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-shift-e = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-    ctrl-h = 'focus left'
-    ctrl-j = 'focus down'
-    ctrl-k = 'focus up'
-    ctrl-l = 'focus right'
+    ctrl-h = 'focus --boundaries all-monitors-outer-frame left'
+    ctrl-j = 'focus --boundaries all-monitors-outer-frame down'
+    ctrl-k = 'focus --boundaries all-monitors-outer-frame up'
+    ctrl-l = 'focus --boundaries all-monitors-outer-frame right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
-    ctrl-shift-h = 'move left'
-    ctrl-shift-j = 'move down'
-    ctrl-shift-k = 'move up'
-    ctrl-shift-l = 'move right'
+    ctrl-shift-h = 'move --boundaries all-monitors-outer-frame left'
+    ctrl-shift-j = 'move --boundaries all-monitors-outer-frame down'
+    ctrl-shift-k = 'move --boundaries all-monitors-outer-frame up'
+    ctrl-shift-l = 'move --boundaries all-monitors-outer-frame right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     ctrl-shift-semicolon = 'mode service'
     ctrl-shift-r = 'mode resize'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-    ctrl-shift-n = 'move-workspace-to-monitor --wrap-around next'
-    ctrl-shift-m = 'move-workspace-to-monitor --wrap-around prev'
+    ctrl-shift-n = 'move-workspace-to-monitor --wrap-around left'
+    ctrl-shift-m = 'move-workspace-to-monitor --wrap-around right'
 
     ctrl-shift-q = 'close'
 
