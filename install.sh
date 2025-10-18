@@ -97,7 +97,9 @@ DANGLING_SYMLINKS_CMD='find "$HOME" -maxdepth 4 \
   ! -path "*/.config/Signal/*" \
   ! -path "*/.mozilla/firefox/*" \
   ! -path "*/.steampath"'
-if [[ ! -z "$IS_MACOS" || ! -z "$IS_RASPI" ]] DANGLING_SYMLINKS_CMD="${DANGLING_SYMLINKS_CMD} ! -path '*/.config/autostart/*'"
+if ! command -v sway >/dev/null; then
+  DANGLING_SYMLINKS_CMD="${DANGLING_SYMLINKS_CMD} ! -path '*/.config/autostart/*'"
+fi
 DANGLING_SYMLINKS_CMD="${DANGLING_SYMLINKS_CMD} -print"
 DANGLING_SYMLINKS=`eval $DANGLING_SYMLINKS_CMD`
 if [ -n "$DANGLING_SYMLINKS" ]; then
