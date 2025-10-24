@@ -40,6 +40,8 @@ if [[ -n $HOME/.zcompdump(#qN.mh+24) ]]; then
 else
   compinit -C;
 fi
+# make case sensitive
+zstyle ':completion:*' matcher-list 'm:{a-z}={a-z}'
 
 # Aliases
 
