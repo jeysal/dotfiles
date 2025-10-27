@@ -4,10 +4,7 @@ autocmd FileType markdown,latex set spell
 " highlight
 autocmd CursorHold * silent if exists("*CocActionAsync") | call CocActionAsync('highlight') | endif
 " organize imports on save
-augroup organize_imports
-  autocmd!
-  autocmd FileType typescript,typescriptreact autocmd BufWritePre <buffer> :silent call CocAction('runCommand', 'editor.action.organizeImport')
-augroup END
+autocmd BufWritePre *.ts,*.tsx silent! call CocAction('runCommand', 'editor.action.organizeImport')
 " show type hint
 nmap <silent> <C-q> :call CocActionAsync('doHover')<CR>
 " navigate errors
