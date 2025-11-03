@@ -169,7 +169,7 @@ input * {
 
 input type:touchpad {
   natural_scroll enabled
-  pointer_accel 0.75
+  pointer_accel 0.5
 }
 
 input 1133:16461:Logitech_K400_Plus {
