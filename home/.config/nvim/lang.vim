@@ -3,8 +3,25 @@ autocmd FileType markdown,latex set spell
 
 " highlight
 autocmd CursorHold * silent if exists("*CocActionAsync") | call CocActionAsync('highlight') | endif
-" organize imports on save
-autocmd BufWritePre *.ts,*.tsx silent! call CocAction('runCommand', 'editor.action.organizeImport')
+
+" organize imports with Biomeon save
+function! s:BiomeOrganizeImports() abort
+  " Ask coc for Biome-only source actions
+  let actions = CocAction('codeActions', 'document', ['source.organizeImports.biome'])
+  if !empty(actions)
+    " Prefer the first (usually marked isPreferred by Biome)
+    call CocAction('doCodeAction', actions[0])
+  else
+    echo "[coc-biome] No organize-imports action available"
+  endif
+endfunction
+command! BiomeOrganizeImports call <SID>BiomeOrganizeImports()
+" Use CocActionAsync except on BufWritePre (Coc docs recommendation)
+" For organize imports, BufWritePre is fine.
+autocmd BufWritePre *.ts,*.tsx,*.js,*.jsx,*.mjs,*.cjs,spec.ts,*.json,*.jsonc
+      \ silent! call CocAction('doCodeAction',
+      \ get(CocAction('codeActions', 'document', ['source.organizeImports.biome']), 0, {}))
+
 " show type hint
 nmap <silent> <C-q> :call CocActionAsync('doHover')<CR>
 " navigate errors
