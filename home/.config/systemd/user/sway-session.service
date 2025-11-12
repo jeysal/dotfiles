@@ -1,4 +1,3 @@
-# https://github.com/i3/i3/issues/5186#issuecomment-2463357316
 [Unit]
 Description=sway window manager session
 Wants=sway-session.target
