@@ -3,7 +3,6 @@ Description=sway session is up
 Requires=basic.target
 BindsTo=graphical-session.target xdg-desktop-autostart.target
 
-DefaultDependencies=no
 RefuseManualStart=yes
 RefuseManualStop=yes
 StopWhenUnneeded=yes

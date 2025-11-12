@@ -1,6 +1,6 @@
 [Unit]
 Description=sway window manager session
-Wants=sway-session.target
+BindsTo=sway-session.target
 
 # this service is started by sway in its config file
 # it's done like this so sway and its launched child processes
