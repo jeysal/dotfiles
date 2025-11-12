@@ -10,4 +10,4 @@ RestartSec=1s
 ExecStart=/usr/bin/zsh -c "%h/bin/lock-pa-source-volume %I"
 
 [Install]
-WantedBy=default.target
+WantedBy=pipewire-pulse.service
