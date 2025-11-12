@@ -1,0 +1,13 @@
+[Unit]
+Description=Pause/Resume Syncthing on Metered Connections
+After=syncthing.service
+PartOf=syncthing.service
+
+[Service]
+Type=simple
+ExecStart=%h/bin/nm-metered-syncthing
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=syncthing.service

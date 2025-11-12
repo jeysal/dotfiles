@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# This script checks default route and pauses/unpauses Syncthing devices based on metered status
+# It listens to NetworkManager D-Bus events to automatically trigger on connection changes
+
+check_metered_and_sync() {
+    # Get the interface for the default route
+    DEFAULT_IF=$(ip route | awk '/default/ {print $5; exit}')
+
+    if [ -z "$DEFAULT_IF" ]; then
+        logger "No default interface found, skipping Syncthing control"
+        return
+    fi
+
+    # Get the effective metered status (yes/no)
+    METERED=$(nmcli -g GENERAL.METERED device show "$DEFAULT_IF" | awk '{print $1}')
+
+    # Pause or unpause all remote devices
+    if [ "$METERED" = "yes" ]; then
+        syncthingctl pause --all-devs
+        logger "Syncthing paused due to metered connection on $DEFAULT_IF"
+    else
+        syncthingctl resume --all-devs
+        logger "Syncthing unpaused due to unmetered connection on $DEFAULT_IF"
+    fi
+}
+
+# Run once at startup
+check_metered_and_sync
+
+# Listen for NetworkManager StateChanged events
+# Use gdbus to listen for PropertiesChanged signals on NetworkManager devices
+gdbus monitor --system --dest org.freedesktop.NetworkManager \
+    --object-path /org/freedesktop/NetworkManager \
+| while read -r line; do
+    # Filter lines related to Connectivity or Metered changes
+    if echo "$line" | grep -qE 'Connectivity|Metered|State'; then
+        check_metered_and_sync
+    fi
+done
+
