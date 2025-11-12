@@ -1,7 +1,7 @@
 [Unit]
 Description=Pause/Resume Syncthing on Metered Connections
 After=syncthing.service
-PartOf=syncthing.service
+BindsTo=syncthing.service
 
 [Service]
 Type=simple
