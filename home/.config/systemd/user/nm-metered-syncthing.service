@@ -10,4 +10,4 @@ Restart=on-failure
 RestartSec=5
 
 [Install]
-WantedBy=syncthing.service
+WantedBy=default.target
