@@ -1,7 +1,6 @@
 # https://github.com/i3/i3/issues/5186#issuecomment-2463357316
 [Unit]
 Description=sway window manager session
-PartOf=sway-session.target
 Wants=sway-session.target
 
 # this service is started by sway in its config file
