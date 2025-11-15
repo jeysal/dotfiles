@@ -2,7 +2,7 @@
 set -uo pipefail
 
 NODE_VERSION=$(cat home/.node-version)
-NPM_GLOBAL_PACKAGES=(zx@8.8.2)
+NPM_GLOBAL_PACKAGES=(zx@8.8.5)
 
 if uname | grep >/dev/null Darwin; then
   echo "Detected Darwin"
