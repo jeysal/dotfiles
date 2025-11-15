@@ -47,6 +47,7 @@ nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<CR>
 
 " switch back and forth
 nnoremap <C-h> <C-^>
+nnoremap <C-BS> <C-^>
 
 " running InsertLeave would be pretty nice actually
 imap <C-c> <Esc>
