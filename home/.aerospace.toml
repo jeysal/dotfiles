@@ -174,7 +174,7 @@ automatically-unhide-macos-hidden-apps = false
     ctrl-shift-0 = 'move-node-to-workspace 10'
 
     # Lock
-    ctrl-esc = '''exec-and-forget osascript -e 'tell application "System Events" to keystroke "q" using {control down, command down}' '''
+    ctrl-esc = '''exec-and-forget pmset displaysleepnow'''
 
     ctrl-enter = 'exec-and-forget kitty -1 -d ~'
     ctrl-shift-enter = 'exec-and-forget NOTMUX=true kitty -1 -d ~'
