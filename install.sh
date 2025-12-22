@@ -52,7 +52,7 @@ ln -fnsT $(realpath vim-plug/plug.vim) ~/.local/share/nvim/site/autoload/plug.vi
 echo "Done"
 
 echo -n "Setting up fnm/npm..."
-zsh -i -c "fnm install && fnm use"
+zsh -c "fnm install && fnm use"
 echo "Done"
 
 if [[ -z "$IS_RASPI" ]]; then
