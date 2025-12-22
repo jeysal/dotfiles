@@ -1,9 +1,6 @@
 #!/usr/bin/env zsh
 set -uo pipefail
 
-NODE_VERSION=$(cat home/.node-version)
-NPM_GLOBAL_PACKAGES=(zx@8.8.5)
-
 if uname | grep >/dev/null Darwin; then
   echo "Detected Darwin"
 
@@ -55,7 +52,7 @@ ln -fnsT $(realpath vim-plug/plug.vim) ~/.local/share/nvim/site/autoload/plug.vi
 echo "Done"
 
 echo -n "Setting up fnm/npm..."
-zsh -i -c "fnm install $NODE_VERSION && fnm use $NODE_VERSION && npm i -g $NPM_GLOBAL_PACKAGES"
+zsh -i -c "fnm install && fnm use"
 echo "Done"
 
 if [[ -z "$IS_RASPI" ]]; then
