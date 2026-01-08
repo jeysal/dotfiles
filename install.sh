@@ -79,8 +79,6 @@ if [[ ! -z "$IS_MACOS" ]]; then
   echo -n "Running brew list export once..."
   PKG_LIST=$HOME/docs/tech/pkg-list/$HOST.txt
   brew list >$PKG_LIST
-  echo >>$PKG_LIST
-  brew cask list >>$PKG_LIST
   echo "Done"
 fi
 
