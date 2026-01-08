@@ -23,6 +23,10 @@
   ff = false
   log = true
 
+[merge "mergiraf"]
+    name = mergiraf
+    driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
+
 [color "branch"]
   current = yellow reverse
   local = yellow
