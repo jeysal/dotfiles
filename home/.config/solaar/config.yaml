@@ -1,4 +1,4 @@
-- 1.1.18
+- 1.1.19
 - _NAME: MX Keys S
   _absent: [hi-res-scroll, lowres-scroll-mode, hires-smooth-invert, hires-smooth-resolution, hires-scroll-mode, scroll-ratchet, scroll-ratchet-torque, smart-shift,
     thumb-scroll-invert, thumb-scroll-mode, onboard_profiles, report_rate, report_rate_extended, pointer_speed, dpi, dpi_extended, speed-change, backlight-timed,
@@ -15,7 +15,7 @@
   backlight_duration_hands_in: 30
   backlight_duration_hands_out: 15
   backlight_duration_powered: 300
-  backlight_level: 1
+  backlight_level: 2
   change-host: null
   disable-keyboard-keys: {1: false, 2: true, 4: false, 8: false, 16: false}
   divert-keys: {10: 0, 111: 1, 199: 0, 200: 0, 226: 0, 227: 0, 228: 0, 229: 0, 230: 0, 231: 0, 232: 0, 233: 0, 234: 0, 259: 0, 264: 0, 266: 0, 284: 0}
