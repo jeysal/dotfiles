@@ -53,6 +53,7 @@ alias sed='sed -r --follow-symlinks'
 
 alias groot='cd $(git rev-parse --show-toplevel)'
 alias gfa='git fetch --all --prune'
+alias gcom='git checkout origin/$(git_main_branch)'
 alias gmb='git merge-base'
 function gdmb() { git diff $(git merge-base origin/"$(git_main_branch)" "${1:-HEAD}") "${1:-HEAD}" "${@:2}" }
 
