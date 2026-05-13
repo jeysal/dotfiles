@@ -56,6 +56,15 @@ alias gfa='git fetch --all --prune'
 alias gcom='git checkout origin/$(git_main_branch)'
 alias gmb='git merge-base'
 function gdmb() { git diff $(git merge-base origin/"$(git_main_branch)" "${1:-HEAD}") "${1:-HEAD}" "${@:2}" }
+alias g.='git log \
+  --graph \
+  --first-parent \
+  --abbrev-commit \
+  --decorate \
+  --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)" \
+  --branches \
+  --tags \
+  $(git reflog --format=%H HEAD | sort -u)'
 
 alias y='yarn'
 
