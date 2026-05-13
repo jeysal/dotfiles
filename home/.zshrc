@@ -51,9 +51,10 @@ alias du='du -h'
 alias grep='grep -E'
 alias sed='sed -r --follow-symlinks'
 
-alias gdmb='git diff $(git merge-base origin/master HEAD)'
 alias groot='cd $(git rev-parse --show-toplevel)'
 alias gfa='git fetch --all --prune'
+alias gmb='git merge-base'
+function gdmb() { git diff $(git merge-base origin/"$(git_main_branch)" "${1:-HEAD}") "${1:-HEAD}" "${@:2}" }
 
 alias y='yarn'
 
