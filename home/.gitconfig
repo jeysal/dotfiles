@@ -25,6 +25,10 @@
   ff = false
   log = true
 
+[push]
+	autoSetupMerge = simple
+	autoSetupRemote = true
+
 [color "branch"]
   current = yellow reverse
   local = yellow
