@@ -23,6 +23,8 @@
   ff = false
   log = true
 
+[branch]
+	autoSetupMerge = false
 [push]
 	autoSetupMerge = simple
 	autoSetupRemote = true
