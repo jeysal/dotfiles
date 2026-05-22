@@ -16,8 +16,12 @@ set backspace=indent,eol,start
 " avoid confusing file watchers https://github.com/nodejs/node-v0.x-archive/issues/3172
 set backupcopy=yes
 
-" misc
+" refresh buffers in background
 set autoread
+set updatetime=1000
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * checktime
+
+" misc
 set encoding=utf-8 nobomb
 set hidden
 set hlsearch
