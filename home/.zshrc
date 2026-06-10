@@ -65,6 +65,16 @@ alias g.='git log \
   --branches \
   --tags \
   $(git reflog --format=%H HEAD | sort -u)'
+gsummary() {
+  local ref="${1:-HEAD}"
+  local base
+  base="$(git merge-base origin/"$(git_main_branch)" "$ref")"
+
+  git log --reverse \
+    --format='- %s%n%b' \
+    "$base..$ref" |
+  sed '/^$/d; /^- /!s/^/  - /'
+}
 
 alias y='yarn'
 
