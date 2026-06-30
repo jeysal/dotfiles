@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+# Generate a unique temporary filename
+tempfile=$(mktemp -t clipboard.XXXXXXXXXX.png)
+
+# Save the clipboard image to the temporary file
+osascript -e 'set theImage to the clipboard as «class PNGf»' \
+  -e "set theFile to open for access POSIX file \"$tempfile\" with write permission" \
+  -e 'write theImage to theFile' \
+  -e 'close access theFile'
+
+# Output the image data to stdout
+cat "$tempfile"
+
+# Delete the temporary file
+rm "$tempfile"
