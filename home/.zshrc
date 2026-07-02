@@ -150,7 +150,7 @@ alias stand='cat ~/.config/sway/stand | xargs -d \\\\n swaymsg'
 alias default='swaymsg reload'
 
 # "Better version" aliases
-which colordiff >& /dev/null && alias diff='colordiff'
+which git >& /dev/null && alias diff='git diff --no-index'
 which nvim >& /dev/null && alias vi='nvim' && alias vim='nvim'
 
 # aliases from oh-my-zsh
