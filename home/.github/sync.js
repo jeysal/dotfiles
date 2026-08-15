@@ -5,6 +5,20 @@
   const { mkdirSync, readFileSync, readdirSync } = require("fs");
   const { resolve } = require("path");
 
+  const run = (cmd, args, options) => {
+    const result = spawnSync(cmd, args, {
+      ...options,
+      stdio: "inherit",
+    });
+
+    if (result.error) throw result.error;
+    if (result.status !== 0) {
+      throw new Error(
+        `${cmd} ${args.join(" ")} failed with exit code ${result.status}`,
+      );
+    }
+  };
+
   const fetch = require(require.resolve("node-fetch", { paths: [resolve()] }));
 
   // GitHub helpers
@@ -55,7 +69,7 @@
     `);
 
     user = login;
-    repos.push(...nodes);
+    repos.push(...nodes.filter(Boolean));
 
     ({ endCursor, hasNextPage } = pageInfo);
   }
@@ -71,22 +85,19 @@
     // prepare repo dir
     mkdirSync(repoDir, { recursive: true });
     if (!readdirSync(repoDir).includes(".git")) {
-      spawnSync("git", ["init"], { cwd: repoDir, stdio: "inherit" });
-      spawnSync("git", ["remote", "add", "origin", url.href], {
+      run("git", ["init"], { cwd: repoDir });
+      run("git", ["remote", "add", "origin", url.href], {
         cwd: repoDir,
-        stdio: "inherit",
       });
     }
 
     // update credentials
-    spawnSync("git", ["remote", "set-url", "origin", url.href], {
+    run("git", ["remote", "set-url", "origin", url.href], {
       cwd: repoDir,
-      stdio: "inherit",
     });
     // fetch
-    spawnSync("git", [`fetch`, `--prune`, "origin"], {
+    run("git", [`fetch`, `--prune`, "origin", "'+refs/*:refs/*'"], {
       cwd: repoDir,
-      stdio: "inherit",
     });
   });
 })();
