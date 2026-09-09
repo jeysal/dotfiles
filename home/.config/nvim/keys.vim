@@ -61,7 +61,9 @@ map § ^
 
 " just in case
 nnoremap <leader>? :CocCommand workspace.showOutput<CR>
-nnoremap <leader>R :CocRestart<CR>
+
+" after git checkout etc
+nnoremap <leader>5 :bufdo e<CR>
 
 " leader
 map <space> <leader>
