@@ -171,6 +171,9 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # fnm
 eval "$(fnm env --use-on-cd)"
 
+# mise
+which mise >& /dev/null && eval "$(mise activate zsh)"
+
 # Prompt
 for PROMPTFILE in {/usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme,$HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme}; do
   echo $TERM | grep -E "(screen|xterm).*" >/dev/null && [[ -f $PROMPTFILE ]] && source ~/.promptcfg && source $PROMPTFILE
