@@ -76,6 +76,8 @@ gsummary() {
   sed '/^$/d; /^- /!s/^/  - /'
 }
 
+alias ghco='gh pr checkout'
+
 alias y='yarn'
 
 alias sc='systemctl'
