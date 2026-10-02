@@ -43,6 +43,10 @@ fi
 # make case sensitive
 zstyle ':completion:*' matcher-list 'm:{a-z}={a-z}'
 
+# Aliases from oh-my-zsh
+source $HOME/conf/oh-my-zsh/plugins/git/git.plugin.zsh
+source $HOME/conf/oh-my-zsh/plugins/systemd/systemd.plugin.zsh
+
 # Aliases
 
 alias df='df -h'
@@ -55,7 +59,10 @@ alias groot='cd $(git rev-parse --show-toplevel)'
 alias gfa='git fetch --all --prune'
 alias gcom='git checkout origin/$(git_main_branch)'
 alias gmb='git merge-base'
-function gdmb() { git diff $(git merge-base origin/"$(git_main_branch)" "${1:-HEAD}") "${1:-.}" "${@:2}" }
+alias gsh='git show --ignore-space-change'
+alias gsts='git stash show --patch --ignore-space-change'
+alias gd='git diff --ignore-space-change'
+function gdmb() { git diff --ignore-space-change $(git merge-base origin/"$(git_main_branch)" "${1:-HEAD}") "${1:-.}" "${@:2}" }
 alias g.='git log \
   --graph \
   --first-parent \
@@ -154,10 +161,6 @@ alias default='swaymsg reload'
 # "Better version" aliases
 which git >& /dev/null && alias diff='git diff --no-index'
 which nvim >& /dev/null && alias vi='nvim' && alias vim='nvim'
-
-# aliases from oh-my-zsh
-source $HOME/conf/oh-my-zsh/plugins/git/git.plugin.zsh
-source $HOME/conf/oh-my-zsh/plugins/systemd/systemd.plugin.zsh
 
 # History
 HISTFILE=~/.histfile
