@@ -27,6 +27,14 @@ cp -prsT --update=none $(realpath home)/ ~/
 mkdir -p ~/.vim/backups ~/.vim/swaps ~/.vim/undo
 echo "Done"
 
+if [[ -d ~/.cursor/skills ]]; then
+  echo -n "Installing skills..."
+  for skill in $(realpath skills)/*(/); do
+    ln -fnsT $skill ~/.cursor/skills/$(basename $skill)
+  done
+  echo "Done"
+fi
+
 echo -n "Generating system-specific configuration..."
 $(dirname $0)/generate.sh
 echo "Done"
