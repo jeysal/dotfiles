@@ -62,7 +62,7 @@ if empty($IS_RASPI)
   Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc-prettier', {'do': 'npm ci'}
   Plug 'fannheyward/coc-biome', {'do': 'yarn install --frozen-lockfile'}
-  Plug 'oxc-project/coc-oxc'
+  Plug 'oxc-project/coc-oxc', {'do': 'npx --yes pnpm install --frozen-lockfile'}
   Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
   Plug 'neoclide/coc-tsserver', {'do': 'npm ci'}
   Plug 'neoclide/coc-yaml', {'do': 'npm ci'}
