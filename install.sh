@@ -27,10 +27,10 @@ cp -prsT --update=none $(realpath home)/ ~/
 mkdir -p ~/.vim/backups ~/.vim/swaps ~/.vim/undo
 echo "Done"
 
-if [[ -d ~/.cursor/skills ]]; then
+if [[ -d ~/.agents/skills ]]; then
   echo -n "Installing skills..."
   for skill in $(realpath skills)/*(/); do
-    ln -fnsT $skill ~/.cursor/skills/$(basename $skill)
+    ln -fnsT $skill ~/.agents/skills/$(basename $skill)
   done
   echo "Done"
 fi
