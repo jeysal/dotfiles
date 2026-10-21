@@ -4,4 +4,4 @@ PAGER=less
 BROWSER=firefox
 
 CARGO_HOME="$HOME/.cargo"
-PATH="$HOME/bin:$HOME/.local/bin:$CARGO_HOME/bin:$HOMEBREW_PREFIX/opt/rustup/bin:$HOME/go/bin:$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$HOMEBREW_PREFIX/opt/findutils/libexec/gnubin:$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$PATH"
+PATH="$HOME/bin:$HOME/.local/bin:$CARGO_HOME/bin:$HOMEBREW_PREFIX/opt/rustup/bin:$HOME/go/bin:$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$HOMEBREW_PREFIX/opt/findutils/libexec/gnubin:$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$HOMEBREW_PREFIX/opt/curl/bin:$HOMEBREW_PREFIX/opt/gnu-getopt/bin:$PATH"
