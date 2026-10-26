@@ -10,7 +10,7 @@
     headset-signature-shutdown, headset-signature-passive, logivoice-nr-state, logivoice-ng-state, logivoice-comp-state, logivoice-deesser-state, logivoice-depopper-state,
     logivoice-limiter-state, logivoice-hpf-state, reprogrammable-keys]
   _battery: 4100
-  _config_cookie: [108, 78]
+  _config_cookie: [117, 46]
   _modelId: B37800000000
   _sensitive: {backlight: false, backlight_level: false, disable-keyboard-keys: false, divert-keys: false}
   _serial: E920059D
@@ -37,7 +37,7 @@
     headset_per_zone_lighting, headset-signature-startup, headset-signature-shutdown, headset-signature-passive, logivoice-nr-state, logivoice-ng-state,
     logivoice-comp-state, logivoice-deesser-state, logivoice-depopper-state, logivoice-limiter-state, logivoice-hpf-state]
   _battery: 4100
-  _config_cookie: [108, 79]
+  _config_cookie: [117, 47]
   _modelId: B03400000000
   _sensitive: {dpi: false, smart-shift: false}
   _serial: 9678519E
@@ -66,7 +66,7 @@
     logivoice-nr-state, logivoice-ng-state, logivoice-comp-state, logivoice-deesser-state, logivoice-depopper-state, logivoice-limiter-state, logivoice-hpf-state,
     reprogrammable-keys]
   _battery: 4096
-  _config_cookie: [108, 81]
+  _config_cookie: [117, 45]
   _modelId: 404D00000000
   _sensitive: {disable-keyboard-keys: false, gesture2-gestures: false, hires-scroll-mode: ignore, hires-smooth-invert: ignore, hires-smooth-resolution: ignore}
   _serial: FCCB6CC8
