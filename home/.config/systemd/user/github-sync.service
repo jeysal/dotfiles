@@ -1,7 +1,13 @@
 [Unit]
 Description=fetch all GitHub repos into .github
+StartLimitIntervalSec=1h
+StartLimitBurst=8
 
 [Service]
 Type=simple
 WorkingDirectory=%h/.github
 ExecStart=zsh -c "yarn && ./sync.js"
+Restart=on-failure
+RestartSec=10
+RestartSteps=5
+RestartMaxDelaySec=5min
