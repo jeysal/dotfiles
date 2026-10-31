@@ -5,5 +5,5 @@ After=network-online.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/env curl -s http://sync.afraid.org/u/%i/
-ExecStopPost=/usr/bin/bash -c "[ $EXIT_STATUS -ne 0 ] && systemctl list-units --full --all | grep running | grep systemd-resolved && systemctl restart systemd-networkd || true"
+ExecStart=/usr/bin/env curl -fsS --retry 3 --retry-delay 5 --max-time 30 http://sync.afraid.org/u/%i/
+ExecStopPost=/usr/bin/bash -c "[ $EXIT_STATUS -ne 0 ] && [ $EXIT_STATUS -ne 22 ] && systemctl list-units --full --all | grep running | grep systemd-resolved && systemctl restart systemd-networkd || true"
