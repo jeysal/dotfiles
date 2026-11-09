@@ -155,7 +155,7 @@ watch_linux() {
 
 # monitors
 alias sofa='cat ~/.config/sway/sofa | xargs -d \\\\n swaymsg'
-alias stand='cat ~/.config/sway/stand | xargs -d \\\\n swaymsg'
+alias sit='cat ~/.config/sway/sit | xargs -d \\\\n swaymsg'
 alias default='swaymsg reload'
 
 # "Better version" aliases

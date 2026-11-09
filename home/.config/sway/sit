@@ -1,0 +1,16 @@
+output eDP-1 enable
+output DP-1 enable
+output DP-2 enable
+output 'Ancor Communications Inc VX248 E8LMQS165027' enable
+output 'Samsung Electric Company C27F398 HTQJ501243' enable
+output 'Samsung Electric Company SMBX2331 0x42324335' enable
+output 'LG Electronics LG TV SSCR2 0x01010101' enable
+output eDP-1 position 1920 0
+output DP-1 position 0 0
+output DP-2 position -1920 0
+output 'Ancor Communications Inc VX248 E8LMQS165027' position -1920 0
+output 'Samsung Electric Company C27F398 HTQJ501243' position 0 0
+output 'Samsung Electric Company SMBX2331 0x42324335' position 1920 0
+output 'LG Electronics LG TV SSCR2 0x01010101' position -5760 0
+output 'LG Electronics LG TV SSCR2 0x01010101' mode '3840x2160@120.000Hz'
+output 'LG Electronics LG TV SSCR2 0x01010101' scale 1

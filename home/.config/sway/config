@@ -179,28 +179,14 @@ input 1133:16461:Logitech_K400_Plus {
 
 # --- output ---
 
-output eDP-1 {
-  position 1920 0
-}
-output DP-1 {
-  position 0 0
-}
-output DP-2 {
-  position -1920 0
-}
-
-output 'Ancor Communications Inc VX248 E8LMQS165027' {
-  position -1920 0
-}
-output 'Samsung Electric Company C27F398 HTQJ501243' {
-  position 0 0
-}
-output 'Samsung Electric Company SMBX2331 0x42324335' {
-  position 1920 0
-}
+output 'Ancor Communications Inc VX248 E8LMQS165027' disable
+output 'Samsung Electric Company C27F398 HTQJ501243' disable
+output 'Samsung Electric Company SMBX2331 0x42324335' disable
 output 'LG Electronics LG TV SSCR2 0x01010101' {
-  position -5760 0
+  enable
+  position 0 0
   mode '3840x2160@120.000Hz'
+  scale 1
 }
 
 # --- special keybinds ---
