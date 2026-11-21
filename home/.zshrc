@@ -168,6 +168,22 @@ HISTFILE=~/.histfile
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
 
+# SSH agent forwarding into tmux
+if [[ -n $TMUX && -n $SSH_CONNECTION ]]; then
+  export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+  function _heal_ssh_agent {
+    ssh-add -l >/dev/null 2>&1
+    (( $? != 2 )) && return
+    local s
+    for s in ~/.ssh/agent/s.*(N=om); do
+      SSH_AUTH_SOCK=$s ssh-add -l >/dev/null 2>&1
+      (( $? != 2 )) && { ln -sf $s ~/.ssh/ssh_auth_sock; return; }
+    done
+  }
+  autoload -Uz add-zsh-hook
+  add-zsh-hook precmd _heal_ssh_agent
+fi
+
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
