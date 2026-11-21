@@ -168,6 +168,9 @@ HISTFILE=~/.histfile
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
 
+# SSH agent forwarding into tmux
+[[ -n $TMUX && -n $SSH_CONNECTION ]] && export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
